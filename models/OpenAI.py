@@ -1,21 +1,17 @@
 import time
 from models.base_model import BaseLLM
-from langchain.chat_models import ChatOpenAI
+from langchain.llms import OpenAI
 from keys.openai_key import key
-from langchain.schema import (
-    HumanMessage,
-    SystemMessage
-)
 
-class ChatOpenai(BaseLLM):
+class Openai(BaseLLM):
     def __init__(self) -> None:
         super().__init__()
         self.set_model()
         self.set_tokenizer()
         
     def set_model(self)->None:
-        self.model_id = 'ChatOpenAI'
-        self.model = ChatOpenAI(openai_api_key=key, temperature=0)
+        self.model_id = 'OpenAI'
+        self.model = OpenAI(openai_api_key=key, temperature=0)
 
     def set_tokenizer(self)->None:
         pass
@@ -23,18 +19,15 @@ class ChatOpenai(BaseLLM):
 
     def run(self, prompt)->str:
         if self.model is None:
-            self.model = ChatOpenAI(openai_api_key=key, temperature=0)
+            self.model = OpenAI(openai_api_key=key, temperature=0)
             
         # inference
         start_time = time.time()
-        messages = [SystemMessage(content="You are a smart assistant."),
-                    HumanMessage(content=prompt)]
-        output = self.model(messages=messages)
+        generated = self.model(prompt)
 
         # elapsed time
         self.calculate_elapsed_time(start_time=start_time)
 
         # decode
-        generated = output.content
         print("\n** Output:\n", generated)
         return generated

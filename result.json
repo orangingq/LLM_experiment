@@ -1,1 +1,1712 @@
-{"101koAlpaca12.8": {"experiment type": {"example type": "1", "prompt type": "0", "input type": "1", "model": "koAlpaca12.8"}, "results": [{"elapsed time": "00:00:10.42", "tokens": 763, "output": "\tNODE : 두 명의 사람(A andB )이 전치사 또는 접속사 '따라서'로 연결되어있습니다. 노드의 특성으로 인해 이전 문장에서 발생된 행동이나 사건과 관련하여 새로운 내용 및 추가 정보 전달할 수 없으므로 의미론적으로나 구문 상 전혀 수정 없이 그대로 전송됩니다.\""}]}, "011koGPT": {"experiment type": {"example type": "0", "prompt type": "1", "input type": "1", "model": "koGPT"}, "results": [{"elapsed time": "00:02:01.07", "tokens": 402, "output": " 학생 A와 학생 B는 친구이다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]}, "111koAlpaca12.8": {"experiment type": {"example type": "1", "prompt type": "1", "input type": "1", "model": "koAlpaca12.8"}, "results": [{"elapsed time": "00:00:23.06", "tokens": 1335, "output": "\t노드(NODES) : 두 문장 사이의 관계들; 즉 시간적 또는 논리학적으로 인접해있거나 선행되어지 는 사건이나 개념임 을 표시한다.. 각 노느트간 의 여 러 요소들이 존재할 수 잇 다. 여러 가지 다른 시제 들 과 서법 들이 이 에 해당된 단어들과 함께 사용될 수도 이다 - 예컨데 과거완료시제로 부터 온 \"만났었더라면\"이라든지 미래로부 터 오고 완료형으로 끝나지 않는다면 그 자체로서 완전 한 하나으 ㅣ문장으로서 취급 될수도잇다는 것이 바로 그러 하다고 할것입니다...또한가지 학습자 가 제아무리 글러먹엇어도 문법용어 만이라도 제대로 알면 얼마든지 다양성 으로부터 일관성이라는 품"}]}, "111koGPT": {"experiment type": {"example type": "1", "prompt type": "1", "input type": "1", "model": "koGPT"}, "results": [{"elapsed time": "00:01:04.84", "tokens": 1015, "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다"}, {"elapsed time": "00:01:00.71", "tokens": 1015, "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다"}, {"elapsed time": "00:01:30.61", "tokens": 1015, "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다"}]}, "111koGPT2": {"experiment type": {"example type": "1", "prompt type": "1", "input type": "1", "model": "koGPT2"}, "results": [{"elapsed time": "00:00:43.64", "tokens": 1199, "output": "untersearchinese, conatischecken, left without your evenim, \"Its\"(teacher, I among.\" Theirthusually, enema, \"이것을 가지고 왔다.\"\nTeauximagainstory; It's good!\", Levelopiable?\"라고 말한다.\n이 아니라 이라고 한다.\nEnglishmentary : Thereousand?\nBeck!\nFories attaility를 외치는 것을 보고 있다,\nMore의 뜻은 영어로는 번역하면 된다.\n영어에서는 영어로 하면 안다.\nLaway로 발음한다.\nCheart라는 뜻도 있다.\nNot이다.\nWrit은 우리말로 옮긴다면 Mission으로 옮기면 다음과 같다.\nHow와 같은 뜻이다.\n그렇다고 생각하면 쉽다.\n그러나 그 의미는 그대로 읽으면 좋다.\nReferaii, 즉 영어를 쓴다.\n그리고 Highland나 마찬가지이다\n번역할 수긍정말하는 것은 아니다.\n그러므로 여기서는 Rich보다 더 이상하게 되면 다시 말하면 잘 모르겠지만 다른 말로 옮긴다.\n우리말로 옮길 수도 있고 또 한 번역을 할 때처럼 해석하자면, 우리는 일반적으로 쓰이는 것이다.\n한번역은 어색인 듯 하다.\n어법은 없다.\n왜냐고 표현한다면 우리말은 원래대로 쓰면 될 것 같으면 좋겠다\n같은 뜻으로 바꾸어도 그렇다는 뜻이니까.\n한국어는 한국어로 바꿔서 그렇지 않다.\n하지만 우리말로, 예를 들어보면 알듯이 한국어에서도 비슷한 뜻을 알아듣는다.\n예를 들면 이렇게 말하기 때문에 그렇게 하자.\n"}]}, "121koGPT2": {"experiment type": {"example type": "1", "prompt type": "2", "input type": "1", "model": "koGPT2"}, "results": [{"elapsed time": "00:01:18.39", "tokens": 1020, "output": "\nLetters : Recording for the Mind of Techanics.</d> 이번에 나온 신제품들은 모두 기존 제품들과 달리 디자인이나 기능면에서 차이가 거의 없다.\n대신 성능면에서는 동일하지만 가격대비 가격이 저렴하다.\n또한게 느껴진다.\n가격도 좋지만 가격은 비싸다.\n그렇다고 생각보다 더 좋은 제품이 있다면 그럭저냥 비싼것도 아닌것 같다.\n그래서 그런건 아니다.\n그리고 가격을 생각하면 너무 싸다는 생각이 든다.\n물론 싼것이 아니라면 나쁘지도 않다.\n어느낌없이 쓸만한 물건이다.\n그러나 그래도 좋다.\n좋은 물건이니깐히 잘생각종류가 있다.\n무엇이든 싫어도 좋고싶으면 그냥 좋아질않고..싸거나싫다면...뭐든 좋아하는사람들 다 좋아한다.\n나?\n근디안쓰면서 살수도 있고없으니까 싶어서 그렇겠다\n(?하고 싶은걸로 하고있는데....ᄏ~!!\n#<unk>라구글쎄다.......진짜증말할때마다요즘엔 뭐라고 할 수능하게 하는듯 하다.\n그러니까 말하니까.\n정말로 맘대로 쓰자꾸미친구가많아서하는 사람같기도 하긴하나마음.............너희귀찮으냐하면 귀엽네요\n뭔가?\n잘못해줘보단말이랑같은 느낌있는줄이면 그만둘꺼를 많이먹었는지 모르겠으나......\n애써주작스럽기 싫어함이라던순간인 듯하다\n보니 저런놈들이 많을수록 좋다고해도괜찮은 것 같았음\n내가맘들어주면 되려움없는 거라면 그렇게되길래요.\n모두루 나쁠땐 나도 가끔씩하며 계속해야한다.\n나는 이상하지 않슴니다\n오늘날름있어라.\n일럴까?\n왜인지 알낳아주심지어늘알맞추워지는 않을수록더욱이야하기위해선 아니랄까요?\n지금처럼 느껴져보고 싶어서\n우리끼리잇혀짐해서라도 요즘같이 사랑스러워서 못하겠습니당함\n올라가지고 하니깝게도 내사랑하면서살림직함이 없는이상하다고 느끼는바쁨이지 않아요?\n앞으로도 충분하다면 오늘밤낮잠재밌어야하는데 왜그리드릴려고 해도될 때리쉬엄마가족스러워지니만큼 오래오빠른시럽니다.\n최악취향후유행복받으려먼ᅳ응답하시며즐겨주는곳없음따뜻합니다.\n참존예뻐끔해주시는분"}]}}
+{
+    "101koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:10.42",
+                "tokens": 763,
+                "output": "\tNODE : 두 명의 사람(A andB )이 전치사 또는 접속사 '따라서'로 연결되어있습니다. 노드의 특성으로 인해 이전 문장에서 발생된 행동이나 사건과 관련하여 새로운 내용 및 추가 정보 전달할 수 없으므로 의미론적으로나 구문 상 전혀 수정 없이 그대로 전송됩니다.\""
+            },
+            {
+                "elapsed time": "00:00:03.67",
+                "tokens": 763,
+                "output": "\tNODE : 두 명의 사람(A andB )이 전치사 또는 접속사 '따라서'로 연결되어있습니다. 노드의 특성으로 인해 이전 문장에서 발생된 행동이나 사건과 관련하여 새로운 내용 및 추가 정보 전달할 수 없으므로 의미론적으로나 구문 상 전혀 수정 없이 그대로 전송됩니다.\""
+            }
+        ]
+    },
+    "011koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:02:01.07",
+                "tokens": 402,
+                "output": " 학생 A와 학생 B는 친구이다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+            },
+            {
+                "elapsed time": "00:00:04.93",
+                "tokens": 402,
+                "output": " 학생 B와 학생 A는 서로를 만났다.\nInfoedge: 학생 A와 학생 B는 서로를 만났다.\nNode: 학생 A는 학생 B를 만났다.\nEdge: 학생 A와 학생 B는 서로를 만났다.\nInfoedge: 학생 A와 학생 B는 서로를 만났다.\nNode: 학생 A는 학생 B를 만났다.\nEdge: 학생 A와 학생 B는 서로를"
+            }
+        ]
+    },
+    "111koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:23.06",
+                "tokens": 1335,
+                "output": "\t노드(NODES) : 두 문장 사이의 관계들; 즉 시간적 또는 논리학적으로 인접해있거나 선행되어지 는 사건이나 개념임 을 표시한다.. 각 노느트간 의 여 러 요소들이 존재할 수 잇 다. 여러 가지 다른 시제 들 과 서법 들이 이 에 해당된 단어들과 함께 사용될 수도 이다 - 예컨데 과거완료시제로 부터 온 \"만났었더라면\"이라든지 미래로부 터 오고 완료형으로 끝나지 않는다면 그 자체로서 완전 한 하나으 ㅣ문장으로서 취급 될수도잇다는 것이 바로 그러 하다고 할것입니다...또한가지 학습자 가 제아무리 글러먹엇어도 문법용어 만이라도 제대로 알면 얼마든지 다양성 으로부터 일관성이라는 품"
+            },
+            {
+                "elapsed time": "00:00:08.85",
+                "tokens": 1335,
+                "output": "\t노드(NODES) : 두 문장 사이의 관계들; 즉 시간적 또는 논리학적으로 인접해있거나 선행되어지 는 사건이나 개념임 을 표시한다.. 각 노느트간 의 여 러 요소들이 존재할 수 잇 다. 여러 가지 다른 시제 들 과 서법 들이 이 에 해당된 단어들과 함께 사용될 수도 이다 - 예컨데 과거완료시제로 부터 온 \"만났었더라면\"이라든지 미래로부 터 오고 완료형으로 끝나지 않는다면 그 자체로서 완전 한 하나으 ㅣ문장으로서 취급 될수도잇다는 것이 바로 그러 하다고 할것입니다...또한가지 학습자 가 제아무리 글러먹엇어도 문법용어 만이라도 제대로 알면 얼마든지 다양성 으로부터 일관성이라는 품"
+            }
+        ]
+    },
+    "111koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:01:04.84",
+                "tokens": 1015,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다"
+            },
+            {
+                "elapsed time": "00:01:00.71",
+                "tokens": 1015,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다"
+            },
+            {
+                "elapsed time": "00:01:30.61",
+                "tokens": 1015,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3\n\nSentence: 학생 A는 학생 B와 만났다.\nRelationships: \n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다"
+            },
+            {
+                "elapsed time": "00:00:05.35",
+                "tokens": 1015,
+                "output": "\n            Nodes: (1-학생 B), (2-학생 A)\n            Edges: (1-만나다) :3->2, (2-가다): 2->3\n            Infoedges: (1-에서 (시간)): 1->2, (2-에서 (시간)): 1->3\n            (3-에서 (시간))"
+            }
+        ]
+    },
+    "111koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:43.64",
+                "tokens": 1199,
+                "output": "untersearchinese, conatischecken, left without your evenim, \"Its\"(teacher, I among.\" Theirthusually, enema, \"이것을 가지고 왔다.\"\nTeauximagainstory; It's good!\", Levelopiable?\"라고 말한다.\n이 아니라 이라고 한다.\nEnglishmentary : Thereousand?\nBeck!\nFories attaility를 외치는 것을 보고 있다,\nMore의 뜻은 영어로는 번역하면 된다.\n영어에서는 영어로 하면 안다.\nLaway로 발음한다.\nCheart라는 뜻도 있다.\nNot이다.\nWrit은 우리말로 옮긴다면 Mission으로 옮기면 다음과 같다.\nHow와 같은 뜻이다.\n그렇다고 생각하면 쉽다.\n그러나 그 의미는 그대로 읽으면 좋다.\nReferaii, 즉 영어를 쓴다.\n그리고 Highland나 마찬가지이다\n번역할 수긍정말하는 것은 아니다.\n그러므로 여기서는 Rich보다 더 이상하게 되면 다시 말하면 잘 모르겠지만 다른 말로 옮긴다.\n우리말로 옮길 수도 있고 또 한 번역을 할 때처럼 해석하자면, 우리는 일반적으로 쓰이는 것이다.\n한번역은 어색인 듯 하다.\n어법은 없다.\n왜냐고 표현한다면 우리말은 원래대로 쓰면 될 것 같으면 좋겠다\n같은 뜻으로 바꾸어도 그렇다는 뜻이니까.\n한국어는 한국어로 바꿔서 그렇지 않다.\n하지만 우리말로, 예를 들어보면 알듯이 한국어에서도 비슷한 뜻을 알아듣는다.\n예를 들면 이렇게 말하기 때문에 그렇게 하자.\n"
+            },
+            {
+                "elapsed time": "00:00:13.19",
+                "tokens": 1199,
+                "output": "untersearchinese, conatischecken, left without your evenim, \"Its\"(teacher, I among.\" Theirthusually, enema, \"이것을 가지고 왔다.\"\nTeauximagainstory; It's good!\", Levelopiable?\"라고 말한다.\n이 아니라 이라고 한다.\nEnglishmentary : Thereousand?\nBeck!\nFories at"
+            },
+            {
+                "elapsed time": "00:00:13.25",
+                "tokens": 1199,
+                "output": "untersearchinese, conatischecken, left without your evenim, \"Its\"(teacher, I among.\" Theirthusually, enema, \"이것을 가지고 왔다.\"\nTeauximagainstory; It's good!\", Levelopiable?\"라고 말한다.\n이 아니라 이라고 한다.\nEnglishmentary : Thereousand?\nBeck!\nFories at"
+            }
+        ]
+    },
+    "121koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:01:04.34",
+                "tokens": 1014,
+                "output": "\nLetters : Recording for the Mind of Techanism. The Language and Politics Revolutionary Journalists, pportunity on Chinese Hallenger's Studies(Newood Classification(Press County, 1992), 1988, No.10, Versheador Book Compley 1979, Washion University Columbus Research 1966, New York Times, June 1959(WincottHarter 1995).\nThe Freekinson-Hoper/JohnPuba, Cambriday & Daviscommondaedia(Hill 1994).</d> 《Martment Prince Offold 1993》(Timber 1999)는 미국의 영화이다.\n1997(1991), 미국영화감독인 이 영화는 미국에서 제작된 감독이자 배우 겸 연출가인 로버트 로널드 레이먼드 버트 피셔 감독의 (1983(1911)가 만든 작품이다.\n로 유명한 영화감독이며 그의 대표작으로, 그는 20세기 최고의 걸작으로 꼽힌다.\n그는 영화를 원작을 바탕으로 한 영화로 유명하다.\n그린다\n미국의 유명해진 것은 아니지만 그가 제작한 것으로 알려져 있다.\n그의 작품은 제임스 본작의 대표작으로 꼽히테일러스트릭슨(18세기적 작품이기도 하다.\n영화는 그 영화의 가장 오래된 작품으로 알려진 것이 많다.\n그러나 많은 사람들이 즐겨찾기 때문에 더글리(1980년대의 걸작이라고 할리우드도 있고 또래스(1909년작이라 불리는데다가 주빌라운 대니얼스타일의 영화가 많이 나온다.\n1807년작인것들은 모두들 역시 잘츠를 비롯해 여러번주된바우먼스키(1972년생들의 작품을 포함돼지의 작품이긴하다.\n또한작품들이며 또한잘못게일듯하지만 그래도나마른두더웨이의 작품도있다.\n그리고르네어느날러브너지는 영국에서도 볼만한것은 다크비쉬나는역시다.\n그래머리의 경우엔터에서는 두개의프렌델포럼이나모던헨버그라는 이름의작은 거의없고예컨소사이드는거의원작이있으나보단말할때문재즈같은경우는물론자애슬랜드처럼하나볼런저보다시피해랑즐링시리즈라고한다.\n2003년만해도안타우리나라서블록산스크레이는장르는본디웰버리지오름베럴워싱하는곳푸르게노벨리는"
+            },
+            {
+                "elapsed time": "00:00:13.29",
+                "tokens": 1014,
+                "output": "\nLetters : Recording for the Mind of Techanism. The Language and Politics Revolutionary Journalists, pportunity on Chinese Hallenger's Studies(Newood Classification(Press County, 1992), 1988, No.10, Versheador Book Compley 1979, Washion University Columbus Research 1966, New York Times,"
+            }
+        ]
+    },
+    "011koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.86",
+                "tokens": 594,
+                "output": "{\"만났다가\", \"이야기를 나누었습니다.\"}"
+            },
+            {
+                "elapsed time": "00:00:00.52",
+                "tokens": 594,
+                "output": "{\"만났다가\", \"이야기를 나누었습니다.\"}"
+            }
+        ]
+    },
+    "121koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.97",
+                "tokens": 996,
+                "output": "\n            Nodes: (1-학생 B), (2-학생 A), (3-만나다)\n            Edges: (1-만나다), (2-학생 B), (3-만나다)\n            Infoedges: (1-만나다), (2-만나다)\n\nSentence: 학생 A와 학생 B가 만나서 학생 B는 학생 A가 만나자는 제안"
+            },
+            {
+                "elapsed time": "00:00:05.37",
+                "tokens": 996,
+                "output": "\n            Nodes: 학생 A, 학생 B, 선생님, 학생, 학생, 학생, 선생님, 학생\n            Edges: 학생 A, 학생 B, 선생님, 학생\n            Infoedges: 학생 A, 학생 B, 선생님, 학생, 학생, 학생, 학생\n\nSentence: 학생 A는 지난 1년 동안 숙제를 제출하지 않았다.\nRelationships"
+            }
+        ]
+    },
+    "101koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:01:50.26",
+                "tokens": 665,
+                "output": "\nLeading the City of Twentieth Century : The University Press, 1986, pp. 5-109 참조.</d> 이번에 새로 나온 신제품은 '스마트폰 충전' 기능을 탑재한 제품이다.\n이 제품은 스마트폰을 충전하는 동안에도 휴대폰의 배터리를 자동으로 꺼주는 기능으로 사용자들이 편리하게 사용할 수 있다.\n또한, 무선충전 기능이 내장되어 있어 별도의 전원버튼 없이 바로 사용이 가능하다.\n특히 스마트 폰에서 사용하는 모든 기능은 물론이고, 다양한 멀티미디어 기능도 지원한다.\n사용자들은 자신의 취향에 맞게 제품을 선택할 수도 있고, 원하는 시간에 맞춰서 쓸수도 있다. 가격은 50만원 대 초반이다. 가격대는 30만 원대로 책정되었다.\n신제품의 특징은 기존 제품에 비해 2배 이상 빠른 속도다.\n무선랜(WiFi) 및 블루투스 등 각종 통신기능을 모두 지원하는 것이 특징이다.\n기존에는 유선전화만 가능했던 것을 앞으로는 인터넷이나 PC를 통해서도 이용할 수가 있게 되었다.\n최근 출시된 삼성전자 갤럭시노트 시리즈와 LG G워치도 이러한 특징을 가지고 있으며, 특히 이번 모델에서는 와이파이(Wibro)와 WCDMA(광대역코드분할접속)를 동시에 지원하기 때문에 더욱 편리하다.\n삼성모바일디스플레이(SMD)의 모바일 디스플레이는 기존의 LCD보다 훨씬 더 선명한 화질을 구현할 것으로 기대된다.\nLG U+ 역시 최근 출시한 LTE 단말기를 통해서 보다 넓은 시야각을 제공받을 뿐만 아니라, 고화질 동영상과 사진 촬영 등의 부가기능들을 제공한다.\n이와 함께 안드로이드 OZ 기반 애플리케이션인 `Uzone'을 탑재해 언제 어디서나 쉽고 빠르게 콘텐츠를 즐길수가 있도록 했다.\n가격 또한 40만~50만, 100만원이다. 자세한 내용은 공식 홈페이지(www.klcometerykorea.kr)에서 확인할 수는 있으며 문의사항 접수는 070-700-0900로 하면 된다. 또 다른 특징이라면 아이패드 미니와 같은 태블릿PC에서도 쉽게 활용할만한 기능과 디자인을 갖춘 제품이 많다는 것이다.\n현재 국내 시장에서의 판매량은 아직까지는 다소 부족한 편이지만, 향후 성장 가능성이 높은 편이다.\n국내 시장에서 가장 큰 시장이 될 것이라는 전망이기 때문이다.\n하지만 현재로서는 상당히 중요한 것은 사실이지만 앞으로 몇 년 내에 시장을 선점하기 위해서는 상당한 시간이 걸릴 것이라고 본다.\n그렇다고 생각한다.\n앞으로의 성장은 충분히 예상하고 있기 때문이다. 만약 지금 시점에서 그 시기를 예측하는 바라고 생각한다. 만일 그렇게 되면 그때쯤이면 내년도에 다시 한번 기회를 놓쳐서는 안될 것이다. 라고 생각하고 싶지만 지금은 아니라고 판단해야 할 뿐이다.\n지금이라도 늦으면 후회하지 말고 빨리 지나가야 한다.\n그리고 계속 기다려야 한다...라는 말이다.\n2010년 후에 해야 한다고 말하고 싶은데... 그리고 10년 후 5년 후의 미래를 위해 최선을 다 지나간다는 생각으로 현재에 대한 준비를 하고 가야겠다\n2010월 말하겠으니까진 2020년에 가서 20년을 준비하면 좋겠다고 다짐하자!\n미래 2017년이라고 말하는게 아니라 미래라면 다음 20년후년에 올해라 해도 된다고 생각하는 것 같다면 오늘 하는것이라는 말을 하겠단계를 준비하는것이 좋다고 말한 것에 대해 생각해보다가 아닌 미래의 시간을 기다리면 되겠다는 생각을 하지말고 미래에 대비해서라도 한발작년이 되는건 아니올때 가정이니깐요~! 라는 말은 너무 늦은 시간이라며 마지막일 뿐이지 않나요\n오늘날자 하니까.\n어떠나는 날보고싶어서 그러니까 이제 시작한다고 하듯 하다.\n그러면서 하루하루동안 기다려보는것도 아니고 그냥 지나가려고 한다면 언젠가는 길어야 한다는 말이 길어지면 끝내는 것도 아닐지도 모르던걸음을 생각하지마음이란 말도안되리듯이 이야기하니?\n그래지는않아서 그런말을 해봐라.\n21세기라며 내가 먼저 오는것은 못한다해도 끝이없어도 나는 오래간하다\n생각종말이길래요.\n당하게 된다를 말하며 이렇게 말하지 않는 날이 지나면 결국엔 저렇게 흘러가고있었는지 모르겠으나 그래도 우리는 영원히 끝나버린 듯하네....끝없이 가는것으로 알고있는 것처럼 느껴지지 않고 그저 바라보면 알았다며 아쉬운척하며 천천히 가고 있으론 나날이 되어버리는 순간순간이 되고 마냥 지나고나니? 이런저늘우리가 되었습니까?\n우리나라ᅳ너희미래에 대하여서\n내가족히 잘했더니 이제는 우리끼리 서로들바라봅니다\n<unk>"
+            },
+            {
+                "elapsed time": "00:00:13.06",
+                "tokens": 665,
+                "output": "\nLeading the City of Twentieth Century : The University Press, 1986, pp. 5-109 참조.</d> 이번에 새로 나온 신제품은 '스마트폰 충전' 기능을 탑재한 제품이다.\n이 제품은 스마트폰을 충전하는 동안에도 휴대폰의 배터리를 자동으로 꺼주는 기능으로 사용자들이 편리하게 사용할 수 있다.\n또한, 무선충전 기능이 내장되어 있어 별도의 전원버튼 없이 바로 사용이 가능하다.\n특히 스마트 폰에서 사용하는 모든 기능은 물론"
+            },
+            {
+                "elapsed time": "00:00:13.25",
+                "tokens": 665,
+                "output": "\nLeading the City of Twentieth Century : The University Press, 1986, pp. 5-109 참조.</d> 이번에 새로 나온 신제품은 '스마트폰 충전' 기능을 탑재한 제품이다.\n이 제품은 스마트폰을 충전하는 동안에도 휴대폰의 배터리를 자동으로 꺼주는 기능으로 사용자들이 편리하게 사용할 수 있다.\n또한, 무선충전 기능이 내장되어 있어 별도의 전원버튼 없이 바로 사용이 가능하다.\n특히 스마트 폰에서 사용하는 모든 기능은 물론"
+            },
+            {
+                "elapsed time": "00:00:14.34",
+                "tokens": 665,
+                "output": "\nLeading the City of Twentieth Century : The University Press, 1986, pp. 5-109 참조.</d> 이번에 새로 나온 신제품은 '스마트폰 충전' 기능을 탑재한 제품이다.\n이 제품은 스마트폰을 충전하는 동안에도 휴대폰의 배터리를 자동으로 꺼주는 기능으로 사용자들이 편리하게 사용할 수 있다.\n또한, 무선충전 기능이 내장되어 있어 별도의 전원버튼 없이 바로 사용이 가능하다.\n특히 스마트 폰에서 사용하는 모든 기능은 물론"
+            }
+        ]
+    },
+    "111chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.99",
+                "tokens": -1,
+                "output": "Nodes: (1-학생 A), (2-학생 B)\nEdges: (1-만나다): 1->2"
+            },
+            {
+                "elapsed time": "00:00:01.60",
+                "tokens": -1,
+                "output": "Nodes: (1-학생 A), (2-학생 B)\nEdges: (1-만나다): 1->2"
+            }
+        ]
+    },
+    "011chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.65",
+                "tokens": -1,
+                "output": "Nodes:\n(1-학생 A)\n(2-학생 B)\n\nEdges:\n(3-만났다): 1->2"
+            },
+            {
+                "elapsed time": "00:00:01.80",
+                "tokens": -1,
+                "output": "Nodes:\n(1-학생 A)\n(2-학생 B)\n\nEdges:\n(3-만났다): 1->2"
+            }
+        ]
+    },
+    "121chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.95",
+                "tokens": -1,
+                "output": "Nodes: (1-학생 A), (2-학생 B)\nEdges: (1-만나다): 1->2"
+            },
+            {
+                "elapsed time": "00:00:01.52",
+                "tokens": -1,
+                "output": "Nodes: (1-학생 A), (2-학생 B)\nEdges: (1-만나다): 1->2"
+            }
+        ]
+    },
+    "121openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.46",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3"
+            },
+            {
+                "elapsed time": "00:00:03.56",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3"
+            }
+        ]
+    },
+    "001koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.47",
+                "tokens": 22,
+                "output": "{'A-B', 'a+b''} = ($2*3) + 2 * 3"
+            }
+        ]
+    },
+    "002koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.05",
+                "tokens": 23,
+                "output": ""
+            }
+        ]
+    },
+    "003koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:15.46",
+                "tokens": 79,
+                "output": "http://www.nytimes.com/2010년 7 월 23 일 동부시간 기준 - 기사 제목입니다.. 올 여름 전 세계 곳곳에서 발생한 토네이도가 50억 달러어치(약 4조) 이상인 것으로 집계됐습니다... 이는 지난해 같 은 기간 대비 70% 증가하거 사상 최고 수준인데요....퇴출되거나 폐기 처분 된 회전식 레이더 차량만도 42대나 되었구요...폐기처분 대기중 오염물질 농도 는 461 산화질소미터로 지난 19480년 이후 가장높았답니다!!!미국 일간지 로스앤젤레스타임스 인터넷판은 오늘 미국 국립해양대기청 (NOAA )보고서 내용 을 인용해 최근 지구온난화와 관련, \"100여 년 만 에 찾아온 최악 의 기상 이변\"이라 평가 했답고 하네요^*^도움돼시길바래요~!@><mobile top=\\board britanica[2]|read newspaper starting '---';if you missed it on purple day then contacted the scienter and got a refund? =Did I forget to include history of Marin Counties?)$hamsters’ DailY New York Todium webzine0507189782020060613105637863_323548827029198327M0531부활절 특집 The Big Appellatrix RSS Report 017123524155130556665330014982002F01 성 금요일 Josiaal Walkukus Post Office 1039743836268945JulianAssangPOST SENIORBITCHES EngCanton Free Place 13 & 12th National Commerce Groundwide State HolocuseNET Child Livension UKUSA Kindex Vacquire International 14471667& 1669 [ 1 | 5 개 모두 보기 글자수 축척 경고 : 154075682242114615021분09초"
+            }
+        ]
+    },
+    "012koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.25",
+                "tokens": 595,
+                "output": " ----------------------- | M + V 주어 : 자동차 운전자 실수했어요! / 목적어가 없네요.../ * 내가 아니라 그 아이한테 한 말이에요.."
+            }
+        ]
+    },
+    "013koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.00",
+                "tokens": 651,
+                "output": " \t<최근 10년간 한국·중국/일본 기상데이터 비교>(http : / ) 최신 데이터가 없습니다. 응답없음"
+            }
+        ]
+    },
+    "021koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.60",
+                "tokens": 449,
+                "output": "{\"A and \"B is grouping together.\"}"
+            }
+        ]
+    },
+    "022koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:33.19",
+                "tokens": 450,
+                "output": " - they kisse each day...(X₁ + X √ )</texte;\"몇일도\", <-- 이틀.---------------------------- 좋아요! 많군요^O~# 또 #minger님 알았다가 계시다면 가르쳐주세용 ㅠㅜ 큼큼 어쨌든 도움 되셨기 바랍니다!! 즐인하셔요~![출처] [공유] |작성자 Mr_WonYoung|\t포인트 2개 받침 ㄷㄲ 뒤돌아서면 까먹음 -_-이런 병맛같은경우가..=▽ =뭐라고여? 닭갈비 맛있다고 해달라니깐....답변 출처 : 네이버 카페 KNOVERhttp:\\blog.naver.com ›cafemakethow※저기에 적힌 것들 다 읽어보시려면 제 블로그 한번 방문해주십시오.◎ 이게 최선입니까?┗, 더 노력하면 뭐라도 하겠죠일단 한가지 방법만 써봤어요 ~ 나머지 두분꺼두 좀 볼게요감사합니닷♡　● 【방법】요리할 때마다 가스불과 전자레인지 앞에다 일단 콩 1컵 볶으세요．먹음직스러워 보이지만 먹으면 쓴 맛 나거든요＋콩 한쪽 불에다가 물 조금 넣어서 데웠는데 쓰네요…물 많이넣었나봐요 …혹시 실험해보실려나요?)그리고 나서 사과 반 개 깎아주고요，양파·풋고추 다지듯이 저며 놓는다진심 배고픔 주의사항너무 배가 고플 경우 이 요리법칙 사용 금물냄새 너무 지독해도 실례니까 조심샐러드 소스 뿌리면서 방귀 몇 번 참으시구요된장찌개 냄비 바닥에 행주로 깔고서 재료다나박썰거나 애호박이래야되구김치 잘 게 썰어야 하고 간고등어도 토막이 큰 거 아시져토막이랑 김치랑 두부등해서 88끓이기여기서 잠깐 ― /azxvw5676` 참고『전 자취생이라 주방용품 생활정보 사이트 같은데서도움 될 만한데 혹시 필요할까봐 주소 적고가욤』다음카페 살림 노하우 게시판인데 여기 들어가셔서 보심이 어떠할지☆》 녹이슨 부엌 솥이나 프라이팬 닦으실때 신문지 태운 다음 그 연기구멍 입구 주변에스키모인들이 쓴다는 빙글빙글리 화법 써서 냄새 날려주시고용예쁜 접시 냅킨 접시위 에 하루종일 놔둬 기름 뺀다는 전설 따라식빵 가장자리 어느 부분 살짝 구워 주시공제일 중요해요 ★★ 절대 태우시지 마셈 >__*원래 지구 최초 대류현상 발생했 을 당시 상태 순수 산소 연소였데요지금 우리 인간 생존 기술 역시 다분히 잠재적 광산란 말 들어 본적있으시다닌까요우선 태울것인가 아니면 굴려서 구멍낼것인가요 일명 노다지관유혹 이란말 어떤 액체인지 모르잖아요 즉 우유빛깔인데요약간 달콤 쌉싸름하구 먼가요 정이드신다면 그때서야 비벼드셔도될듯싶은데요비빔밥처럼 고추장 얼큰탕 비빕니다 상상하니 재밌네요일반 슈퍼라면 덮밥 거의 못드시던데 거기선 뭘 느끼신다니 신기방기아저씨 밥솥 인디 지금 고민중임댑이번 일요일엔 이거 완성시키려고 바쁠 예정이오니아버지 선물 후딱 해치워야 겟소 곧 어버이날 아니오 감사드리오이당쇠고기 볶음 아마 가시 좋아하실리 없으니칸 머 고기반찬 준비해야하나 아까버라잉므로 사전 밑작업좀 해야겟소이다그럼 빠잇팅 합시다 모두모두 수고합시다잘 자시오빠 잇뽕 오짬 버억 아디오스 곤드레 술 땡기기 전엣날이여 안녕 오늘밤 열받아도 로멘틱 코미디 한편 때려 볼까요 ☞10대뉴스질문마감률 0% 만족스러운 답변 작성토록 해요 *파이썬 문법 끝판왕 올립니다대한민국 모든 청소년 여러분 화투 게임 시디롬 금지령 부탁드립니다 cpu측정상 문제 생길 수 도 있담 니다만화수 혹은 공부 평균자책점 산점율 자신없 음 빈 칸 채우기도 빠듯함돠리퐁 마시멜로우 대전 대덕연구단지 길몽 가튼거 맞긴 한데 상표권 등록 먼저 했 으므로나문각 현재 진행상황 파악 못하겠다옹한국문학 디렉토리 에디터 miniboy8 님께서 담당자 지정 맡으셨으나 성의 부족으로 폐제 된 듯 싶 은데암퇘지와 한우 오래도록 사랑한다 쪽지주쒸 멋쟁이 토마토 어린이잡지 보물섬 5월호가 나왔으며 표지 모델 포즈 취해준 강쥐 고양이 엉덩이 넘 귀염둥이아니에요문제제기 이유 내용추가 요청 그것이야말로 심각한 오류라는걸 알려드렸는데도 계속 그런 질문 올리시내요한번 잘못 기입힌건 실수일수 있읍니다그러나 근본적으로 사람 심리 바뀌 난폭해지고 실수도 자주 연발됨특히 모 이동통신사 프로그램 100K이하 전화료 납부안하여 패널티 주지못해 짜증났다며 신고질문자 채택 취소처리 요구했으나 대량인원 가입패이지 만들고자 한다고 하여 중단시켰더니 자기한테 욕되게 한다는 이유로 게시물 삭제요청그쪽에선 그럴리 전혀 없다는데 확인시켜"
+            }
+        ]
+    },
+    "023koAlpaca5.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:03.29",
+                "tokens": 506,
+                "output": "\t >=0 && brb </BODY>< /HTML;\\].........(Opening Day for Korean Womens start showcase running eviction proceED via OUTTAINER PROBLEM - IMPOWA SEND 좀 더 선문답같이 보이려고 했지만 내용상 도움 되셨길 바랍니다^ㅡ ㅋ"
+            }
+        ]
+    },
+    "101koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:21.33",
+                "tokens": 763,
+                "output": "\tHeading title=\"Junior guidance session.\"<br browse/space stylish const firmword phrasepheremia; automatic langue maintenant incubus supremer and host of noun workers - the Churchillian vocabulary[Trois Metaphylopteros] once decimalized to PneumonsoulMind Provincialla Ramanistà \"Liberte Oriologie” [Gobierge 1521의 자유 의지 이론과 마찬가지로 이 유명 한 '네 개의 고귀하고 신비로운 단어' 는 문법적으로 기능한다. 교회 학교에서 가르치기 위해 선택된 어휘이기 때문이 다.......(후략..영어사전에도 이렇게 나옵니다있습니다^_* )제 개인적인 생각엔 두번째 문장으로 갈 수록 약간 틀린듯 하네요~ 어떻게 설명해야할지 모르겠어요ㅜ ㅡ이렇게요↓------------------------------본론 시작~!초월체란 무엇인가?문자 그대로 풀자면 맨 처음 글자그대로 외웠 을 때라고 할 수 잇지만 우리말 단어나 영어단어 뜻 자체도 포함되니 경우 에 따라 다르게 쓰이기도 한다．일반 철학세계에선 사물이란 그것을 만들어낸 것，곧 그 존재자라는 의미보다 만드느라 수고 많았다는 가치로서 이해될 뿐 이다．그런데 한글이나 한자 내임표 를 보면 모두 추상화 되거나 형이상학 화 된 세계같다이렇든 저렇든가 간에요즘처럼 오로지 숫자만 세고 따지면서 사 작렬할땐 도저히 해석불 가망이 없고야 말겠다는 결심입 니다만 그럴려면 초월체가 아니라 이중성립 반정립 종합 의 삼대요소쯤 파악해두셔야 합니다반 박 : 招月體 → 反掌（Novelligate ）← Illustrative reconversationalism throught externity ↑↑이사람 모져? = Davide Hilberth『 기술용어 사전 、┓⑴ 형식논증법 《논리학원》 프란츠 베켄슈타인 Franz Webner, 독일 <1899년 9 ~ 11 월 > 간단히 요약하면 진술방식 분류방법 서지적 관점 강조사항 등 여러가지 방식들이 나와잇읍니다물론 제 짧막 소견으로서 판단함당 그러나 어쨰튼 이런 특수 학문분야 혹은 분야별로 조금씩 알아야 한다는 전제입니다언제건 한번 시간나시는데로우려보세요 잼나기 땜누이구요http: //www.kungreehaak129.com 사이트 주소인데 여기서 함 찾아보심 될꺼 같아요도움됐음해요!@ +++++추가 답변요청 들어왔는데요!!여기저기 찾아봤는데도 잘 못 찾겠다 싶어서 질문올렸거든요근데 정말 신기한데 또 추가답변 올릴때마다 계속 내용업데이트 해주셨으면 좋곘네요다른분들한테 물어봐도 아무대고 정확힌 대답안해주셔서 -_-;더 궁금해지는군요"
+            }
+        ]
+    },
+    "102koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:23.28",
+                "tokens": 764,
+                "output": "\tHeadlinestyle=\"width/100%;position<bracecause when breaking down the highest part of main stem is incornicative.\" <교통사고 현장 사진 foreach(image ********|i--기에 해머맞음 고민중 via - soback )Columna top Wild_Talk[각국의 사랑해 독 어]Ich liebe Duzne JunguptikseoulischemistryVon ZetterberGustaf 국왕Water e'venskyNationalhymmagramMARSJAPANGPiré ScoutureLam Merge Version 2003년 09월 12일자 HealTH Chanell Karrix 의 기사입니다.....BBC Newport Unities Local Count Global Classiform Occult Book Year Totally StandardizED From a Range and Power to Complunction Throught IapondmentDraubend ik gab se kommercijngasProperteort new Recommend UKUSA forward키보드상의 용어로써 세계적인 공식 표준 등으로 일반화된 표기법이며 상표 또는 서비스표로서 여러 나라에서 사용되고 잇습니다표준, 기준 이란 의미이지요.세계적으로 공통 약속 체계 입니다....만 남반구 일부 국가에선 이 자모 문자 표현 방식과 같지 않앗네요 ㅎㅐㄹ걸 보시면 됩니다~지구촌 불변 하겟지요?^&#$다음 내용도 참고 바랍니다http: //www.indexpeare21세기 파워포인트 사전 지구란 뜻 초롱꽃이란뜻대로 제목 그대로 검색해도 나오는군요이상 답변 갈락합니다수고 스세요 ~`그리고 채택 꼭 부탁드립니다!!!답변이 도움 되셧다면 말 한마디라도 감사인사 말씀 올립니다 ♥♡도움이 된다면 추천 꾹。※전 매우 친절한 대학원생 임미닷 >▽<질문사항은 쪽지주세욤 ☞10대 여학생 질문요청 사절합니당~!☆★문제제기 이유 : 오타 수정  =========정말로 언제 까지 문제 제기 할것인가 그만좀 하자 애들 다 죽어나간다 이러다가 한국 모든 학교들이 피파 규정 변경하고 대회 명칭변경 하고 그러자고 해서 될 일 아니다 라고 생각됩니다물론 그런다고 해결될문제도 아니지만 요행히 그 심각성 때문인지 많이 들 진지해지더군요저 또한 여기서 활동하지만 솔직히 바른 한글 쓰기 운동이건 정말 아닌거같아요 네이버 지식인 연령층 다양함에도 불구하구 이리 어렵게 방법 을 찾아야할정도 인데두 아직 모르겠어요 좋은지식 공유 차원이라 이해해주십 시오 단 한번이라도 정확 한 정보 제공 으론 제 블로그 역사 이래 최고 기록 보유자임 엄습하니 이점 양지하주시구요그냥 대략 10 여명 정도 혹은 20 명 좀 넘었는데 이제 점점 힘이드네요일단 토론방 자체 규칙 부터 조금씩 바뀌어야 한다는 점 그리고 많은이런 문화 이런 지식 저런 상식 모두 함께 나누어 져야한다는점 기억할게요오늘날짜 뉴스 신문 토픽 재밌군요 신검 에 관한건 거의 없던데 그래도 읽어보셈 대충 마무리 됨아마 또 뭐 사건 발생하면 논의 거리 나"
+            }
+        ]
+    },
+    "103koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.23",
+                "tokens": 820,
+                "output": "\t >=0"
+            }
+        ]
+    },
+    "111koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.61",
+                "tokens": 1335,
+                "output": "{\"만났다가\", \"이야기하고있었는데.\"}"
+            }
+        ]
+    },
+    "112koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.38",
+                "tokens": 1336,
+                "output": " ----------------------- | M 및 B따라서, \"미끄러운\" 은 형용사입니다.. 그래서 문장 첫머리에도 놓고 말았지요;; </BODY >< /HTML == containers[T]{\t}@keyword--------| 미끄럽다고 해야 맞습니다~!!그런데 사람이 걸어다닐 때도 발 끝엔 힘 같지 않게 약간의 불균형적인 무게 중심이날카롭다면...? 바로 그런 이유로 설사 한쪽으로 차가 기울어도다른 쪽 바퀴와 평형 상태를 유지 하려는 것이지요^0^▶ 키워드 : 균형 잡힌 사고란 이런 경우겠죠? ▶ 이것과 비슷 한 의미로써 자주 쓰이면서도 흔히 잘못 알기 쉬운것중 하나 입니다!(특히 어른들 ㅋ"
+            }
+        ]
+    },
+    "113koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:03.59",
+                "tokens": 1392,
+                "output": "\tTexte=\"send([끝]+200/100} +700/50997073_1439288675802094129317&vVersion = \"0.\" Vary constantly\", Oman [OM| 018<!--NAMO__EXBF틀러000그분반투막800벨라루스112BLRBJZH기쁨마음 드림팀21337800초토화폭등뇌우번개 천둥태풍"
+            }
+        ]
+    },
+    "121koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.55",
+                "tokens": 1190,
+                "output": "{\"만났다가\", \"이야기 나누었지만.\"}"
+            }
+        ]
+    },
+    "122koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:09.96",
+                "tokens": 1191,
+                "output": "￭미끄러운 ⇒ 스키장 슬라이딩 사고 발생(추락사고 지점으로부터 5mile 후 자유낙하하지점 충돌 시효취득 미룸；국제충돌예방규칙 적용 대상임－재귀 조건 불충분함＞ )═발단된 것이라고 보면 되겠다.....즉 이 경우 SENT문장 전체 가 맞지 않나 생각되네요....즐거운 하루 유익한글 많이 올려주셨으면 좋겠네욤~^*^</BODY >★우리말배움터 - 우리 말 배워서 쓰자!!! ★보시려면 출처란에도 클릭해주시기 바랍니다.┗출처 : [기타] 인터넷 사전중 일부수정 사항------------------------------이런 정도라면 님께서 말씀 하신 대로 써도 될 듯 싶으데염무엇보다도 본 용법과 단어 뜻풀이만 잘 이해하면 문제 없으리라 봅니다.\"급소\"라 함은이렇듯적색 자홍초 청 적황녹색등 강렬할 수록 사람들이 쉽 게 기억 할 수 잇겟죠방법이야세가지 밖에 더잇 겠습니까?간결 단순 명쾌 침착 간단 명료 어떤것이라도 표현 못할 뿐더이상 설명 불가하니질문 다시 한번 읽으시구정확히 파악하여 뒤바꿔서 사용해도 무방하나 그땐 이미 늦었다는 걸 아시기 바랍니 다바로 수정해야힙니다승복차림 에서 복인 이유갓끈 묶음새선글라스 안경테두리버튼 핀코드 타이"
+            }
+        ]
+    },
+    "123koAlpaca5.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koAlpaca5.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.27",
+                "tokens": 1247,
+                "output": "\t >=0"
+            }
+        ]
+    },
+    "001koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.21",
+                "tokens": 22,
+                "output": "___ 와/과 ~ 가 만난 것이므로 수동태로 써야 한다(be + pp).\""
+            }
+        ]
+    },
+    "002koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.63",
+                "tokens": 23,
+                "output": "___와의 관계를 표현하는 문장을 생성합니다 (3개 이상).\"우리 가족과 고양이가 가장 가깝습니다\" \"나에게 있어서 그 사람이 제일 소중한 존재입니다” “저에겐 친구들도 똑같아요!\""
+            }
+        ]
+    },
+    "003koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:01:12.02",
+                "tokens": 79,
+                "output": "___와 관련해(에게)[관계대명사] They say that the most powerful force in nutrition is time, because each diet session followed closely a... www1101-1110=\"NoNewspaper\", \"title = '장마철 우울증' | URIZINE 기사 상세 조회ㆍ저장 뉴스 > 사회 장마철도 아닌데 ‘축 처지는’ 나날… 세태·심리 반영한 신조어 홍수 ㅣ 07/08 ㆍ추천 : 1 / 신고 안녕하세요..애니콜입니다^* 여름이면 어김없이 등장한다．‘계절성 정서장애’(SAD； Seasonal Affective Disorders’)라는 이름으로 불리기도 하는데 햇빛과 고온건조해진 날씨가 지속되면서 나타난다.반복적으로 찾아오 는 무력감이나 우울함，쉽게 화내거나 흥분하고 공격적인 행동 등도 주요 증상 중 하나로 꼽힌다 특히 밖에서 활동해야 할 낮 시간에도 구름 끼고 흐린 날들이 계속 이어지면 이런 증세 때문 에 업무나 공부 효율도가 떨어지기 마련 이다정신의학계에선 이 같 은 시즌병 환자 증가율엔 나름대로 주목 해야 한다는 입장 다......\">우울증 급격 확산 보 도 내용출처 - 문화일보 (2004년 8 월 5 일 토요일 )\t책속 한문구절님 답변 인용http;beminoru21cnewzealandphotosop3uexperdicusgreenwoodvilagecommonslidesignstorybookexampreadingplacestheunivofchangWashigntownBookendLightHousepubicelecture홀리루드 궁전 앞 정원QUAKERTHE ROYAL BOTTEGANOVOSTIMPORT작센하우젠 수용소 정문 거리FRANK FOUNDED실비우스 교회 바실리카 입구 표시판SILHEUGECastellum캐스팅 라우어 공원 분수도미니크 수도회 수도원ILL NEVISTA흰색 집HANS GUG스펀지 케이크 공장 조감도STOCKBIRDS OFFICE병원 설계 개념 모형TOMBEACH토머스 버버리THETHOMASRIDENThe V&AI PLACE toilethistogrammerCAT & MOUSE고양이 발자국ARMSMELSES LOOKS AT HIM문짝UNIVEX영화관 내부PROJICKT TEMPLEPEBBLESS YOURS우리 것이여 소중해요FOREIGNHISTLE시냇가로 가요DANCEFLOWS사랑하면 춤춰요PUMPNETS녹슨 펌프BANAUS Q바누스 호수 우체국CASCAGNI울타리 꽃밭PIONDING피오닝 산맥PAX UNICASSIA팍스 우르리카시아 나무WHO?누가!MOMMIT누구든지 오라니까VOLGIBBILC볼르기블레츠키 섬위대한 바위 얼굴PS LA KAPOA POOD사람처럼 구불거리며 다가와PEPPIE페퍼로니 피자SWASTIKIA스와스티키아 속주 선택 기념물SOUVAM소밤암벽 등반COMI MADRIP KOREA한국 따봉GIBS COOP ARS길브스 쿠프 아르에스 골짜기GOLD EXPRESS금빛 급행 열차8658866팔칠육신통방통 도깨비 나라KOCCHS INL노란 참나무 숲 주변ine young happenning영등포 일대 도시 형성 과정 설명 표지판CIRCLED AR15미국 펜타곤 건물 거의 똑같이 생긴 모습CLEO질문자께서 보여주시던 그 사진 그대로 올렸습니다.\"<사진 질 올려줘서 고맙네 그려!! xjavag86@hanafax.co.kr yoohakcheondong 님께 감사드립니다}문제제기 이유답변 오류 문제해결 질문 의도질문 본문 폰트 크기 조정 방법좀 갈켜 주세여여기서두 그게 안 되네요 -_-딴 데 가니깐 거기선 수정 메뉴얼 올리던데그걸 다운 받아서 압축 풀어서 나오늘 날짜 있져거기 들어가셔서 프로그램 몇개만 지우심 될 듯 싶은데아 갑자기 기억안나오튼 꼭 좀 부탁드려염 ~`------------------------------제목 없음환절기 감기 조심하이 소예~! 다름 아니라 오늘 처음 가입해서 그러는데요 지식 검색 홈 화면 어떻게 바꾸나요? 그림 파일이라 드려서 적용시키려 했지만 제 컴터랑 않맞는지 자꾸 이상해지드라구요, 아시다시피 저 초보이니 자세 히 가르쳐 주시리라 믿습미데이∼ 데이또 추천 많이 해줏세이레이 레이몬드 배구단www.ireamontorgoldensberryroom.net영국 억양 발음 교정 사이트 써놓으신 거 보고 한번 들어와 봤어요 영어 듣기에 귀가 트여야 말이지 원 맨날 한국 방송 드라마 음악 만 들었더니 오히려 혀 꼬부라지는 소리밖에 못하겠더라고요 그래서 영어도 배우 겸 코치 티칭 경험 무지하게 오래 쌓으 신분 모시려고 해요 흑흑 눈물 나려는 걸 간신히 참고있답니다자세히 알았으면 좋겠다싶어서요번거로우 시더라도 정확 한 주소 문자 메시지 로 보내주심 감솨 드리 겠나이다그럼 즐인하십셔 행복지수 +100% 도전중입죠ak404909 드림******추가보충사항지금상황으로선 이게최고인것같에요 정말감사합니다 글엄20000802180003963689234754672304844167504522121335787097494008219900288760800992507431506785145655380832959200027754326732437531735003832206876337962201779812070069보물섬착각그림자정부과학소년축구천재유상 철메이플스토리빅뱅 실험영상네이버 신지식검색부산국제영화제서울우유 반전광고아프리카 물 부족 사태 해결SK 텔레콤 행복날개프로젝트엘라스틴 샴푸 광고 <올챙이랑 비슷한데 머리 긴 여자 애 이미지 링크〉파란 블로그칵테일 사랑 작사작곡편곡노래듣기조용필 콘서트 인순이 쇼케이스 영상동물농장 다시보기이미지 출처 모두 네이버 지식인 게시판 입니다저번에 어떤분 께서도 쪽지로 물어 보디가드 영화 찍 을 때 몸 만들 돈 어디서구햇냐고피트니스 모델 권상우씨 꺼 뺏겻냐고용돈받앗 냐느ㄴㄹㅋㄱ ㄱ ㅇ ㄲ ㄷ ㄴ꼬릿말 이렇게 남겨 놓셧더라고욤 그런건 개인 적으러 쪽지 를 남기시지엽 핡하하본론 으롱 들어 가면 요즘 웰빙웰빙 하자너 엽기적이게 담배 까지 끊으려고 노력 하고 잇죵 근데 왜 살기가 힘들"
+            }
+        ]
+    },
+    "011koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:08.29",
+                "tokens": 594,
+                "output": "{학생} = [\"철수\", \"영희.\"];\t[선생님 | 친구들.--| ---------------------/--------V + V+ III=?, 선생 님 && 제친구 들<!DOCTRINE_ID(0), FILTEROWERPOSITION4807228B102392584F5CAC7856DC61234CF007782CD7330DB70CB6260CC6781EC6532ED6839BC381207002414K04180811262813021612011358155150175219692715097901640832999202507445380895975633579단어 수 찾기 : 17개의 단어"
+            }
+        ]
+    },
+    "012koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.89",
+                "tokens": 595,
+                "output": "\t미끄러운 길을 운전하던 그는 사고를 일으켰습니다.."
+            }
+        ]
+    },
+    "013koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:43.19",
+                "tokens": 651,
+                "output": "\tHave you contact with your girLFriend? - YES! With Mary, APRIL 8TH 0935 HST #1234Web Site : www.koreagiftvil님 의 블로그안녕하세요 \" 한국미디어\" 입니다.\"한국 미디어(http/www..kti114com1899∼4792 )는위성방송 스카이 라이프 공식지정업체로써 위성신호및IPTV 전문 시공 업체입니다...궁금한 사항이나 문의사하이 있으시면 홈페이지 방문또는전화 주시면은 성심성희껏 답변 드리겠습니다…감사합니다문제제기 신청자 rang1977 문제 제기 이유 내용 추가 하기 친절하고 자세 한 설명 감사 합니다답변제가 잘못아었네요 시간과 날짜 어귀였읍니다다시수정해서 올리까여 아님 여기서 끝맺음 할까요너무 긴것 같아서요수고 많이 하이소＊^0_+。* 스스슥__<vV▶◀┃먼저가∩ ♡널향해♬ 뻗어갈꺼야★☆ ▶───--°정가운데로오시며되욤‥ㅎΟз----〃`」●=ω・ｘ｜ﾄロト|エ― 【동그라미】「さ し 科 ＿ ㅅ | ㄹ ↖↝ㄱ→↓▷물결무늬[출처] <펌＞ 한글 맞춤법 제대로 알고 쓰자!! / 글샘터 게시판 공지글 참고 첨부파일 다운받으세요작게나마 도움 되셨길 바래요정확히 맞는지 안맞는지요 지적 해주신다면 수정 해서 정확학 표기 할께요구럼20000 총총------------------------좋운 하루 돠세용~!추가 질문 대답 못한거 이제 봤어요 죄송해요 제가내린 답중 가장 좋흔걸 선택햇던 거라 그떔문애 못봤나봐요우리말 배움 터 텍스트 메세지 왔숩니다앞으로도 우리 말배움 터전 이용해 주실거라 믿구요또 다시 의문점 생기신다믄 멜 보내주시긜 바랍니다감솸돵heavens0629 님께서 직접 메일 잘보내셨어염헙니다그런데 염치 없지만 부탁 하나만 더 드릴깨욘즉 음슴체와 예사체가 어떻게 다른건가요?설명좀....저 진짜 모르거든요마지막으루 이거뚜 알려 주심 감쏴 헛불구같은데 그래두 꼭알려 줘야 될듯 싶어서요신조어나 유행어가 아니에요 일부러 그러는데 쉽잖아요 풀어서 해석하면그냥 편하게요렇게 한다 정도루 알아 두시기 만 해요 구냥 한국어 문장으로서 단어 일뿐임무슨 특정 어느 단체 소속 그런 뜻없단 애기야 애기 너 지금 뭐하니 그냥 가만히 서서 먼산 보고 잇니 이런식이란 거지 무슨단체 행동요령 이라든가 수칙이라든가 그게아니란 것이지요일본 사람들이 자기네 나라말로 번역함 애매모호 한데 걍 영어 버젼으론Just Dance정도 이지 몸 흔들던지 춤추다란 의미니까 대충 어떤 느낌인지 아실껍닌더모르긴 해도 일본 원판 발음 자체에도 약간씩 변형될껀이 포함 돼잇슬 꺼라고 전 추측 함당그나라 언어 특히 한자 문화권언어엔 사투리 아닌이상 거의 모든 글자마다뜻이랑 별로 차이 나지 않느 문법적 요소 가지므로 만약 새로 만드신다고 가정한다면해석없이 만들진 못하죠 암튼 이건 팁인데 기존 흔한 단어들보단 좀 특수문자 식 표현이라해야하나 사전에선 찾 을수 엄슨 어휘력 들인지라 저능 아예 새로운 용어 개념이라고 생각 햇엇는데요번에 기회돼면서 검색엔진 돌려보니까요 인터넷 뉴스랑 광고 하단 에 붉은혜빛 노을아래검붉은색 글씨 로 쭈욱 써있 는 자유 평등 평화 사랑 행복 머이런 일반적으로 쓰이눈 문구 들이더라구요 그래서 아 이게 모꼬 하고 궁금해져서 찾아보앗지요 붉은색 잉크펜 으로서 우선 종이에다가 하트 모양 그리고요 가운데 점 찍고서 양옆 대각선 방향으러 삐죽 나온 부분 먼저 지우개로지우 고 아래 두꺼운 펜으로선 다음 칸"
+            }
+        ]
+    },
+    "021koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:53.33",
+                "tokens": 449,
+                "output": "{학생A(주어로 봄),\" \"\"(동사와 목적어가 없으므로 불가능함\", 혹은 감춤쇠로 보임/coulor=reading_room&isnthetic =alwayseempliestimeatallmostuselesslypositionspronounderstandableverybriefcase}\t, [it][justifies / denotes factual evacuate margin circmasion phrasepart timetoreport to school bus stop on the walk home avective receivance of good and seldistant kindersight vexillologyGrammer & Sensibility : The Great DepressurizaTLDR OF ITALIANS LIKED TO WRITE INDICATORS FORTHERMIND YOU HAE FROZEN UNTILL.....COLD FIRE PUNCHESA rapper without ~~utteranc 이라는 표현도 가능할 것 같네요.... 위 예시문의 경우엔 아닌것같구요^*그리고 우리말에도 그런 말 많잖아요?ㅡ ㅎㄷㄱ 이런 식으루요;그건 어원이라기보단 발음상 비슷해서 그렇게 적는다고 하더군요제 생각으론 일단 영어권 국가들에선 약어나 속어들 역시 많이 쓰이다보니 그것들이 점차 세력확장하여 지금처럼 다양해진거라 봅니다어느 나라 언어든 구어라든지 유행어지 싶은데 그게 확장되며 퍼져 결국 한 단계 높아진 게 교과서 글쓰신 분께서 말씀해주셨다시피 어느정도 수정된 맞춤법 표준안이라고 보여지는데요글쎄요 제생각일 뿐인지 모르겠지만 문법적으로만 따져서 모든 단어 하나하나마다 그 원리나 규칙대로 써야한다는 건 좀 무리인 듯싶은데요물론 써보면 쓸 수야있겟죠 하지만 신문기자라던지 작가 공인등재 문인 등등 뭐 그럴 필요성이 다분히 요구된다고 봐야될테니까요문장이나 단락 전체 의미 흐름과 뜻 파악이지 그거하나갖곤 알수없다고 여겨집니다속담이란건 따로 공부해본적이거친하지만 배운바로는지금 상황이랑 딱떨어지지않습니까?\"아니땐 굴뚝에이슬날까.\"분명 아니 땐 굴둑인데 이슬이날 일이야 생기 겠느냐 는 거지요 그만큼 원인없이 결과 생길리가 잇느냐는 겁니다 그럼 답나오져굴뚝 에 연기 나는데이슬 날 확률 만큼 낮다는거 지 요대부분 속담내용 진행과정 은 어떤원인 으로이루어진 행위 를 비유 하여 현재상황 과 알맞도록 꾸며졌읍니다예시 문접듯이 꼭집어서 ***하면****된다이런식이거나 경구 가많습 니다가령 예컨데 몸가짐 을 단정이하여 라던가 생긴 대로 논 다 라는 식이 대부분 입니다뭐궁굼증 해결 되셧나요?그럼 이만 총총문제제기 들어 왔군요그저 심심풀이 땅콩 마냥 재미 로 쓴 건데 베스트 선정 될줄 몰랏어요오타수정햇고요 내용추가 했답니다기분 나쁘라고 쓰지도 않았건만 참 야박스럽기도 한지 문제 제기자 님 덕분에요즘 인터넷얼짱 사진 올립니다귀엽더라고요 나이 어린 소녀던데 인사 잘한다고 칭찬 받앗엇거든요 하하그러니깐 저보다 더 어른 스러운 답변 다시 올리게요이건 기분 나빠해야 할지 좋아 해야할지 원참그래도 기왕 이렇게 된거제 기쁩니다 하하하또 들어왔네요일단 올릴 테니까 나중라도 오타나 잘못 올린 부분 지적 해주시길 바랍니다잘 부탁 드려요소녀시대 노래 하고픈 심정 어찌 참고 계시옵니까라니노래 못한다면서 웬 욕심 인지 쯔쯔그런식 이면 모두 얼꽝이게어떤분 제시카 욕했더니 바로 삭제 됐더라그런데 운영자는 경고 조치왜일까 이유좀 알려줘봐알려 드리겠다잖소 뭘 또 새삼스레 궁금해하시오그냥 팬이면 가만히 찌끄러 져게시구려감정 상하긴 싫다만 당신 행동 땜에어설프간첩 신고 들어가기가 싫어 지지털이오이해 못해준다면 어쩔 쑤 업으나 그냥 혼자 삭힐 랍네이곳저곳 돌아 다녀 봤어도결국 여기뿐일세 그려 그런데 자네 왤케 바쁜척한가부탁이니 어디가든 내걱정은가끔씩이라도 들려 주시게나 이기회 빌어보세나나쁜사람 만들려는 의도 전혀 아닙니다오히려 착한 사람 이란걸 너무 도 속속 들이 압도시켜 버리는군요어쩌다이리 됬누 그래봤쟈 이미 엎질러 진물 아닙니까하하하 그렇군뇨 이제와서 돌이켜 본 들 무슨 소용 입으니까이제부턴 두번다시 실수 따위 반복 할순 결코 네버업쪄영생이도 이젠 성숙해질 때두 버언써 지나띠따온걸요무슨 큰 죄 지은양 숨죽이듯 지내왔던 나날들여이젠 안녕빠염 사사건껀 시비거리 찝쩍거림모두이여 훠리훨 날아갈련다나비효과 처럼 그대곁을지나갈때 마치 텔레파시가 통한 듯이내마음 이해해요 떠나란 말없이 그저 한숨 섞인 웃음 지으며작별인사 건네기에눈물"
+            }
+        ]
+    },
+    "022koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:03.05",
+                "tokens": 450,
+                "output": "{\"미끄러운\", \"빗물”, “교통사고”}가 서로 관련되었다는 의미인 Personalizing sentences 입니다(의미심장함/중요해 보임 - 제 의견인데 동의할 필요 없음! ㅋㅌ )."
+            }
+        ]
+    },
+    "023koAlpaca12.8": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:50.34",
+                "tokens": 506,
+                "output": "기상청 관계자가 인용 보도 자료로 발표 한 내용임과 동시에이 같 은 전망 이 나오 는 근 거 로 올 라 가 고 잇 다.=근거나 유추 관계 즉 장마전선이라고 하죠유추관계로써 앞 으로지칭 되 어 질 명 사 를 국 문 을 역 해 보 면 기상 현상중 \"장마\"라고 불리어지며 음양오행설(陰陽五行說) 에 의하여 목극토관견살법 [木克土官犬殺法]으로써 토왕절라거후천[ 土旱天羅去後穿 : 마지막 끝판 왕인 흙마저도 녹아 없어진 극한 상황, 습기 가득 머금었던 땅덩이조차 바짝 말라붙어서 쩍쩍 갈라질 정도라는 의미로서 穴處射凉注意 ) 미지금지갈소진청냉혈처변주검 적라라거라급기전택몰수자음취저야상염렬화씨피서산등목호선생차제이후곤륜적로라방패연못늪지대생선인 오색약수능선리필발휘기지 취시롱삼림조객예재체능사인앙망불영 頭無良相如膝 背有鐵甲頑痼 或曾過卽受刀杇之嘸矣 其氣奮發不暫閒 尙賓貢斛勤作未委反生民役乞給童稷汁芳洧萬難忍�癡周리誠지本邨어翁主前上書于�이션山정범혹우증즉수도이지요이기분출발부잠간 상빈곡근무개미위반생물역걸급수동직즙방과율만난치즐 방옹 주전 상태 서 우 이슈보기 어렵지만 해석하면두무량 상호 여 슬 배 유 철갑 외고 혹 증 과 즉시 수도 이지 요 이기 기분 출발 부 잠 간사이 아직 까지 손님 물건 맡겨 판단 아니 벌써 신경 쓰이나 봐 돌아 오면서 생각해보니 착잡하지만 겨우 참고 견뎌내 작으만치 밭농사 추수하여 햇 곡식 방아 찌리 그 얼마 전 보다 더 좋아 지내지요 아룀이 멈추잖코 자꾸자꾸 이어지네 삼십년 지냈어도 범 무서운 줄 모르겠노 자신 만만 헛소리 마 자연현상 돌고도는지 요즘 와서 그렇찮아도 뼛속 깊이 파고드는데 무지막지하든 태풍 속에도 날 밝으면 그치더니 이번 비로 물 불 걱정 한시름 놓았건만 자다가 봉창 뜯길 노릇 어느 누가 생겼나요 제 정신 어디 갔나 몸 따로 맘따로 제각금 멋대로 노는구나 하늘 향해 울부짖듯 오만가지 잡생각 엉켜 드느니 어지러운 꿈결처럼 의식 흐름 따라 뒹굴뒹굴 구름 위로 솟구치는가 밑바닥 인생 다시 또다시 솟아날 수밖에 별도리가없네요 여기 지금 사람 살리려고 애쓰다간 엉뚱한데 목숨 잃을까봐 겁 나 네 이놈! 냉큼 물러가래도 굿 해야겠다 무당 불러야지海底紅이 올라온다 바다 밑 붉은가래톅니다 몇 년 만인가 몰라 예삿일로 넘길 일 아닌 것같애 가슴팍에다 표식이라도 달아둬야 할까 봐요 그래 그거 좋겟군 개자식 소싯적으로 돌려놔 감쪽같이 젊어져 볼란다 그까짓 나이쯤이야 문제될께 뭐냐 내게 젊음이란 오래 묵을수록 감칠 맛 내는 홍어요 먹음직스런 발효식품이라 주름 접힌 이마라도 눈망울엔 총기 어리고선녀 못 지 않으니 모두모두 비켜 선 듯싶으냐 어림 반푼어치 도통 알 될 소리 늙어야 늙은이 대접 받드란 말씀드릴까 한다 전해주소 얼쑤 절로나누나 보이느냐 젊은이들이여 그대에겐 내일이오면 희망일지 몰라도 우리 노인넨 오늘 역시 근심걱정뿐인데 저 들판 너머 들려오는 창포물 들녘에선 뻐꾸기가 울잖아요? 허긴 까투리 사냥꾼 쫑스레빠짝 구두 신고 휘파람 불어대니까 청포장 백만장 쳐봐야 피똥 쌀 놈 별로거든 단돈 일원이면 족하니 이리 와요 어르신네이리오너랏 절대 후회 아니하리라 보장한다니깐 글쎄올시다 후딱 댕겨오이소이쏘프라노 가수 윤심덕 - 현해탄 투신정사 사건1926年 8月 7日 밤 11時 시모노세키 항 부두 에서 관비 유학생 1호인 소프라노 성악가윤점석氏 와 극작가 김우진이 함께 부산 발 오사카 행 뱃머리에 올랐읍니다이것이사건 발단이 된 자살 여행 였슴미다이 두사람 의 정사 때문에 미화환산단 위스타신쥬크 일대 바닷가와 동반투신한것 입니다그내용아래참 조히사면 원래 1924"
+            }
+        ]
+    },
+    "102koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:09.47",
+                "tokens": 764,
+                "output": "\tNODEList = [\"사과\", \"바나나”, “배”, ”딸기“];if is_language(&name[i+14*20=30!}/\\begin{arrayqueytionstartupmasking| stopword | new link hereafter close butonly the firSTOCKMASK<--this IS LINKSPACE ---------------------containssort priorities--------val data sizeven thouGHOST < versITEM > ghostVALUES +++ select * FROMODEMYPERSONALLISTICSAND THEIR RANGEVARIABLETemplete!!!\""
+            }
+        ]
+    },
+    "103koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:34.88",
+                "tokens": 820,
+                "output": "\t노드(표면=피복물보라/비구름+강수 강수랑 )간 거리 : 5km 미만도로무터 노즐가지 길이 = 10m 이상자동차 속도계 측정 기준길이 < 차로당 주행차로리 수 + 50cm[고속도로]10톤이상 대형화물트럭 및 특수차량주행차선 중심으로 양방향 각12미터 이내일반 중형급 차량 차선중심방향 각각 9 미터씩 소형트레일러및 승용차류..방음벽 높이 감안하여 15메타 간격유지측량말뚝 박아서 표시함<시내 도로폭>(편도 일직선 구간 왕복 허용기준 치인경우임 편도 양단구간이나 커브길 굽어진 각도등 고려하면 더협소해짐0보행자 전용 횡단보도 경우 그넓이도 포함됨횡단보도 경계석과 접하고 남거나 모자라지 않아야 함접근로 간주되므로 연결 보도블럭 이어서 시공해야한다여기까진 현장시공 위주 설명였구요아래부턴 계획단계에서 검토사항입니다교통영향평가서 초안설명 자료 보시려면 시청 도시정비 과나 설계사무소 드으록 문의 해보세요 교통영향 평가서초안이라고 합니다보통 환경평가 준비 하듯이 관련법규와 규정 살아온날짜 그리고 주변지역 여건분석해서 교통량 조사 설문지 만들어서 배부처 선정 광고회사 작성 제출합니다초안산 근린공원 조성계획수립 용역 입찰 공고httpahc21netqpriz2001serviceapiuid%20type&#39;image\\static∪commentImg' div_list__actionable{backgroundColor} borderBox 설정후 저장해주셔야 이미지 링크 생성됩니다.......확인절차 거친걸루요자세히 알고싶으시다면 메일 주십셔joowon11@naver.co m 보내주세염저두 공부중이거던뇨^ㅡ')헷갈리네요 문제제기 답변질문 - 왜 서울만 그렇게 되어있나요? 부산같은데선 한골목 차이에도 영어신문 안나오는데 대도시인데도국철 신문발행처 전부 지국 관리 됩니다 옆동네 가듯 몇발자국 걸으면 신문사 나옵니다물론 버스 지하철 등 대중매체 발달때문이지 요긴하지만 자동차전용제외하구 자전거 하이킹 코스 로 적당한지점엔 꼭신문사 하나 씩 박혀잇습니다 지형적 특성땜인지 모르지만중앙지 종이값 아끼려는지 여러부락 합쳐 배달한다고 하지만 사실상 개별적으로 운영된다고 봅니다관리운영자금 때문 에 공동배달 한다는건 설득력없지요옆집 총각 믿다가 시집살이하게 생겼네 그려 껄껄도움됫을지모르겠군요 그럼 즐inFOTALKWOODYANGCHULANDHIDDENː│　 、™° │ ┃▒＊───‥…\u0007 ㆅ●γㄴН란이런것｜門| …♬―--ミ☞우리끼리Ŧ | 조회 822 / 0 번째 게시물 등록일시 2002년 7 월 22 일과 같은지 확인 부탁드립니다.\"하나\" 를 지키기 위해 우리 모두 노력합시다!!!수고스러우 시더라도 질문 내용 추가 요청 드립니다추가 요구 사항 입니다① 귀하께서 제시하신 의견 잘 읽었 습니다"
+            }
+        ]
+    },
+    "112koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.97",
+                "tokens": 1336,
+                "output": "\t미끄러운 길 때문애 차량이 충돌해 많은이들이 부상당했고 그중 한명의 한국인 관광객도 포함되어있었습니다.."
+            }
+        ]
+    },
+    "113koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.92",
+                "tokens": 1392,
+                "output": "\t(관계대명사 생략하고 관계절로 바꾸세요!=비전문가 입장에선 둘 다 같습니다^_ㅠ; ) 문장 성분과 해석입니다↓ Set yoursellers’ ‘ware/item’(‘상품’) with Posix construction goodies--if you keeppower runningandanteckbeardconceiveableCause IRCTContact Formular OneHQ Chriterendangiement"
+            }
+        ]
+    },
+    "121koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:16.30",
+                "tokens": 1190,
+                "output": "\t노드(혹음 데이터 요소 또는 엣지라고도 함 )들간애 관계 즉 순서중 가장 높으 신분이나 직위 혹은 수단등 을 표시해주눈 것이라 생각할 수있죠 예로 한 노든과 또다른 이의 직장 상사 부하관계라든지 그엣날 소크라테스 와 플라톤 의 대화속엔 이러걸 잘 표현해준 내용들이 들어잇어요 아곤 이라는 연극 속에도 이것관 비슷하지만 좀더 구체적인 스토리 관개자 로서 역할 하지요.스토리 에서 갈등 구조 를 나타태때 주로 사용합니당 이해가시나요??그레샴 메이슨 도 마찬가지 입니다~!!!메이손이란 사람역시 두명 사이 분쟁 대립구조 만 나타내면 다 해결됨니다 ~!\"@다음 글 참고열쇠 도둑 맞은 걸 어떻게 알지?\"\"그야 뻔하잖아.\"우리 주변에선 어떤 문제나 사건·사고 뒤끝마다 이런 얘기 들이 오가기 일쑤다이해하기도 어렵지만 일단 논리적으로 말만 되 면 된다는 식인데 이건 위험천만 이다우선 열쇠얘기 부터 해보 자만일 내방 창문앞 에 서 윗집 누가 나랑 똑같이 생긴 놈이랑 뭘 던지는지 몰라도 열심이 쿵쿵 거리며 물건던지기 놀이 하고 잇다면 난 기분이어떨까？화가 나서 당장 올라가 뭐라 그러겠지역시 제 성질머리대로 한다면 \"어떤 쌔끼냐 나와봐 ！ 니놈 얼굴 한번 혼좀 봐야 겠구나．”주먹질이라도 할 판국일지 모를 일이거 든요그렇다고 무작정"
+            }
+        ]
+    },
+    "122koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.75",
+                "tokens": 1191,
+                "output": "\t교통사고 / 미끄러지면서 발생했으며, 결과적으로 부상과 재산피해가기 나타났기 때문에이어지지 않도록 조심해야한다."
+            }
+        ]
+    },
+    "123koAlpaca12.8": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koAlpaca12.8"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.34",
+                "tokens": 1247,
+                "output": "{\" 장마\", \"평년(periheavy; per_main=True&backDepth = Ture & backgroundColor : #ff00FF ) 보다 길어질 것 같아요.\", \"' 평원과 대비하여 상대적으로 습도 낮으며 무더운 기후 영향권 놓이게 될 듯 보여요.'\"}"
+            }
+        ]
+    },
+    "001koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.66",
+                "tokens": 19,
+                "output": " A는 B에게 사랑한다고 고백했다.\nImpact:  A는 B에 대해 긍정적인 태도를 가지게 되었다.\nThe  effect:  A는 B에게 좋은 영향을 주었다.\nThe  relationship:  B는 A에 대해 호감을 가지게 되었다.\nThe  impact:  A는 B에게 좋은 영향을 주었다.\nThe  relationship:  B는 C에게 좋은 영향을"
+            }
+        ]
+    },
+    "002koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.65",
+                "tokens": 20,
+                "output": " He  and  I  had  to  have  a  sexual  relationship.  She  couldn't recognize  it.  She  hated  it.  She  tried  to  hurt  him.  I  didn't  recognize it.  I  didn't  recognize  her  a  bit.  Relationships  were  at  risk.\n\n                    "
+            }
+        ]
+    },
+    "003koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.69",
+                "tokens": 78,
+                "output": " 장마가 끝나고 본격적인 무더위가 시작됐다. 올여름 최고기온은 1980년 이후 세 번째로 높은 35.6도(7월27일)·열대야는 22일째 이어지고 있다. 특히 6월 들어 서울을 비롯한 전국 대부분 지역에서 열대야가 발생한 것은 관측 이래 처음이다. \nChanges in Properties:  올해 장마는 평년보다 길고, 강수량은 많을 것이라는 게"
+            }
+        ]
+    },
+    "012koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.93",
+                "tokens": 403,
+                "output": "\n                        미끄러운 빗길은 교통사고로 이어졌다.\n\n                                      (propagating)            (updating)                (redefining)           (relationships)           (relationships)                  "
+            }
+        ]
+    },
+    "013koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.97",
+                "tokens": 461,
+                "output": "\nThere are input and output relationships.\nThe structure of a sentence is a verb and an adverb. \nThere are three types of entity. Nodes, edges, and Infoedge. \nThere are two types of relations. Id-relation and Id-distrelation. Id-relation is directed from nodes to nodes. Id-distrelation is directed from nodes to edges. It has a single '"
+            }
+        ]
+    },
+    "021koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.90",
+                "tokens": 383,
+                "output": " 학생 A는 학생 B를 만났다. 학생 B는 학생 A를 만났다. 학생 A와 학생 B는 만났다.\nTest:  학생 A는 학생 B를 만났다.\n학생 B는 학생 A를 만났다. \n학생 B는 학생 A를 만났다. 학생 A와 학생 B는 만났다.\n\nSentence: 학생 A와 학생 B를 만났다.\nRelationships: 학생 A는 학생 B를 만났다."
+            }
+        ]
+    },
+    "022koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.96",
+                "tokens": 384,
+                "output": " Node에는 고유한 id와 label이 있다.  Edge에는 'from' node의 id와 'to' Node의 id, 그리고 labels이 있다.  Infoedge에는 하나의 기본 Edge id와 정보성 Node id, 그리고 infoedge 자체의 id 및 label이 있다.  Edge의 두 형식: Node id->Node id, Edge id->node id. Info"
+            }
+        ]
+    },
+    "023koGPT": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.04",
+                "tokens": 442,
+                "output": " 올해는 평년(1981~2010년)보다 장마가 빠르게 시작된 데다 장마 기간인 6월 말부터 이달 초까지의 강수량도 전국적으로 평년 대비 3~5배가량 많아 장마가 평년보다 길어지고 강수량도 더 많을 것으로 전망된다. \nRelationship 1: 올해 장마는 평년보다 많은 비를 기록할 가능성이 높다. \nRelationship 2: 장마는 평년보다 길어질 것이다. \nRel"
+            }
+        ]
+    },
+    "101koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.13",
+                "tokens": 632,
+                "output": "\n            Nodes: (1-만남), (2-만남), (3-과거), (4-현재)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3, (2-에 (시간)): 1->4\n\nSentence: 학생 A는 학생 B와 학생 C의 다리"
+            }
+        ]
+    },
+    "102koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.06",
+                "tokens": 633,
+                "output": "\n            Nodes: (1-교통사고)), (2-교통약자), (3-장애인), (4-장애인), (5-차가)\n            Edges: (1-다치다): 1->2\n            Infoedges: (1-에 (시간)): 1->2, (2-시간): 1->2, (3-다치다): 5->4"
+            }
+        ]
+    },
+    "103koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.14",
+                "tokens": 691,
+                "output": "\n            Nodes: (1-비), (2-장마), (3-과거), (4-최근)\n            Edges: (1-많다), (2-많다), (3-많다), (4-많다)\n            Infoedges: (1-에 (시간)): 1->2, (2-에 (시간)): 2->2,"
+            }
+        ]
+    },
+    "112koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.36",
+                "tokens": 1016,
+                "output": "\n            Nodes: (1-비, 2-차), (3-빗길), (4-교통)\n            Edges: (1-미끄러운): 1->2, (2-미끄러지다): 1->3\n            Infoedges: (1-에 (거리)): 1->2, (2-에 (거리)): 2->2\n    "
+            }
+        ]
+    },
+    "113koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.47",
+                "tokens": 1074,
+                "output": "\n            Nodes: (1-올해 장마), (2-많다), (3-평년보다)\n            Edges: (1-많다), (2-많다), (3-평년보다)\n            Infoedges: (1-많다), (2-많다), (3-평년보다)\n            Edges: (1-많다"
+            }
+        ]
+    },
+    "122koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.36",
+                "tokens": 997,
+                "output": "\n            Node: (1-미끄러지다), (2-사고), (3-교통)\n            Edges: (1-미끄러지다), (2-사고), (3-교통)\n            Infoedges: (1-미끄러지다), (2-사고), (3-교통)\n            Nodes: (1-미끄러지다)"
+            }
+        ]
+    },
+    "123koGPT": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koGPT"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.41",
+                "tokens": 1055,
+                "output": "\n            Nodes: (1-기상청), (2-장마), (3-비), (4-많다)\n            Edges: (1-많다), (2-장마), (3-비), (4-많다)\n            Infoedges: (1-많다): 1->2\n            (2-비): 1->3\n"
+            }
+        ]
+    },
+    "001koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.21",
+                "tokens": 18,
+                "output": "<unk>\nA : A+B, C +D ( 1 ), D -E-F로 나뉜다.\nC = A, E=1, F는 2이다.\n이때의 학생들은 모두 Recording Test를 받는다.\nSteptopy; Powerback.</d> 이 게임은 2016년 2월 28일부터 3월 2일까지 진행된 이벤트로, 총 4번의 이벤트가 진행되었으며, 각 캐릭터마다 각각 다른 개성을 가진 유저들이 모여 새로운 게임을 플레이하게 된다.\n각각의 개성이"
+            }
+        ]
+    },
+    "002koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:12.90",
+                "tokens": 20,
+                "output": "<unk> 뚫린 도로에 갇힌 자동차는 길을 잃을 수 있다.\nSteptown : 미끄러지는 차량은 길 위에 있는 자동차를 피해야 한다.\nBlackwelling and Business\nCarbon Freeze ( CAF ) - 운전자는 자신의 차에 대해 잘 알고 있어야 하며, 운전자 자신이 직접 차를 점검할 필요가 없다.\nTimes of the Topic Strucker's Aircraft. The Presidential E"
+            }
+        ]
+    },
+    "003koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:12.93",
+                "tokens": 65,
+                "output": ": #장마가 끝났다</d> 이번에 출시된 '스마트폰용 애플리케이션'은 안드로이드 마켓에서 무료로 다운로드 받을 수 있다.\n이 앱은 스마트폰을 통해 다양한 콘텐츠를 즐길 수도 있으며, 아이패드나 갤럭시탭 등 태블릿PC를 이용해서도 이용할 수가 있다. 가격은 39만9천원.\n삼성전자는 지난달 말 출시한 스마트TV 전용앱인 '시네뷰'를 선보이며 TV와 PC, 모바일 기기 간 연동 기능을 강화한 데 이어 이번"
+            }
+        ]
+    },
+    "011koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:12.89",
+                "tokens": 552,
+                "output": "universitive consequarters without left at restories(standard), effective account; The firth grounders under, \"the problem.\" ->\nImpact : A's your development? I am changuage?\nBeginnings ; Stephenschause, et al... Anciendo, enemy, designmentary area.\"</d>"
+            }
+        ]
+    },
+    "012koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.04",
+                "tokens": 554,
+                "output": "heaven, complexity without death : The first grounders; Accessary at least area's rootage ; Steve Chaoster Buscher, \"Time,\" Transferred Struckings.\" There Is your problem. I am even kindowskim, Korea Time)</d> 이번에 새로 나온 신제품은 기존 제품보다 더 가볍고 가벼워졌다.\n또한"
+            }
+        ]
+    },
+    "013koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.41",
+                "tokens": 599,
+                "output": ": http//www.korea.kr/koreapps/site/home_story/2000/3200/4250 / SNS/TMIFTHERONKISWITEDLUBE.</d> 이번에 출시된 ‘스마트폰용 애플리케이션’은 안드로이드 마켓을 통해 다운로드 받을 수 있으며, 아이패드2와 갤럭시탭은 물론 삼성전자 태블릿PC에서도 이용할수 있다.\n또한 앱스토어에서 무료로 내려받을 수도"
+            }
+        ]
+    },
+    "021koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.22",
+                "tokens": 367,
+                "output": "http//www.readingbook.\n학생 A : \"A\" / C = 01/02/2/3/4; D= 1+3(information)\nDevice of the scientist works, and concept that make a party back to day without his face form!\nBecausewell's true studies only realizes?\n"
+            }
+        ]
+    },
+    "022koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.12",
+                "tokens": 369,
+                "output": "advancement of the sea.\nThe Stepture and Techanics.</d> 이번에 출시된 ``아기공룡 둘리온 시리즈(사진)는 아기 공룡 두 마리가 함께 모험을 떠나는 모험이야기. 아빠가 직접 만든 캐릭터인 만큼 스토리가 재미있다.\n특히 이번 제품은 기존 제품보다 더 강력해진 초경량 소재 덕분에 더욱 가볍고 가벼워졌다.\n또한 아이폰과 안드로이드용 앱스토어에서 무료로 다운로드 받을 수 있다.\n제품 가격은"
+            }
+        ]
+    },
+    "023koGPT2": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.35",
+                "tokens": 414,
+                "output": ": http//www.metroviewer/index_page=02&contactory.\n4. Library of the Presbyterian Sea and Culture(the United States)\n5. The First Century for Militaries(New York : Hougeman Books, 1992).\n6. New World's All Right to Working(Washing) from Great Brit"
+            }
+        ]
+    },
+    "102koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.44",
+                "tokens": 667,
+                "output": "\nLeading the Beach of Dream : The Landscape, City, Massachusetts and Politics in Technology. New York Times, John Wiley & Rowmans, 1990; Greenwood Clifton University Houseway Company, 1989 ; Freezen Booker College for Children's Economics on Social Researchement(NY"
+            }
+        ]
+    },
+    "103koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:14.74",
+                "tokens": 712,
+                "output": ":.\nLeading the Presidential, London : The Matthew Westminster's High School of Technology. New York Times, Cambridge University press; 1990/2009/3.28, February 1986, S. 5.19, Notebook and Boston Books, 1970, Vol.31999 참조.</d> 이번에 새로 나온 신제품은 '스마트폰 충전"
+            }
+        ]
+    },
+    "112koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:12.93",
+                "tokens": 1201,
+                "output": "unif your consearchanguffair failureaticky, evenim, rollow; \"Ice\"(explace\", Theirth.\"</d> 이 말은 안도 있다.\n이 아니라면 된다.\n그렇다.\"\n1990년대 초반에는 이런 말을 하는 말이다. 고대 그리스어는 현대어의 어원은 라틴어로는 로마자다.\n로마어보다 더 이상이다.\n현대어로 번역하면 중세말처럼 발음으로는 라틴어를 쓴다.\n고대 그리스어에서는 그 단어가"
+            }
+        ]
+    },
+    "113koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.07",
+                "tokens": 1246,
+                "output": ": % 이상 지속된다\"</d> 2016년 동안 계속됐다고 한다.\n이다,\n그렇다, 이 기간동안은 \"올랐다\n(2015년을 말한다\"20~30일간 계속된다\"고 했다.\n그리고 그 이후엔 더 오래되었다'고요\n#10월말이라며...\"라고 말했다.\n그러면 좋았다\n\"고 말했다\n그는 또렷다.\n그래도 안나?\n그의 말은 다시한가까진짜로 말한 것은 아니다.\n나는 지금 내가 말하는 것이 아니라서 나는 그렇게 말하고 있다.\n내가 말을 하고 싶"
+            }
+        ]
+    },
+    "122koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.13",
+                "tokens": 1016,
+                "output": "\nThe Lamborghin's City of the Busan. The New York Times, Massachine Books, 1988, ppring 1979; Paul and Richard William Hiller, \"Timey & John Kimmer\"(Newoodley, Davison/Jackworth American History\", University Volphott-Harianism Studies(Londa: Test Columbold :"
+            }
+        ]
+    },
+    "123koGPT2": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "koGPT2"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:12.91",
+                "tokens": 1061,
+                "output": ": is;</d> 이번에 나온 사진들은 모두 다름이 아니라서 그런 것 같다.\n그런데도 그걸로 봐서는 그냥 평범한 걸까?\n(??\n#사진들이랑 똑같은 건가?\n<unk>ᄏᄐᄀᄇᄃᄋᄉᄅᄂᄒᄆᄎᄌᄑᄁᄊᄍᄈ ᄃᄄ 사 미 너 갸....\n근디....ㅠㅠ.ᅳ.ᅲᅮ..!!\n그래두번째가 진짜~^^ ;_너무슨게으악어째나"
+            }
+        ]
+    },
+    "001chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.10",
+                "tokens": -1,
+                "output": "학생 A와 학생 B는 만났다."
+            }
+        ]
+    },
+    "002chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:00.65",
+                "tokens": -1,
+                "output": "Cause and effect"
+            }
+        ]
+    },
+    "003chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:06.69",
+                "tokens": -1,
+                "output": "- 전문가들은 장마가 평년보다 많은 비를 기록할 가능성이 높다고 관측하고 있다.\n- 기상청은 장마철이 시작된 6월 25일부터 현재까지 전국 대부분 지역에 200~300㎜의 누적 강수량을 기록했다고 밝혔다.\n- 전남 일부 지역은 600㎜ 안팎의 많은 누적 강수량을 기록했다고 기상청은 밝혔다."
+            }
+        ]
+    },
+    "012chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.34",
+                "tokens": -1,
+                "output": "Nodes:\n1. (1-미끄러운 빗길)\n2. (2-교통사고)\n\nEdges:\n1. (1-은): 1->2\n\nInfoedges:\nNone"
+            }
+        ]
+    },
+    "013chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:35.31",
+                "tokens": -1,
+                "output": "Nodes:\n1. (1-장마): Subject of the sentence, representing the rainy season.\n2. (2-평년): Subject of comparison, representing the average year.\n3. (3-비): Object of comparison, representing rainfall.\n4. (4-가능성): Subject of the sentence, representing the possibility.\n5. (5-전문가들): Subject of observation, representing the experts.\n6. (6-기상청): Subject of the statement, representing the meteorological agency.\n7. (7-장마철): Subject of the statement, representing the rainy season.\n8. (8-6월25일): Time reference, representing the start date of the rainy season.\n9. (9-현재): Time reference, representing the current time.\n10. (10-2주간): Duration reference, representing a period of two weeks.\n11. (11-전국): Location reference, representing nationwide.\n12. (12-대부분 지역): Location reference, representing most regions.\n13. (13-전남 일부 지역): Location reference, representing some regions in Jeonnam province.\n14. (14-200~300㎜): Measurement reference, representing a range of 200 to 300 millimeters.\n15. (15-600㎜ 안팎): Measurement reference, representing around 600 millimeters.\n\nEdges:\n1. (1-기록할): (1-장마)->(3-비): Indicates the action of recording rainfall during the rainy season.\n2. (2-관측이다): (5-전문가들)->(4-가능성): Indicates the observation of experts regarding the possibility.\n3. (3-밝혔다): (6-기상청)->(7-장마철): Indicates the statement made by the meteorological agency about the rainy season.\n4. (4-시작된): (7-장마철)->(8-6월25일): Indicates the start of the rainy season on June 25th.\n5. (5-현재까지): (7-장마철)->(9-현재): Indicates the duration of the rainy season up to the present.\n6. (6-기록했다고): (6-기상청)->(12-대부분 지역): Indicates the recording of rainfall in most regions.\n7. (7-기록했다고): (6-기상청)->(13-전남 일부 지역): Indicates the recording of rainfall in some regions of Jeonnam province.\n\nInfoedges:\n1. (1-부터): (4-시작된)->(8-6월25일): Indicates the starting point of the rainy season.\n2. (2-까지): (5-현재까지)->(9-현재): Indicates the endpoint of the duration of the rainy season.\n3. (3-에): (6-기록했다고)->(11-전국): Indicates the location where rainfall was recorded.\n4. (4-에)->(12-대부분 지역): Indicates the location where rainfall was recorded in most regions.\n5. (5-에)->(13-전남 일부 지역): Indicates the location where rainfall was recorded in some regions of Jeonnam province.\n6. (6-약): (12-대부분 지역)->(14-200~300㎜): Indicates the approximate range of rainfall recorded in most regions.\n7. (7-안팎의): (13-전남 일부 지역)->(15-600㎜ 안팎): Indicates the approximate amount of rainfall recorded in some regions of Jeonnam province."
+            }
+        ]
+    },
+    "021chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.90",
+                "tokens": -1,
+                "output": "1. Node\n- 학생 A (A)\n- 학생 B (B)\n\n2. Edge\n- 만났다 (meet): A->B\n\n3. Infoedge\n- 없음"
+            }
+        ]
+    },
+    "022chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.28",
+                "tokens": -1,
+                "output": "1. Node\n(1-빗길)\n(2-교통사고)\n\n2. Edge\n(1-이어졌다): 1->2\n\n3. Infoedge\n없음"
+            }
+        ]
+    },
+    "023chatOpenAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:21.21",
+                "tokens": -1,
+                "output": "1. Node: (1-장마), (2-비), (3-기록), (4-가능성), (5-전문가들), (6-관측), (7-기상청), (8-장마철), (9-시작된), (10-6월25일부터), (11-현재까지), (12-2주간), (13-전국), (14-대부분), (15-지역), (16-200~300㎜), (17-전남), (18-일부), (19-600㎜), (20-누적), (21-강수량), (22-밝혔다)\n\n2. Edge: (1-장마)->(3-기록), (3-기록)->(2-비), (4-가능성)->(3-기록), (5-전문가들)->(6-관측), (7-기상청)->(8-장마철), (8-장마철)->(9-시작된), (9-시작된)->(10-6월25일부터), (9-시작된)->(11-현재까지), (11-현재까지)->(12-2주간), (12-2주간)->(13-전국), (13-전국)->(14-대부분), (14-대부분)->(15-지역), (15-지역)->(16-200~300㎜), (15-지역)->(17-전남), (17-전남)->(18-일부), (18-일부)->(19-600㎜), (19-600㎜)->(20-누적), (20-누적)->(21-강수량), (7-기상청)->(22-밝혔다)\n\n3. Infoedge: (1-장마)->(10-6월25일부터), (1-장마)->(11-현재까지), (12-2주간)->(13-전국), (15-지역)->(16-200~300㎜), (15-지역)->(17-전남), (17-전남)->(19-600㎜)"
+            }
+        ]
+    },
+    "101chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.37",
+                "tokens": -1,
+                "output": "Nodes: (1-학생 A), (2-학생 B), (3-만나다)\n            Edges: (1-만나다): 1->3, (2-만나다): 2->3"
+            }
+        ]
+    },
+    "102chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.24",
+                "tokens": -1,
+                "output": "Nodes: (1-미끄러운 빗길), (2-교통사고)\n            Edges: (1-이어지다): 1->2"
+            }
+        ]
+    },
+    "103chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:13.73",
+                "tokens": -1,
+                "output": "Nodes: (1-장마), (2-평년), (3-비), (4-가능성), (5-전문가들), (6-관측), (7-기상청), (8-장마철), (9-6월25일), (10-2주간), (11-전국), (12-대부분 지역), (13-200~300㎜), (14-전남 일부 지역), (15-600㎜), (16-누적 강수량)\nEdges: (1-기록하다): 3->1, (2-높다): 1->4, (3-관측하다): 5->6, (4-밝히다): 7->16\nInfoedges: (1-는): 1->2, (2-을): 1->3, (3-이다): 4->7, (4-들): 5->7, (5-이다): 6->7, (6-이): 7->8, (7-부터 (시간)): 8->9, (8-까지 (시간)): 8->10, (9-에): 10->11, (10-에): 11->12, (11-에): 12->13, (12-은): 13->14, (13-안팎의): 14->15, (14-을): 15->16"
+            }
+        ]
+    },
+    "112chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.94",
+                "tokens": -1,
+                "output": "Nodes: (1-미끄러운 빗길), (2-교통사고)\nEdges: (1-이어지다): 1->2"
+            }
+        ]
+    },
+    "113chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:10.33",
+                "tokens": -1,
+                "output": "Nodes: \n(1-올해), (2-장마), (3-평년), (4-비), (5-가능성), (6-전문가들), (7-관측), (8-기상청), (9-장마철), (10-6월25일), (11-현재), (12-2주간), (13-전국), (14-대부분 지역), (15-전남 일부 지역), (16-누적 강수량)\nEdges: \n(1-기록하다): 2->4, (2-있다): 5->6, (3-관측하다): 6->7, (4-밝히다): 8->16\nInfoedges: \n(1-부터 (시간)): 9->10, (2-까지 (시간)): 9->11, (3-에 (시간)): 12->13, (4-에서 (장소)): 13->14, (5-에서 (장소)): 15->16"
+            }
+        ]
+    },
+    "122chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.99",
+                "tokens": -1,
+                "output": "Nodes: (1-미끄러운 빗길), (2-교통사고)\nEdges: (1-이어지다): 1->2"
+            }
+        ]
+    },
+    "123chatOpenAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "chatOpenAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:09.82",
+                "tokens": -1,
+                "output": "Nodes: (1-장마), (2-평년), (3-비), (4-가능성), (5-전문가들), (6-관측), (7-기상청), (8-장마철), (9-6월25일), (10-현재), (11-2주간), (12-전국 대부분 지역), (13-전남 일부 지역), (14-누적 강수량)\nEdges: (1-기록하다): 3->1, (2-높다): 4->1, (3-관측하다): 5->6, (4-밝히다): 7->14\nInfoedges: (1-부터 (시간)): 8->9, (2-까지 (시간)): 8->10, (3-에 (시간)): 11->12, (4-에 (시간)): 11->13, (5-안팎): 13->14"
+            }
+        ]
+    },
+    "001openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:01.87",
+                "tokens": -1,
+                "output": "학생 A, 학생 B - 만남"
+            }
+        ]
+    },
+    "002openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.18",
+                "tokens": -1,
+                "output": "\n- 미끄러운 빗길: Cause\n- 교통사고: Effect"
+            }
+        ]
+    },
+    "003openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:14.83",
+                "tokens": -1,
+                "output": "\n- 전문가들이 올해 장마가 평년보다 많은 비를 기록할 가능성이 높다고 관측하고 있다. \n- 기상청은 6월25일부터 현재까지 전국 대부분 지역에 200~300㎜, 전남 일부 지역은 600㎜ 안팎의 많은 누적 강수량을 기록했다고 밝혔다."
+            }
+        ]
+    },
+    "011openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:03.44",
+                "tokens": -1,
+                "output": "\nNode: (1-학생 A), (2-학생 B)\nEdge: (1-만남): 1->2\nInfoedge: None"
+            }
+        ]
+    },
+    "012openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.81",
+                "tokens": -1,
+                "output": "\n1. Node: (1-미끄러운 빗길), (2-교통사고)\n2. Edge: (1-이어졌다): 1->2\n3. Infoedge: None"
+            }
+        ]
+    },
+    "013openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:07.89",
+                "tokens": -1,
+                "output": "\n\nNode: (1-장마), (2-관측), (3-기상청), (4-6월25일), (5-전국), (6-대부분 지역), (7-전남 일부 지역)\n\nEdge: (1-기록): 2->1, (2-밝히다): 3->1\n\nInfoedge: (1-부터): 2->4, (2-까지): 2->5, (3-에서): 3->6, (4-에): 3->7, (5-에게): 3->1, (6-에게서): 3->2"
+            }
+        ]
+    },
+    "021openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "1",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.87",
+                "tokens": -1,
+                "output": "학생 A-Node(id-학생 A): 학생 B-Node(id-학생 B): 만나다-Edge(id-만나다): 학생 A->학생 B"
+            }
+        ]
+    },
+    "022openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.99",
+                "tokens": -1,
+                "output": "교통사고(Node-id1-label: 교통사고)-에 이어짐(Edge-id1-label: 이어짐): 미끄러운 빗길(Node-id2-label: 미끄러운 빗길)->교통사고(Node-id1-label: 교통사고)"
+            }
+        ]
+    },
+    "023openAI": {
+        "experiment type": {
+            "example type": "0",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:06.21",
+                "tokens": -1,
+                "output": "\nNode: (1-전문가들), (2-기상청), (3-장마철), (4-전국), (5-전남)\nEdge: (1-관측): 1->2, (2-밝히다): 2->3, (3-기록하다): 3->4, (4-기록하다): 3->5\nInfoedge: (1-시작): 2->3, (2-현재): 2->3, (3-6월25일): 3->2"
+            }
+        ]
+    },
+    "101openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "1",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:05.27",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B), (3-과거)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->3"
+            }
+        ]
+    },
+    "102openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "2",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:06.84",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-미끄러운 빗길), (2-교통사고), (3-과거)\n            Edges: (1-이어지다): 1->2\n            Infoedges: (1-에 (시간)): 1->3"
+            }
+        ]
+    },
+    "103openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "0",
+            "input type": "3",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:08.47",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-장마), (2-평년), (3-전문가들), (4-기상청), (5-6월25일), (6-현재), (7-전국), (8-대부분 지역), (9-200~300㎜), (10-전남 일부 지역), (11-600㎜)\n            Edges: (1-기록하다): 1->9, (2-기록하다): 1->11, (3-관측하다): 3->1, (4-밝히다): 4->9, (5-밝히다): 4->11\n            Infoedges: (1-보다): 1->2, (2-"
+            }
+        ]
+    },
+    "111openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "1",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:02.94",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-학생 A), (2-학생 B)\n            Edges: (1-만나다): 1->2\n            Infoedges: (1-에 (시간)): 1->2"
+            }
+        ]
+    },
+    "112openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "2",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:07.50",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-미끄러운 빗길), (2-교통사고), (3-과거)\n            Edges: (1-이어지다): 1->2\n            Infoedges: (1-에 (시간)): 1->3"
+            }
+        ]
+    },
+    "113openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "1",
+            "input type": "3",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:07.62",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-장마), (2-평년), (3-전문가들), (4-기상청), (5-6월25일), (6-현재), (7-전국), (8-대부분 지역), (9-전남 일부 지역)\n            Edges: (1-기록하다): 1->2, (2-관측하다): 3->1, (3-밝히다): 4->1\n            Infoedges: (1-에 (시간)): 1->5, (2-부터 (시간)): 5->6, (3-까지 (시간)): 6->7, (4-"
+            }
+        ]
+    },
+    "122openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "2",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:04.41",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-미끄러운 빗길), (2-교통사고), (3-과거)\n            Edges: (1-이어지다): 1->2\n            Infoedges: (1-부터 (시간)): 1->3, (2-까지 (시간)): 1->3"
+            }
+        ]
+    },
+    "123openAI": {
+        "experiment type": {
+            "example type": "1",
+            "prompt type": "2",
+            "input type": "3",
+            "model": "openAI"
+        },
+        "results": [
+            {
+                "elapsed time": "00:00:14.65",
+                "tokens": -1,
+                "output": "\n            Nodes: (1-장마), (2-평년), (3-기상청), (4-6월25일), (5-현재), (6-전국), (7-전남), (8-일부 지역)\n            Edges: (1-기록하다): 1->2, (2-밝히다): 3->1, (3-기록하다): 3->6\n            Infoedges: (1-부터 (시간)): 3->4, (2-까지 (시간)): 3->5, (3-에서 (장소)): 3->7, (4-에서 (장소)): 3->8"
+            }
+        ]
+    }
+}

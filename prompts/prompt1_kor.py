@@ -1,6 +1,6 @@
 prompt = """
-주어진 입력 문장에 대해 가능한 한 많은 Relationship을 추론하고 상태를 업데이트하세요. 
-절대 거짓말을 해서는 안 됩니다. 정확한 Relationship만 추론하세요.
+위에 주어진 문장에 대해 하나의 Relationship을 추론하세요. 
+절대 거짓말을 해서는 안 됩니다. Relationship을 최대한 정확하게 추론하세요.
 Relationship에는 세 가지 유형이 있습니다. Node, Edge 및 Infoedge입니다. 
 
 1. Node
