@@ -44,5 +44,4 @@ class KoAlpaca_12(BaseLLM):
 
         # decode
         generated = self.tokenizer.decode(output_ids[0][:-1])[len(prompt):]
-        print("** Output:", generated)
         return generated

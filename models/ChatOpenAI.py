@@ -2,6 +2,7 @@ import time
 from models.base_model import BaseLLM
 from langchain.chat_models import ChatOpenAI
 from keys.openai_key import key
+import tiktoken
 from langchain.schema import (
     HumanMessage,
     SystemMessage
@@ -15,17 +16,18 @@ class ChatOpenai(BaseLLM):
         
     def set_model(self)->None:
         self.model_id = 'ChatOpenAI'
-        self.model = ChatOpenAI(openai_api_key=key, temperature=0)
+        self.model = ChatOpenAI(openai_api_key=key, model_name="gpt-3.5-turbo", temperature=0) 
 
     def set_tokenizer(self)->None:
-        pass
-
+        self.tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")
 
     def run(self, prompt)->str:
         if self.model is None:
-            self.model = ChatOpenAI(openai_api_key=key, temperature=0)
+            self.model = ChatOpenAI(openai_api_key=key, model="gpt-3.5-turbo", temperature=0)
+            self.tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")
             
         # inference
+        self.tokens = len(self.tokenizer.encode(prompt))
         start_time = time.time()
         messages = [SystemMessage(content="You are a smart assistant."),
                     HumanMessage(content=prompt)]
@@ -36,5 +38,5 @@ class ChatOpenai(BaseLLM):
 
         # decode
         generated = output.content
-        print("\n** Output:\n", generated)
+        # print("\n** Output:\n", generated)
         return generated

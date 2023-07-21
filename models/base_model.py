@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 import time
 import torch
-# from langchain.llms.base import LLM
 from typing import Any, List, Mapping, Optional
 from langchain.callbacks.manager import CallbackManagerForLLMRun
 
@@ -61,24 +60,27 @@ class BaseLLM(ABC):
     
 def model_loader(model_type:str):
     match(model_type):
-        case 'koAlpaca5.8':
+        case 'KoAlpaca5.8':
             from models.KoAlpaca_5 import KoAlpaca_5
             llm = KoAlpaca_5()
-        case 'koAlpaca12.8':
+        case 'KoAlpaca12.8':
             from models.KoAlpaca_12 import KoAlpaca_12
             llm = KoAlpaca_12()
-        case 'koGPT':
+        case 'KoGPT':
             from models.KoGPT import KoGPT
             llm = KoGPT()
         case 'koGPT2':
             from models.KoGPT2 import KoGPT2
             llm = KoGPT2()
-        case 'chatOpenAI':
+        case 'ChatOpenAI':
             from models.ChatOpenAI import ChatOpenai
             llm = ChatOpenai()
-        case 'openAI':
+        case 'OpenAI':
             from models.OpenAI import Openai
             llm = Openai()
+        case 'KULLM':
+            from models.KULLM import KULLM
+            llm = KULLM()
         case _:
             raise ValueError("Value Error: Wrong model type.")
             

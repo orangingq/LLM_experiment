@@ -48,6 +48,5 @@ class KoGPT(BaseLLM):
             
 
         # decode
-        print("\n** Output:\n", generated)
         return generated
 

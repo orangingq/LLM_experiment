@@ -42,7 +42,6 @@ class KoGPT2(BaseLLM):
 
         # decode
         generated = self.tokenizer.decode(output_ids[0])[len(prompt):]
-        print("\n** Output:\n", generated)
         return generated
 
 
