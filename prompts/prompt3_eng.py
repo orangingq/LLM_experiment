@@ -1,3 +1,5 @@
+# Infoedge 형식에 대한 설명 prompt
+
 prompt = """
 Given an input sentence, extrapolate as many relationships as possible from the prompt and update the state. 
 You should never lie. Extrapolate only true relationships.

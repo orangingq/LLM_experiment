@@ -1,134 +1,61 @@
-import inputs.Benchmark as Benchmark
-from langchain.prompts.few_shot import FewShotPromptTemplate
-from langchain.prompts import PromptTemplate
 import click
-import json
+from results.save import save
+from prompts.prompt import prompt_maker
+from models.base_model import model_loader
 
-def prompt(example_type:str, prompt_type:str, input_type:str)->str:
-    match int(example_type):
-        case 0:
-            examples = []
-        case 1:
-            from examples import example1
-            examples = example1.examples
-        case _:
-            print("Value Error: only 0 or 1 is allowed.")
-
-    match int(prompt_type):
-        case 0:
-            suffix = ""
-        case 1:
-            from prompts import prompt1
-            suffix = prompt1.prompt
-        case 2:
-            from prompts import prompt1_kor
-            suffix = prompt1_kor.prompt
-        case _:
-            print("Value Error: only 0 ~ 2 is allowed.")
-
-    try:
-        input_type = int(input_type)
-    except ValueError:
-        print("Value Error: only integer input type is allowed.")
-        return False
-    else:
-        input = Benchmark.input[int(input_type)-1]
-
-    example_prompt = PromptTemplate(input_variables=[
-                                "sentence", "relationships"], template="Sentence: {sentence}\nRelationships: {relationships}")
-    prompt = FewShotPromptTemplate(
-        examples=examples,
-        example_prompt=example_prompt,
-        suffix=suffix + "Sentence: {input}\nRelationships: ",
-        input_variables=["input"]
-    )
-    return prompt.format(input=input)
-
-
-def save(model_type, example_type, prompt_type, input_type, time, tokens, output):
-    id = str(example_type)+str(prompt_type)+str(input_type)+model_type
-    result = {
-        'experiment type': {
-            'example type': example_type,
-            'prompt type': prompt_type,
-            'input type': input_type,
-            'model': model_type,
-        },
-        'results': [
-            {
-                'elapsed time': time,
-                'tokens': tokens,
-                'output': output
-            }
-        ]
-    }
-    
-    with open('result.json', 'r', encoding="utf-8") as f:
-        data = json.load(f)
-        if id in data:
-            data[id]['results'].append(result['results'][0])
-        else:
-            data[id] = result
-            
-    with open('result.json', 'w', encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False)
-    
-model_range = ['koAlpaca5.8', 'koAlpaca12.8', 'koGPT', 'koGPT2', 'chatOpenAI', 'openAI']
-example_range = [str(i) for i in range(2)]
-prompt_range = [str(i) for i in range(3)]
-input_range = [str(i+1) for i in range(len(Benchmark.input))]
+kg_range = ['RDF-star', 'LPG', 'Infoedge', 'all'] # "RDF-star": RDF-star format / "LPG": LPG(Neo4j) format / "Infoedge": Infoedge format (new)
+prompt_range = ['None', "Eng", "Kor", 'all'] # "None": No Explanation template / "Eng": English Template / "Kor":Korean Template
+example_range = ['0', '1', '2', 'all'] # 0: No example / 1: 4 examples / 2: 100 examples
+input_range = ['0', '1', '2', '3', '4'] # 0: 1 simple sentence / 1: 1 complex sentence / 2: 1 complex paragraph / 3: 10 inputs / 4: 100 inputs
+model_range = ['koGPT', 'chatOpenAI', 'openAI', 'koAlpaca12.8','koGPT2', 'koAlpaca5.8', 'all']
 
 @click.command()
-@click.option('--model_type', default='koAlpaca5.8', help='model to run on, select one of koAlpaca5.8, koAlpaca12.8, koGPT, koGPT2, chatOpenAI, openAI')
-@click.option('--example_type', default='1', help='model to run on, select one of 0~1')
-@click.option('--prompt_type', default='1', help='model to run on, select one of 1~2')
-@click.option('--input_type', default='1', help='model to run on, select one of 1~3')
-@click.option('--all', default='0', help='True if you want to get every result.')
-# @click.option('--device_type', default='cuda', help='device to run on, select gpu, cpu or mps')
-# @click.option('--db_type', default='chroma', help='vector database to use, select chroma or pinecone')
-# @click.option('--embedding_type', default='KoSimCSE', help='embedding model to use, select OpenAI or KoSimCSE.')
-def main(model_type:str, example_type:str, prompt_type:str, input_type:str, all:str):
-    if int(all) == 1:
-        for model in model_range:
-            for example in example_range:
-                for prompt in prompt_range:
-                    for input in input_range:
-                        print(model, example, prompt, input, all)
-                        run(model, example, prompt, input)
-        return
+@click.option('--kg_type', default='all', type=click.Choice(kg_range), help='"RDF-star": RDF-star format\n"LPG": LPG(Neo4j) format\n"Infoedge": Infoedge format (new)')
+@click.option('--prompt_type', default='all', type=click.Choice(prompt_range), help='"None": No Explanation template\n"Eng": English Template\n"Kor":Korean Template')
+@click.option('--example_type', default='all', type=click.Choice(example_range), help='0: No example\n1: 4 examples\n2: 100 examples')
+@click.option('--input_type', default='0', type=click.Choice(input_range), help="0: 1 simple sentence\n1: 1 complex sentence\n2: 1 complex paragraph\n3: 10 inputs\n4: 100 inputs")
+@click.option('--model_type', default='all', type=click.Choice(model_range), help='model to run on, select one of koAlpaca5.8, koAlpaca12.8, koGPT, koGPT2, chatOpenAI, openAI')
+def main(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_type:str):
+    if kg_type=='all':
+        for kg in kg_range[:-1]:
+            main(kg, prompt_type, example_type, input_type, model_type)
+     
+    elif prompt_type=='all':
+        for prompt in prompt_range[:-1]:
+            main(kg_type, prompt, example_type, input_type, model_type)
     
+    elif example_type=='all':
+        for example in example_range[:-1]:
+            main(kg_type, prompt_type, example, input_type, model_type)
+            
+    elif model_type=='all':
+        for model in model_range[:-1]:
+            main(kg_type, prompt_type, example_type, input_type, model)
+            
     else:
-        run(model_type, example_type, prompt_type, input_type)
-    
-def run(model_type:str, example_type:str, prompt_type:str, input_type:str):
-    match(model_type):
-        case 'koAlpaca5.8':
-            from models.KoAlpaca_5 import KoAlpaca_5
-            llm = KoAlpaca_5()
-        case 'koAlpaca12.8':
-            from models.KoAlpaca_12 import KoAlpaca_12
-            llm = KoAlpaca_12()
-        case 'koGPT':
-            from models.KoGPT import KoGPT
-            llm = KoGPT()
-        case 'koGPT2':
-            from models.KoGPT2 import KoGPT2
-            llm = KoGPT2()
-        case 'chatOpenAI':
-            from models.ChatOpenAI import ChatOpenai
-            llm = ChatOpenai()
-        case 'openAI':
-            from models.OpenAI import Openai
-            llm = Openai()
-        case _:
-            print("Value Error: Wrong model type.")
+        run(kg_type, prompt_type, example_type, input_type, model_type)
+            
 
-    print(llm._llm_type)
-    output = llm(prompt=prompt(example_type, prompt_type, input_type))
-    print(f"example_type: {example_type}, prompt_type: {prompt_type}, input_type: {input_type}")
-    print(llm._identifying_params)
     
-    save(model_type, example_type, prompt_type, input_type, llm._identifying_params.get('elapsed time'), llm._identifying_params.get('tokens'), output)
+def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_type:str):
+    print(f"\n> kg_type: {kg_type}, prompt_type: {prompt_type}, example_type: {example_type}, input_type: {input_type}, model_type: {model_type}\n")
+    
+    llm = model_loader(model_type=model_type)
+    prompt = prompt_maker(kg_type, prompt_type, example_type, input_type)
+    
+    output = llm(prompt=prompt)
+    print("\n> output results: ", llm._identifying_params)
+    
+    save({
+        'kg_type': kg_type,
+        'prompt_type': prompt_type,
+        'example_type': example_type,
+        'input_type': input_type,
+        'model_type': model_type, 
+        'elapsed_time': llm._identifying_params.get('elapsed time'),
+        'tokens': llm._identifying_params.get('tokens'),
+        'output': output
+    })
 
     
 

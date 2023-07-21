@@ -57,3 +57,30 @@ class BaseLLM(ABC):
     def _identifying_params(self) -> Mapping[str, Any]:
         """Get the identifying parameters."""
         return {"model": self.model_id, "elapsed time": self.elapsed_time, "tokens": self.tokens, "device": self.device}
+    
+    
+def model_loader(model_type:str):
+    match(model_type):
+        case 'koAlpaca5.8':
+            from models.KoAlpaca_5 import KoAlpaca_5
+            llm = KoAlpaca_5()
+        case 'koAlpaca12.8':
+            from models.KoAlpaca_12 import KoAlpaca_12
+            llm = KoAlpaca_12()
+        case 'koGPT':
+            from models.KoGPT import KoGPT
+            llm = KoGPT()
+        case 'koGPT2':
+            from models.KoGPT2 import KoGPT2
+            llm = KoGPT2()
+        case 'chatOpenAI':
+            from models.ChatOpenAI import ChatOpenai
+            llm = ChatOpenai()
+        case 'openAI':
+            from models.OpenAI import Openai
+            llm = Openai()
+        case _:
+            raise ValueError("Value Error: Wrong model type.")
+            
+    return llm
+    
