@@ -1,5 +1,5 @@
 import time
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from models.base_model import BaseLLM
 import torch
 
@@ -17,37 +17,28 @@ class KULLM(BaseLLM):
             low_cpu_mem_usage=True,
         ).to(device=self.device, non_blocking=True)
         self.model.eval()
+        
+        self.pipeline = pipeline("text-generation", model=self.model, tokenizer=self.model_id, device=self.device)
+
 
     def set_tokenizer(self)->None:
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_id)
-
+        pass
 
     def run(self, prompt)->str:
         
         # encode
         input_ids = self.tokenizer.encode(prompt)
-
-        self.tokens = input_ids.shape[1]
-        print("\n** Tokens: ", input_ids.shape, input_ids[0, :10], "\n")
+        self.tokens = len(input_ids)
 
         # inference
         start_time = time.time()
-        output_ids = self.model.generate(input_ids,
-                                        #  max_length=1500,
-                                        temperature = 0,
-                                        #  repetition_penalty=2.0,
-                                        #  pad_token_id=self.tokenizer.pad_token_id,
-                                        #  eos_token_id=self.tokenizer.eos_token_id,
-                                        #  bos_token_id=self.tokenizer.bos_token_id,
-                                         max_new_tokens=100, early_stopping=True,
-                                         use_cache=True)
-
-        print(output_ids)
+        output = self.pipeline(prompt, max_new_tokens=100, temperature=0, early_stopping=True) #, num_beams=5, eos_token_id=2
+        
         # elapsed time
         self.calculate_elapsed_time(start_time=start_time)
-
-        # decode
-        generated = self.tokenizer.decode(output_ids[0])[len(prompt):]
+        
+        generated = output[0]["generated_text"][len(prompt):]
         return generated
 
 

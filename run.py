@@ -7,9 +7,9 @@ from inputs.Benchmark import input_provider
 
 kg_range = ['RDF-star', 'LPG', 'Infoedge', 'all'] # "RDF-star": RDF-star format / "LPG": LPG(Neo4j) format / "Infoedge": Infoedge format (new)
 prompt_range = ['None', "Eng", "Kor", 'all'] # "None": No Explanation template / "Eng": English Template / "Kor":Korean Template
-example_range = ['0', '1', '2', 'all'] # 0: No example / 1: 4 examples / 2: 100 examples
-input_range = ['0', '1', '2', '3', '4', 'all'] # 0: simple sentences / 1: complex sentences / 2: simple paragraphs / 3: complex paragraphs 
-model_range = ['KoGPT', 'ChatOpenAI', 'OpenAI', 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8', 'KULLM', 'all']
+example_range = ['0', '1',   'all'] # 0: No example / 1: 4 examples / 2: 100 examples # '2',
+input_range = ['0', '1', '2', '3', 'all'] # 0: simple sentences / 1: complex sentences / 2: simple paragraphs / 3: complex paragraphs 
+model_range = ['KoGPT', 'ChatOpenAI', 'OpenAI', 'KULLM', 'all'] # Reject: 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8'
 
 @click.command()
 @click.option('--kg_type', default='all', type=click.Choice(kg_range))
@@ -35,7 +35,7 @@ def runall(kg_type:str, prompt_type:str, example_type:str, input_type:str,  mode
             
     elif model_type=='all':
         for model in model_range[:-1]:
-            if model in ['KoGPT', 'KoAlpaca12.8', 'KoAlpaca5.8']: # low performance...
+            if model in ['KoGPT2', 'KoAlpaca12.8', 'KoAlpaca5.8']: # low performance...
                 continue
             runall(kg_type, prompt_type, example_type, input_type, model)
             

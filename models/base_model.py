@@ -69,7 +69,7 @@ def model_loader(model_type:str):
         case 'KoGPT':
             from models.KoGPT import KoGPT
             llm = KoGPT()
-        case 'koGPT2':
+        case 'KoGPT2':
             from models.KoGPT2 import KoGPT2
             llm = KoGPT2()
         case 'ChatOpenAI':
@@ -82,7 +82,7 @@ def model_loader(model_type:str):
             from models.KULLM import KULLM
             llm = KULLM()
         case _:
-            raise ValueError("Value Error: Wrong model type.")
+            raise ValueError("Value Error: Wrong model type: ", model_type)
             
     return llm
     
