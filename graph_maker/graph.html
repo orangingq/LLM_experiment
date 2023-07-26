@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>간단한 선 그래프</title>
+    <style>
+        #chart {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chart"></div>
+
+    <script>
+        // 데이터 배열 (x축 값과 y축 값)
+        const data = [
+            { x: 0, y: 5 },
+            { x: 1, y: 10 },
+            { x: 2, y: 15 },
+            { x: 3, y: 7 },
+            { x: 4, y: 20 },
+            { x: 5, y: 12 }
+        ];
+
+        // SVG 요소를 생성하는 함수
+        function createSVG(tag, attrs) {
+            const element = document.createElementNS("http://www.w3.org/2000/svg", tag);
+            for (let key in attrs) {
+                element.setAttribute(key, attrs[key]);
+            }
+            return element;
+        }
+
+        // 그래프를 그리는 함수
+        function drawChart(data) {
+            const svg = createSVG("svg", { width: "100%", height: "100%" });
+            const chart = document.getElementById("chart");
+
+            const maxX = Math.max(...data.map(point => point.x));
+            const maxY = Math.max(...data.map(point => point.y));
+
+            const xScale = chart.clientWidth / maxX;
+            const yScale = chart.clientHeight / maxY;
+
+            for (let i = 0; i < data.length - 1; i++) {
+                const x1 = data[i].x * xScale;
+                const y1 = chart.clientHeight - data[i].y * yScale;
+                const x2 = data[i + 1].x * xScale;
+                const y2 = chart.clientHeight - data[i + 1].y * yScale;
+
+                const line = createSVG("line", { x1, y1, x2, y2, stroke: "blue", "stroke-width": 2 });
+                svg.appendChild(line);
+            }
+
+            chart.appendChild(svg);
+        }
+
+        // 페이지 로딩 후 그래프를 그림
+        window.onload = function () {
+            drawChart(data);
+        };
+    </script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 import time
 from models.base_model import BaseLLM
 from langchain.llms import OpenAI
-from keys.openai_key import key
+from keys.keys import openai_key
 import tiktoken
 
 class Openai(BaseLLM):
@@ -12,7 +12,7 @@ class Openai(BaseLLM):
         
     def set_model(self)->None:
         self.model_id = 'OpenAI'
-        self.model = OpenAI(openai_api_key=key, model="text-davinci-003", temperature=0)
+        self.model = OpenAI(openai_api_key=openai_key, model="text-davinci-003", temperature=0)
 
     def set_tokenizer(self)->None:
         self.tokenizer = tiktoken.encoding_for_model("text-davinci-003")

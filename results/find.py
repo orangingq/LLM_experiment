@@ -5,7 +5,7 @@ import sys
  
 # setting path
 sys.path.append('../LLM_experiment')
-from run  import kg_range, prompt_range, example_range, input_range, model_range
+from run  import kg_range, prompt_range, example_range, model_range
 
 def findall(date:str=''):
     exists = []
@@ -13,14 +13,14 @@ def findall(date:str=''):
     for kg in kg_range[:-1]:
         for pr in prompt_range[:-1]:
             for ex in example_range[:-1]:
-                for inp in input_range[:-1]:
-                    for mo in model_range[:-1]:
-                        resarr = find(date, kg, pr, ex, inp, mo, 0)
-                        if len(resarr) == 0:
-                            not_exists += [[kg, pr, ex, inp, mo]]
-                        else:
-                            exists += [[kg, pr, ex, inp, mo]]
+                for mo in model_range[:-1]:
+                    resarr = find(date, kg, pr, ex, 'all', mo, 0)
+                    if len(resarr) == 0:
+                        not_exists += [[kg, pr, ex, 'all', mo]]
+                    else:
+                        exists += [[kg, pr, ex, 'all', mo]]
 
+    # print the search result
     print(f"** Existing Rows: ({len(exists)})")
     for e in exists:
         [kg, pr, ex, inp, mo] = e
@@ -32,8 +32,9 @@ def findall(date:str=''):
         print(f"KG: {kg}\tprompt: {pr}\texample: {ex}\tinput: {inp}\tmodel: {mo}\t")
 
 
+
+
 def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type:str= 'all', input_type:str= 'all',  model_type:str= 'all', print_output:int=1):
-   
     if date == '':
         date = datetime.now().strftime("%Y%m%d")
     
@@ -44,13 +45,15 @@ def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type
         print(f"No file named '{path.abspath(filename)}' was searched.")
         return []
     
-    csv_file = csv.reader(open(filename, "r"), delimiter=",")
+    csv_file = csv.reader(open(filename, mode="r"), delimiter=",")
 
     #loop through the csv list
     retarr = []
     if print_output > 0:
         print("** Search Start!\n")
     for row in csv_file:
+        if not row[0] in kg_range:
+            continue
         if kg_type == 'all' or row[0] == kg_type:
             if prompt_type == 'all' or row[1] == prompt_type:
                 if example_type == 'all' or row[2] == example_type:
@@ -71,4 +74,4 @@ def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type
     return retarr
 
 
-findall(date='20230721')
+findall(date='20230724')

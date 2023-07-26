@@ -1,7 +1,7 @@
 import time
 from models.base_model import BaseLLM
 from langchain.chat_models import ChatOpenAI
-from keys.openai_key import key
+from keys.keys import openai_key
 import tiktoken
 from langchain.schema import (
     HumanMessage,
@@ -16,7 +16,7 @@ class ChatOpenai(BaseLLM):
         
     def set_model(self)->None:
         self.model_id = 'ChatOpenAI'
-        self.model = ChatOpenAI(openai_api_key=key, model_name="gpt-3.5-turbo", temperature=0) 
+        self.model = ChatOpenAI(openai_api_key=openai_key, model_name="gpt-3.5-turbo", temperature=0) 
 
     def set_tokenizer(self)->None:
         self.tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")
