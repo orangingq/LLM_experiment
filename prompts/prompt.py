@@ -11,7 +11,7 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
         case 'Infoedge': # new format 'infoedge'
             kg = '3'
         case _:
-            raise ValueError("kg_type")
+            raise ValueError("kg_type - got: ", kg_type)
         
     match prompt_type:
         case 'None':
@@ -21,7 +21,7 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
         case 'Kor':
             suffix = importlib.import_module("prompts.prompt"+kg+"_kor").prompt
         case _:
-            raise ValueError("prompt_type")
+            raise ValueError("prompt_type - got: ", prompt_type)
         
     match example_type:
         case '0':
@@ -30,13 +30,18 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
             import examples
             examples = importlib.import_module("examples.example"+kg).examples
         case _:
-            raise ValueError("example_type")
+            raise ValueError("example_type - got: ", example_type)
 
 
     example_prompt = PromptTemplate(input_variables=[
                                 "sentence", "output"], template="Sentence: {sentence}\nOutput: {output}")
     
-    
+    if example_type == '0':
+        return PromptTemplate(
+            template = suffix + "Sentence: {input}\nOutput: ",
+        input_variables=["input"]
+        )
+        
     prompt = FewShotPromptTemplate(
         examples=examples,
         example_prompt=example_prompt,

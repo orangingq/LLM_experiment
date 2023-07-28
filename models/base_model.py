@@ -81,9 +81,6 @@ def model_loader(model_type:str):
         case 'KULLM':
             from models.KULLM import KULLM
             llm = KULLM()
-        case 'LLAMA2':
-            from models.LLAMA2 import LLAMA2
-            llm = LLAMA2()
         case _:
             raise ValueError("Value Error: Wrong model type: ", model_type)
             

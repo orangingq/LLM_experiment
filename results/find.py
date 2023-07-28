@@ -47,10 +47,11 @@ def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type
     
     csv_file = csv.reader(open(filename, mode="r"), delimiter=",")
 
-    #loop through the csv list
     retarr = []
     if print_output > 0:
         print("** Search Start!\n")
+        
+    # loop through the csv list
     for row in csv_file:
         if not row[0] in kg_range:
             continue
@@ -65,10 +66,7 @@ def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type
                                     print(f"Input: \n{row[8]}\nOutput: \n{row[9]}\n")
 
                             retarr += [row]
-                        # elif model_type == 'all': 
-                        #     print(f"** KG: {row[0]}\prompt: {row[1]}\texample: {row[2]}\tinput: {row[3]}\tmodel: {row[4]} \t-> Not Exist")
-                    # elif input_type == 'all': 
-                    #     print(f"** KG: {row[0]}\prompt: {row[1]}\texample: {row[2]}\tinput: {row[3]}\tmodel: {row[4]} \t-> Not Exist")
+                            
     if print_output > 0:                     
         print("** Search End!\n");
     return retarr
