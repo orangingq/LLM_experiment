@@ -35,12 +35,6 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
 
     example_prompt = PromptTemplate(input_variables=[
                                 "sentence", "output"], template="Sentence: {sentence}\nOutput: {output}")
-    
-    if example_type == '0':
-        return PromptTemplate(
-            template = suffix + "Sentence: {input}\nOutput: ",
-        input_variables=["input"]
-        )
         
     prompt = FewShotPromptTemplate(
         examples=examples,

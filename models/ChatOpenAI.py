@@ -23,7 +23,7 @@ class ChatOpenai(BaseLLM):
 
     def run(self, prompt)->str:
         if self.model is None:
-            self.model = ChatOpenAI(openai_api_key=key, model="gpt-3.5-turbo", temperature=0)
+            self.model = ChatOpenAI(openai_api_key=openai_key, model="gpt-3.5-turbo", temperature=0)
             self.tokenizer = tiktoken.encoding_for_model("gpt-3.5-turbo")
             
         # inference

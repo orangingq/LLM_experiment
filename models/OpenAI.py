@@ -19,7 +19,7 @@ class Openai(BaseLLM):
 
     def run(self, prompt)->str:
         if self.model is None:
-            self.model = OpenAI(openai_api_key=key, model="text-davinci-003", temperature=0) # latest model (2023-07-21)
+            self.model = OpenAI(openai_api_key=openai_key, model="text-davinci-003", temperature=0) # latest model (2023-07-21)
             self.tokenizer = tiktoken.encoding_for_model("text-davinci-003")
             
         # inference

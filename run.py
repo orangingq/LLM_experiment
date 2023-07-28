@@ -57,9 +57,8 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
             print(f"** {i}) \nInput: ", inputs[i])
             
             if usechain == True:
-                print(prompt)
-                chain = LLMChain(llm=llm, prompt=prompt)
-                output = chain.run(input[i])
+                chain = LLMChain(llm=llm.model, prompt=prompt)
+                output = chain.run(inputs[i])
                 
             else:
                 output = llm(prompt=prompt.format(input=inputs[i]))
