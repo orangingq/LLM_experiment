@@ -45,7 +45,8 @@ def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type
         print(f"No file named '{path.abspath(filename)}' was searched.")
         return []
     
-    csv_file = csv.reader(open(filename, mode="r"), delimiter=",")
+    f = open(filename, mode="r")
+    csv_file = csv.reader(f, delimiter=",")
 
     retarr = []
     if print_output > 0:
@@ -66,7 +67,8 @@ def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type
                                     print(f"Input: \n{row[8]}\nOutput: \n{row[9]}\n")
 
                             retarr += [row]
-                            
+                      
+    f.close()      
     if print_output > 0:                     
         print("** Search End!\n");
     return retarr

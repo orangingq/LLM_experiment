@@ -86,3 +86,14 @@ def model_loader(model_type:str):
             
     return llm
     
+    
+def output_parser(output)->str:
+    # eliminate 'Sentence: ~~~' part
+    found = output.find('Sentence:')
+    parsed = output.rstrip('\n \t').lstrip('\n \t')
+    if found > -1:
+        parsed = output[:found].rstrip('\n \t')
+        if len(parsed) == 0:
+            parsed = output
+    
+    return parsed

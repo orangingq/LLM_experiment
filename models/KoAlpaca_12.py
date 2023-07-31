@@ -3,7 +3,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import time
-from models.base_model import BaseLLM
+from models.base_model import BaseLLM, output_parser
 
 class KoAlpaca_12(BaseLLM):
     def __init__(self) -> None:
@@ -44,4 +44,4 @@ class KoAlpaca_12(BaseLLM):
 
         # decode
         generated = self.tokenizer.decode(output_ids[0][:-1])[len(prompt):]
-        return generated
+        return output_parser(generated)

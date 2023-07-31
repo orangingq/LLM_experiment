@@ -6,10 +6,14 @@ from inputs.Benchmark import input_provider
 # save results into the csv file
 def save(save_info)->None:
    
-    today = datetime.now().strftime("%Y%m%d")
+    now = datetime.now().strftime("%Y%m%d_%H")
     
-    filename = './results/result_'+today+'.csv'
+    filename = './results/result_'+now+'.csv'
     
+    # n = 1
+    # while path.exists(filename):
+    #     filename = './results/result_'+today+'_'+str(n)+'.csv'
+        
     # create a csv file if not exists
     if not path.exists(filename):
         f = open(filename, mode='w', encoding="utf-8", newline='')

@@ -1,6 +1,6 @@
 import time
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-from models.base_model import BaseLLM
+from models.base_model import BaseLLM, output_parser
 import torch
 
 class KULLM(BaseLLM):
@@ -39,7 +39,7 @@ class KULLM(BaseLLM):
         self.calculate_elapsed_time(start_time=start_time)
         
         generated = output[0]["generated_text"][len(prompt):]
-        return generated
+        return output_parser(generated)
 
 
     

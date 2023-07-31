@@ -1,6 +1,6 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from models.base_model import BaseLLM
+from models.base_model import BaseLLM, output_parser
 import time
 
 # https://huggingface.co/kakaobrain/kogpt
@@ -43,10 +43,9 @@ class KoGPT(BaseLLM):
             
              # elapsed time
             self.calculate_elapsed_time(start_time=start_time)
-            # print(self.tokenizer.batch_decode(gen_tokens))
-            generated = self.tokenizer.batch_decode(gen_tokens)[0][len(prompt):]
             
-
-        # decode
-        return generated
+            # decode
+            generated = self.tokenizer.batch_decode(gen_tokens)[0][len(prompt):]
+        
+        return output_parser(generated)
 

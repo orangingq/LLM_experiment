@@ -5,18 +5,18 @@ from models.base_model import model_loader
 from inputs.Benchmark import input_provider
 from langchain.chains import LLMChain
 
-kg_range = ['RDF-star', 'LPG', 'Infoedge', 'all'] # "RDF-star": RDF-star format / "LPG": LPG(Neo4j) format / "Infoedge": Infoedge format (new)
+kg_range = ['RDF-star', 'LPG', 'LPG_tense', 'LPG_id',  'all'] # "RDF-star": RDF-star format / "LPG": LPG(Neo4j) format / "Infoedge": Infoedge format (new) # Reject: 'Infoedge',
 prompt_range = ['None', "Eng", "Kor", 'all'] # "None": No Explanation template / "Eng": English Template / "Kor":Korean Template
 example_range = ['0', '1',   'all'] # 0: No example / 1: 4 examples / 2: 100 examples # '2',
-input_range = ['0', '1', '2', '3', 'all'] # 0: simple sentences / 1: complex sentences / 2: simple paragraphs / 3: complex paragraphs 
-model_range = ['Llama2', 'KoGPT', 'ChatOpenAI', 'OpenAI', 'KULLM', 'all'] # Reject: 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8'
+input_range = ['one', 'two', 'three', 'four', 'five', 'nested', 'parallel', 'dependent', '0', '1', '2', '3', 'all'] # 0: simple sentences / 1: complex sentences / 2: simple paragraphs / 3: complex paragraphs 
+model_range = ['ChatLlama2', 'Llama2', 'ChatOpenAI', 'OpenAI', 'all'] # Reject: 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8', 'KoGPT', 'KULLM', 
 
 
 def runall(kg_type:str, prompt_type:str, example_type:str, input_type:str,  model_type:str, fast_llm=None, chain=False):
 
     if model_type=='all':
         for model in model_range[:-1]:
-            if model != 'Llama2':
+            if not model in ['Llama2', 'ChatLlama2']:
                 llm = model_loader(model_type=model)
             else: 
                 llm = None
@@ -89,7 +89,6 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
         run(args)
         
     
-
 
 @click.command()
 @click.option('--kg', default='all', type=click.Choice(kg_range))

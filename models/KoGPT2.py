@@ -1,6 +1,6 @@
 import time
 from transformers import TFGPT2LMHeadModel, PreTrainedTokenizerFast
-from models.base_model import BaseLLM
+from models.base_model import BaseLLM, output_parser
 
 
 class KoGPT2(BaseLLM):
@@ -42,7 +42,7 @@ class KoGPT2(BaseLLM):
 
         # decode
         generated = self.tokenizer.decode(output_ids[0])[len(prompt):]
-        return generated
+        return output_parser(generated)
 
 
     

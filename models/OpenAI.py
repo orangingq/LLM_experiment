@@ -1,8 +1,9 @@
 import time
-from models.base_model import BaseLLM
+from models.base_model import BaseLLM, output_parser
 from langchain.llms import OpenAI
 from keys.keys import openai_key
 import tiktoken
+
 
 class Openai(BaseLLM):
     def __init__(self) -> None:
@@ -32,4 +33,4 @@ class Openai(BaseLLM):
 
         # decode
         # print("\n** Output:\n", generated)
-        return generated
+        return output_parser(generated)

@@ -1,5 +1,5 @@
 import time
-from models.base_model import BaseLLM
+from models.base_model import BaseLLM, output_parser
 from langchain.chat_models import ChatOpenAI
 from keys.keys import openai_key
 import tiktoken
@@ -39,4 +39,4 @@ class ChatOpenai(BaseLLM):
         # decode
         generated = output.content
         # print("\n** Output:\n", generated)
-        return generated
+        return output_parser(generated)

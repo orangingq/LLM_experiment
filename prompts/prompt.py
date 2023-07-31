@@ -1,6 +1,7 @@
 from langchain.prompts.few_shot import FewShotPromptTemplate
 from langchain.prompts import PromptTemplate
 import importlib 
+import csv
 
 def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
     match kg_type:
@@ -8,8 +9,12 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
             kg = '1'
         case 'LPG':     # LPG (Neo4j) format
             kg = '2'
-        case 'Infoedge': # new format 'infoedge'
+        case 'LPG_tense':
             kg = '3'
+        case 'LPG_id':
+            kg = '4'
+        case 'Infoedge': # new format 'infoedge'
+            kg = '5'
         case _:
             raise ValueError("kg_type - got: ", kg_type)
         
@@ -27,8 +32,25 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str)->str:
         case '0':
             examples = []
         case '1':
-            import examples
-            examples = importlib.import_module("examples.example"+kg).examples
+            filename = './examples/raw_examples.csv'
+            f = open(filename, mode="r")
+            csv_file = csv.reader(f, delimiter=",")
+            examples = []
+            for row in csv_file:
+                if row[0] == 'Sentence':
+                    continue
+                if row[int(kg)] is None:
+                    break
+                
+                examples += [{
+                    "sentence": row[0],
+                    "output": row[int(kg)]
+                }]
+                
+                if len(examples) == 8: 
+                    break
+            f.close()
+            
         case _:
             raise ValueError("example_type - got: ", example_type)
 
