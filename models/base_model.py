@@ -88,12 +88,11 @@ def model_loader(model_type:str):
     
     
 def output_parser(output)->str:
-    # eliminate 'Sentence: ~~~' part
-    found = output.find('Sentence:')
-    parsed = output.rstrip('\n \t').lstrip('\n \t')
-    if found > -1:
-        parsed = output[:found].rstrip('\n \t')
-        if len(parsed) == 0:
-            parsed = output
-    
-    return parsed
+    erasewords = ['Sentence:', 'Note:', 'note:']
+    output = output.rstrip('\n \t').lstrip('\n \t')
+    for word in erasewords:
+        parsed = output[:output.find(word)]
+        if len(parsed) > 0:
+            output = parsed
+        
+    return output.rstrip('\n \t')

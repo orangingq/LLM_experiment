@@ -16,7 +16,7 @@ def runall(kg_type:str, prompt_type:str, example_type:str, input_type:str,  mode
 
     if model_type=='all':
         for model in model_range[:-1]:
-            if not model in ['Llama2', 'ChatLlama2']:
+            if not 'Llama2' in model_type:
                 llm = model_loader(model_type=model)
             else: 
                 llm = None
@@ -47,7 +47,7 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
     
     print(f"\n> kg_type: {kg_type}, prompt_type: {prompt_type}, example_type: {example_type}, input_type: {input_type}, model_type: {model_type}, chain: {usechain}")
 
-    if model_type != 'Llama2':
+    if not 'Llama2' in model_type:
         if not fast_llm is None:
             llm = fast_llm
         else:
@@ -79,13 +79,14 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
             'outputs': outputs
         })
     
-    else: # Llama2
+    else: # Llama2 or ChatLlama2
         from torch.distributed.run import parse_args, run
         args = parse_args(['--nproc_per_node', '8', 'models/llama2/run_llama2.py',
                                   '--kg_type', kg_type, 
                                   '--prompt_type', prompt_type,
                                   '--example_type', example_type,
-                                  '--input_type', input_type])
+                                  '--input_type', input_type,
+                                  '--chat', 'True' if model_type=='ChatLlama2' else 'False'])
         run(args)
         
     

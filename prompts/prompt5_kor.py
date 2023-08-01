@@ -2,6 +2,7 @@
 
 prompt = """
 위에 주어진 문장에 대해 하나의 Relationship을 추론하세요. 
+
 절대 거짓말을 해서는 안 됩니다. Relationship을 최대한 정확하게 추론하세요.
 Relationship에는 세 가지 유형이 있습니다. Node, Edge 및 Infoedge입니다. 
 

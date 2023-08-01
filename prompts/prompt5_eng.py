@@ -2,6 +2,7 @@
 
 prompt = """
 Given an input sentence, extrapolate as many relationships as possible from the prompt and update the state. 
+
 You should never lie. Extrapolate only true relationships.
 A relationship has three types of entity. Nodes, Edges, and Infoedge. 
 

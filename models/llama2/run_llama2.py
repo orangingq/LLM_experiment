@@ -11,43 +11,63 @@ from keys.keys import llama2_path
 from results.save import save
 from models.base_model import output_parser
 
-def build(prompt:str, inputs, model:str = 'llama-2-70b'):
+# build the Llama2 model with the given prompt, inputs and the model name
+def build(model:str = 'llama-2-70b', max_seq_len:int = 3000, max_batch_size:int =64):
     generator = Llama.build(
         ckpt_dir=llama2_path + model+'/',
         tokenizer_path=llama2_path + 'tokenizer.model',
-        max_seq_len= int(len(str(prompt))/100)*120,
-        max_batch_size=int(len(inputs))*2
+        max_seq_len= max_seq_len,
+        max_batch_size=max_batch_size
     )
     return generator
 
-def run(prompt:str, inputs):
+# calculate elapsed time from the given start_time
+def timer(start_time):
+    hours, rem = divmod(time.time() - start_time, 3600)
+    minutes, seconds = divmod(rem, 60)
+    return "{:0>2}:{:0>2}:{:05.2f}".format(
+        int(hours), int(minutes), seconds)
+
+
+def run(final_inputs, chat:bool, max_seq_len:int = 3000, max_batch_size:int = 64):
+    # parameters
+    model = 'llama-2-70b-chat' if chat else 'llama-2-70b' 
+    max_gen_len = 512
+    temperature = 0
+    top_p = 0.9
     
     # model build
-    generator = build(prompt, inputs)
-
-    final_inputs = []
-    for i in range(len(inputs)):
-        final_inputs = final_inputs + [prompt.format(input=inputs[i])] #+ 'Do not repeat same output. Do not make another "Sentence".'
+    generator = build(model) #prompt, inputs, 
     
     # run
     start_time = time.time()
-    outputs = generator.text_completion(
-        final_inputs,
-        max_gen_len=512,
-        temperature=0,
-        top_p=0.9,
-    )
+    if chat:
+        outputs = generator.chat_completion(
+            final_inputs,
+            max_gen_len=max_gen_len,
+            temperature=temperature,
+            top_p=top_p,
+        )
+    else:
+        outputs = generator.text_completion(
+            final_inputs,
+            max_gen_len=max_gen_len,
+            temperature=temperature,
+            top_p=top_p,
+        )
         
+    # return results
     results = []
     for i in range(len(outputs)):
         # elapsed_time
         elapsed_time = timer(start_time)
         
         # parse output
-        output = output_parser(outputs[i]['generation'])
-        
-        print(f"** {i}) \nInput: ", inputs[i])
-        print(f"Output: {output}\n") 
+        if chat:
+            output = output_parser(outputs[i]['generation']['content'])
+        else:
+            output = output_parser(outputs[i]['generation'])
+            
         results = results + [{
             'elapsed_time': elapsed_time,
             'tokens': -1,
@@ -57,19 +77,35 @@ def run(prompt:str, inputs):
     return results
 
 
-def timer(start_time):
-    hours, rem = divmod(time.time() - start_time, 3600)
-    minutes, seconds = divmod(rem, 60)
-    return "{:0>2}:{:0>2}:{:05.2f}".format(
-        int(hours), int(minutes), seconds)
 
-def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_type:str='all'):   
- 
-    prompt = prompt_maker(str(kg_type), str(prompt_type), str(example_type))
+def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_type:str='all', chat:str='False'):   
+    chat = bool(chat)
+    prompt = prompt_maker(str(kg_type), str(prompt_type), str(example_type), chat = chat)
     inputs = input_provider(str(input_type))
 
+    # input prompt build
+    final_inputs = []
+    if chat:        
+        for i in range(len(inputs)):
+            input_prompt = prompt[-1].copy()
+            input_prompt['content'] = input_prompt['content'].format(input=inputs[i])
+            final_inputs += [prompt[:-1] + [input_prompt]]
+    else:
+        for i in range(len(inputs)):
+            final_inputs = final_inputs + [prompt.format(input=inputs[i])] 
+    
     # run
-    outputs = run(prompt, inputs)
+    outputs = run(
+        final_inputs= final_inputs, 
+        chat= chat, 
+        max_seq_len= max(int(len(str(prompt))/100)*120, 3000), 
+        max_batch_size=max(len(inputs)*2, 64)
+    )
+    
+    # print outputs
+    for i, (input, output) in enumerate(zip(inputs, outputs)):
+        print(f"** {i}) \nInput: ", input)
+        print(f"Output: {output['output']}\n") 
     
     # save
     save({
@@ -77,7 +113,7 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
             'prompt_type': prompt_type,
             'example_type': example_type,
             'input_type': input_type,
-            'model_type': 'Llama2', 
+            'model_type': 'ChatLlama2' if chat else 'Llama2', 
             'elapsed_time': -1,
             'tokens': -1,
             'outputs': outputs

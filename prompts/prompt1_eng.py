@@ -2,6 +2,7 @@
 
 prompt = """
 Convert a given input sentence into the RDF-star format. 
+
 You should never lie. Extrapolate only true entities and relationships.
 Below are the short explanation about RDF-star format. You can find more on the internet. 
 

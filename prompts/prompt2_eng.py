@@ -2,6 +2,7 @@
 
 prompt = """
 Convert a given input sentence into Neo4j format. 
+
 You must not lie. Only true nodes and edges should be converted.
 Here is a brief description of the Neo4j format; you can find additional information on the internet. 
 
