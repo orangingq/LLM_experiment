@@ -4,3 +4,4 @@ __pycache__/
 */__pycache__/
 results/*.json
 results/*.csv
+neo4j.sh

@@ -92,6 +92,7 @@ def output_parser(output)->str:
     output = output.rstrip('\n \t').lstrip('\n \t')
     for word in erasewords:
         parsed = output[:output.find(word)]
+        parsed = parsed.replace('{{', '{').replace('}}', '}')    
         if len(parsed) > 0:
             output = parsed
         

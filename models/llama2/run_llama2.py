@@ -10,6 +10,7 @@ from models.llama2.generation import Llama
 from keys.keys import llama2_path
 from results.save import save
 from models.base_model import output_parser
+from results.scoring import scoring
 
 # build the Llama2 model with the given prompt, inputs and the model name
 def build(model:str = 'llama-2-70b', max_seq_len:int = 3000, max_batch_size:int =64):
@@ -37,7 +38,7 @@ def run(final_inputs, chat:bool, max_seq_len:int = 3000, max_batch_size:int = 64
     top_p = 0.9
     
     # model build
-    generator = build(model) #prompt, inputs, 
+    generator = build(model, max_seq_len=max_seq_len, max_batch_size=max_batch_size) #prompt, inputs, 
     
     # run
     start_time = time.time()
@@ -98,7 +99,7 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
     outputs = run(
         final_inputs= final_inputs, 
         chat= chat, 
-        max_seq_len= max(int(len(str(prompt))/100)*120, 3000), 
+        max_seq_len= max(int((len(str(prompt))+len(str(inputs[-1])))/100)*120, 3000), 
         max_batch_size=max(len(inputs)*2, 64)
     )
     
@@ -108,7 +109,7 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
         print(f"Output: {output['output']}\n") 
     
     # save
-    save({
+    filename = save({
             'kg_type': kg_type,
             'prompt_type': prompt_type,
             'example_type': example_type,
@@ -118,6 +119,7 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
             'tokens': -1,
             'outputs': outputs
         })
+    scoring(filename=filename)
 
 
 if __name__ == "__main__":

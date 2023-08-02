@@ -34,11 +34,12 @@ def findall(date:str=''):
 
 
 
-def find(date:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type:str= 'all', input_type:str= 'all',  model_type:str= 'all', print_output:int=1):
-    if date == '':
-        date = datetime.now().strftime("%Y%m%d")
-    
-    filename = './results/result_'+date+'.csv'
+def find(filename:str='', kg_type:str = 'all', prompt_type:str = 'all', example_type:str= 'all', input_type:str= 'all',  model_type:str= 'all', print_output:int=1):
+    if filename == '':
+        now = datetime.now().strftime("%Y%m%d_%H")
+        filename = './results/result_'+now+'.csv'
+        # date = datetime.now().strftime("%Y%m%d")
+        # filename = './results/result_'+date+'.csv'
     
     # return False if file does not exist
     if not path.exists(filename):

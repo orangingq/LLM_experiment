@@ -16,7 +16,7 @@ Edges are represented by enclosing them in [].
 Edges can specify labels and properties in the same way as Nodes. (Ex: "[:label {{property: 'property value'}}]" )
 A label of the edge should be easy and precise. It should be a basic form of the verb. 
 Put the tense or time information in the property section.
-Edges are directional, and you can specify a start Node and an end Node. 
+Edges are directional, so you should specify a start Node and an end Node. 
 For example, if an edge is directed from node id 1 to node id 2, it would be expressed as "(1)-[:label {{property: 'property value'}}]->(2)".
-
+List all the edges in the given format. 
 """

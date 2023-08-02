@@ -68,7 +68,7 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str, chat:bool=False
     
     if chat:
         # KG format explanation 
-        prompt = [{"role": "system", "content": suffix}]
+        prompt = [{"role": "system", "content": suffix.format()}]
         
         # examples
         for example in examples:
