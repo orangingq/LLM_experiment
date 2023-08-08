@@ -13,8 +13,6 @@ def scoring(filename:str=''):
         
     if not path.exists(filename):
         raise NameError(f"No file named '{path.abspath(filename)}' was searched.")
-    # elif path.exists(scorefilename):
-    #     raise NameError(f"File named '{path.abspath(filename)}' was already scored. Erase the score file if you want to re-score the file.")
     
          
     sf = open(scorefilename, mode='w', encoding="utf-8", newline='')
@@ -27,64 +25,73 @@ def scoring(filename:str=''):
         if not 'LPG' in row[0]:
             continue
         kg, prompt, example, model, input_idx, input, output = row[0], row[1], row[2], row[4], row[7], row[8], row[9]
+
         output, score, note = structure_score(output)
         wr.writerow([kg, prompt, example, model, input_idx, input, output, score, note])
-    
-        # print("output: ", (output.strip('\n')[:5]+"...") if len(output)>10 else output, "\t score: ", score, "\t note: ", (note[:10]+"...") if len(note)>10 else note)
-    
+        
     f.close()
     sf.close()
     print(f"\nresult saved: {scorefilename}")
     return
                     
 def structure_score(output):
-        total_score, note = 1, ''
-        scored = False # check if the output was scored
+    total_score, note = 1, ''
+    node_scored = False # check if the output was scored
+    edge_scored = False
+    
+    varlist = []
+    parsed_output = ""
+    querylist = output.split('\n')      
+    stop = False   # stop scoring if unformatted query was found.
+    node_record = ""
+    edge_record = ""
+    for i, query in enumerate(querylist):
+        query = query.lstrip(' \t').rstrip(' \t')     
+        query = query.replace('{{', '{').replace('}}', '}')       
+        leave_out = False # don't put the query line into the output.
+
+        if len(query) < 3:
+            continue
         
-        varlist = []
-        parsed_output = ""
-        querylist = output.split('\n')      
-        stop = False   # stop scoring if unformatted query was found.
-        last_mistake = False # if the last sentence is wrong, don't put it into the result.
-        for i, query in enumerate(querylist):
-            query = query.lstrip(' \t').rstrip(' \t')     
-            query = query.replace('{{', '{').replace('}}', '}')       
-            if len(query) < 3:
-                continue
+        # scoring
+        if not stop:
+            # node
+            n_score, query, varlist = node_score(query, varlist=varlist, check_var=True)
+            if n_score == 0:
+                # edge
+                e_score, query, varlist = edge_score(query, varlist=varlist)
+                if e_score == 0 :
+                    if  i < len(querylist)-1:
+                        total_score = 0
+                        note = query
+                        stop = True
+                    else:
+                        leave_out = True
+                elif edge_record == query:
+                    leave_out = True
+                else:
+                    edge_record = query
+                    edge_scored = True
+                    
+            elif node_record == query[5:]:
+                leave_out = True
+            else:
+                node_record = query[5:]
+                node_scored = True
+        if not leave_out:
+            parsed_output = parsed_output + query + "\n"
             
-            # scoring
-            if not stop:
-                # node
-                n_score, query, varlist = node_score(query, varlist=varlist, check_var=True)
-                scored = True
-                if n_score == 0:
-                    # edge
-                    e_score, query, varlist = edge_score(query, varlist=varlist)
-                    if e_score == 0 :
-                        if  i < len(querylist)-1:
-                            total_score = 0
-                            note = query
-                            stop = True
-                        else:
-                            last_mistake = True
-            #             parsed_output = parsed_output + query + "\n"
-            #         else:
-            #             parsed_output = parsed_output + query + "\n"
-            #     else:
-            #         parsed_output = parsed_output + query + "\n"
-            # else:
-            if not last_mistake:
-                parsed_output = parsed_output + query + "\n"
-                
-        if not scored:
-            total_score = 0
-        return parsed_output, total_score, note
+    if not node_scored and not edge_scored:
+        total_score = 0
+    if len(varlist)>10 and not edge_scored:
+        total_score = 0
+    return parsed_output, total_score, note
                 
 # attribute format: {att_label: 'att_val'} or {att_label: (att_var)}
-def attribute_score(attributes, varlist):
+def attribute_score(attributes, varlist, check_var=True):
     # regular expression format
     att_label_format = "^[ ]{0,3}\w+[ ]{0,3}$"
-    att_val_format = "^[ ]{0,3}((?P<start>[']|[\"])[^\t\n\r\f\v'\"]+(?P=start)|[(](?P<att_var>\w+)[)]|\d+)[ ]{0,3}$"
+    att_val_format = "^[ ]{0,3}((?P<start>[']|[\"])[^\t\n\r\f\v'\"]+(?P=start)|[(](?P<att_var>\w+)[)]|\d+|[T][r][u][e]|[F][a][l][s][e])[ ]{0,3}$"
     p_al = re.compile(att_label_format) 
     p_av = re.compile(att_val_format)
     
@@ -101,7 +108,10 @@ def attribute_score(attributes, varlist):
                 break
             else:
                 att_var = m_av.group('att_var')
-                if not att_var is None and not att_var in varlist:
+                if check_var and not att_var is None:
+                    att_score = 0
+                    break
+                elif not att_var is None and not att_var in varlist:
                     att_score = 0
                     break
                 
@@ -114,7 +124,7 @@ def node_score(query, varlist, check_var=False):
     
     # regular expression format
     var_format = "(?P<var>\w+)" + ('' if check_var else '?')
-    label_format = "(?P<label>(\w|[ ]|:)+)"
+    label_format = "(?P<label>(\w|[ ]|:)*\w)"
     attribute_format = "(?P<attributes>[{].+[}])?"
     node_format = "^[(]" + var_format + "?:[ ]{0,3}"+label_format+"[ ]{0,3}"+attribute_format+"[)]$" #(?P<attributes>[{]\w+:\s?['].+['](,\s{0,3}\w+:\s?['].+['])*[}])?
     p = re.compile(node_format) 
@@ -160,7 +170,8 @@ def edge_score(query, varlist):
     # regular expression format
     var1_format = "[(](?P<var1>:?.*)[)]"
     var_format = "(?P<var>\w+)?"
-    label_format = "(?P<label>(\w|[ ]|:)+)" # label_format = ":(?P<label>\w+)"
+    label_format = "(?P<label>(\w|[ ]|:)*\w)"
+    # label_format = "(?P<label>(\w|[ ]|:)+)" # label_format = ":(?P<label>\w+)"
     var2_format = "[(](?P<var2>:?.*)[)]"
     attribute_format = "(?P<attributes>[{].+[}])?"
     edge_format = "^" + var1_format + "[ ]?[-][ ]?\["+var_format+label_format+"[ ]{0,3}"+attribute_format+"\][ ]?[-][>][ ]?"+var2_format + "$"
@@ -211,10 +222,10 @@ def edge_score(query, varlist):
     return score, query, varlist # , label if score ==1 else ''
 
 
-
-# scoring(filename="./results/result_20230801_15.csv")
-
 # examples
+
+# scoring(filename="./results/result_20230731_01.csv")
+
 s1 = "(a)-[:늘었다 {비율: '8.0%'}]->(:구독자)"
 s2 = '(a) -[:늘었다 {비율: "8.0%"}]->(:구독자)'
 s3 = "(a)-[:때문에]->(:가능성)"

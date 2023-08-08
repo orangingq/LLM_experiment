@@ -37,6 +37,7 @@ def run(final_inputs, chat:bool, max_seq_len:int = 3000, max_batch_size:int = 64
     temperature = 0
     top_p = 0.9
     
+    # print("max_seq_len: ", max_seq_len, "max_batch_size:", max_batch_size)
     # model build
     generator = build(model, max_seq_len=max_seq_len, max_batch_size=max_batch_size) #prompt, inputs, 
     
@@ -80,9 +81,9 @@ def run(final_inputs, chat:bool, max_seq_len:int = 3000, max_batch_size:int = 64
 
 
 def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_type:str='all', chat:str='False'):   
-    chat = bool(chat)
-    prompt = prompt_maker(str(kg_type), str(prompt_type), str(example_type), chat = chat)
-    inputs = input_provider(str(input_type))
+    kg_type, prompt_type, example_type, input_type, chat = str(kg_type), str(prompt_type), str(example_type), str(input_type), bool(chat)
+    prompt = prompt_maker(kg_type, prompt_type, example_type, chat = chat)
+    inputs = input_provider(input_type)
 
     # input prompt build
     final_inputs = []
@@ -95,11 +96,13 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
         for i in range(len(inputs)):
             final_inputs = final_inputs + [prompt.format(input=inputs[i])] 
     
+    # print(final_inputs[0])
+    
     # run
     outputs = run(
         final_inputs= final_inputs, 
         chat= chat, 
-        max_seq_len= max(int((len(str(prompt))+len(str(inputs[-1])))/100)*120, 3000), 
+        max_seq_len= max(int((len(str(prompt))+len(str(inputs[-1]))+0)/100)*150, 3000), 
         max_batch_size=max(len(inputs)*2, 64)
     )
     

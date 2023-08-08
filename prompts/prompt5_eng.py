@@ -1,26 +1,25 @@
-# Infoedge 형식에 대한 설명 prompt
+# LPG_sem에 대한 설명 prompt
 
 prompt = """
-Given an input sentence, extrapolate as many relationships as possible from the prompt and update the state. 
+Convert a given article into Neo4j format. 
 
-You should never lie. Extrapolate only true relationships.
-A relationship has three types of entity. Nodes, Edges, and Infoedge. 
+You must not lie. Convert only true nodes and edges.
+You need to find keywords of the given input article and convert them into Nodes.
+Then you need to make Edges which represent the relationships between the Nodes you made.
+Here is a brief description of the Neo4j format; you can find additional information on the internet. 
 
-1. Node
-Every node has a distinct id and label. 
-The format of the node is (id-label).
-The label of a node is a subject of the sentence.
+Nodes are represented by enclosing them in parentheses (). 
+A Node's label is represented by "(:label)". Find the noun form keyword for a given article and set it as the label.
+By prefixing label with some letters, create a variable that can refer to a Node. (Ex: "(a:label)" )
+Properties of a Node can be represented by curly braces {{}}. (Ex: "(a:label {{property: 'property value'}})" )
+List all the nodes first.
 
-2. Edge
-Every edge has a set of 'from' node ids, and a set of 'to' node ids, its own id, and label.
-The format of the edge is (id-label): node id->node id.
-Every edge is directed from a set of nodes and to another set of nodes. 
-The label of an edge is a basic type verb of the sentence. Label should be precise and short. 
-
-3. Infoedge
-Infoedge adds additional information of the sentence to the edge such as time, location, duration, or from whom. 
-Every infoedge has a single 'base' edge id, a set of 'info' node ids, its own id, and label. 
-The format of the infoedge is (id-label): edge id->node id.
-The label of an infoedge should be one of '부터 (시간)', '까지 (시간)', '에서 (장소)', '에 (시간)', '에게', and '에게서'. 
-
+Edges are represented by enclosing them in []. 
+Edges can specify labels, variables, and properties in the same way as Nodes. (Ex: "[var:label {{property: 'property value'}}]" )
+A label of the edge should be easy and precise. 
+Use the label '따라서' to represent two nodes in a causal relationship.
+Put the tense or time information in the property section.
+Edges are directional, so you should specify a start Node and an end Node. 
+For example, if an edge is directed from node a to node b, it would be expressed as "(a)-[var:label {{property: 'property value'}}]->(b)".
+List all the edges in the given format. 
 """

@@ -88,7 +88,7 @@ def model_loader(model_type:str):
     
     
 def output_parser(output)->str:
-    erasewords = ['Sentence:', 'Note:', 'note:']
+    erasewords = ['Sentence:', 'Note:', 'note:', 'Article:', 'Output:', 'output:']
     output = output.rstrip('\n \t').lstrip('\n \t')
     for word in erasewords:
         parsed = output[:output.find(word)]

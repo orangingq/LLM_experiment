@@ -13,8 +13,12 @@ def kg_matcher(kg_type:str)->str:
             kg = '3'
         case 'LPG_id':
             kg = '4'
-        case 'Infoedge': # new format 'infoedge'
+        case 'LPG_sem':
             kg = '5'
+        case 'Infoedge': # new format 'infoedge'
+            kg = '6'
+        case 'LPG_rea':
+            kg = '7'
         case _:
             raise ValueError("kg_type - got: ", kg_type)
     return kg
@@ -41,23 +45,27 @@ def example_matcher(example_type:str, kg:str):
             f = open(filename, mode="r")
             csv_file = csv.reader(f, delimiter=",")
             examples = []
-            for row in csv_file:
+            for i, row in enumerate(csv_file):
                 if row[0] == 'Sentence':
                     continue
-                if row[int(kg)] is None:
+                if len(row[int(kg)]) == 0:
                     break
-                
+                if i < 7:
+                    continue
+                if int(kg) >= 5 and i < 12:
+                    continue
                 examples += [{
-                    "sentence": row[0],
+                    "article": row[0],
                     "output": row[int(kg)]
                 }]
-                
-                if len(examples) == 8: 
+                if len(examples) == 10: 
                     break
             f.close()
             
         case _:
             raise ValueError("example_type - got: ", example_type)
+    
+    print(examples)
     return examples
 
 
@@ -73,22 +81,22 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str, chat:bool=False
         # examples
         for example in examples:
             prompt += [
-                {"role": "user", "content": "Sentence: " + example['sentence'] + "\nOutput: "},
+                {"role": "user", "content": "Article: " + example['article'] + "\nOutput: "},
                 {"role": "assistant", "content": example['output']}
             ]
         
         # Sentence given to generate output
-        prompt += [{"role": "user", "content": "Sentence: {input}\nOutput: "}]
+        prompt += [{"role": "user", "content": "Article: {input}\nOutput: "}]
     
     
     else:
         example_prompt = PromptTemplate(input_variables=[
-                                "sentence", "output"], template="Sentence: {sentence}\nOutput: {output}")
+                                "article", "output"], template="Article: {article}\nOutput: {output}")
         
         prompt = FewShotPromptTemplate(
             examples=examples,
             example_prompt=example_prompt,
-            suffix=suffix + "Sentence: {input}\nOutput: ",
+            suffix=suffix + "Article: {input}\nOutput: ",
             input_variables=["input"]
         )
         
