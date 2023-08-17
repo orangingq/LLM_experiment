@@ -5,12 +5,13 @@ from models.base_model import model_loader
 from inputs.Benchmark import input_provider
 from langchain.chains import LLMChain
 from results.scoring import scoring
+from results.neo4j import save_into_DB
 
-kg_range = ['LPG', 'LPG_tense', 'LPG_sem', 'LPG_rea', 'all'] # "RDF-star": RDF-star format / "LPG": LPG(Neo4j) format / "Infoedge": Infoedge format (new) # Reject: 'RDF-star', 'Infoedge', 'LPG_id', 
+kg_range = ['RDF-star', 'LPG', 'LPG_tense', 'LPG_sem', 'LPG_rea', 'all'] # "RDF-star": RDF-star format / "LPG": LPG(Neo4j) format / "Infoedge": Infoedge format (new) # Reject: 'RDF-star', 'Infoedge', 'LPG_id', 
 prompt_range = ['None', "Eng", "Kor", 'all'] # "None": No Explanation template / "Eng": English Template / "Kor":Korean Template
 example_range = ['0', '1',  'all'] # 0: No example / 1: 4 examples / 2: 100 examples # '2',
-input_range = ['one', 'two', 'three', 'four', 'five', 'nested', 'parallel', 'dependent', '0', '1', '2', '3', '4', 'all'] # 0: simple sentences / 1: complex sentences / 2: simple paragraphs / 3: complex paragraphs 
-model_range = ['ChatLlama2', 'Llama2', 'all'] # Reject: 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8', 'KoGPT', 'KULLM', 'ChatOpenAI', 'OpenAI', 
+input_range = ['0', '1', '2', '3', '4', '5', 'all'] # 'one', 'two', 'three', 'four', 'five', 'nested', 'parallel', 'dependent',
+model_range = ['ChatLlama2', 'Llama2', 'ChatOpenAI', 'OpenAI', 'all'] # Reject: 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8', 'KoGPT', 'KULLM', 
 
 
 def runall(kg_type:str, prompt_type:str, example_type:str, input_type:str,  model_type:str, fast_llm=None, chain=False):
@@ -79,7 +80,9 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
             'model_type': model_type if not usechain else model_type + '_chain', 
             'outputs': outputs
         })
-        scoring(filename=filename)
+        scorefilename = scoring(filename=filename)
+        save_into_DB(filename=scorefilename)
+        
     
     else: # Llama2 or ChatLlama2
         from torch.distributed.run import parse_args, run
@@ -96,7 +99,7 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
     
 
 @click.command()
-@click.option('--kg', default='LPG_rea', type=click.Choice(kg_range))
+@click.option('--kg', default='LPG_tense', type=click.Choice(kg_range))
 @click.option('--prompt', default='Eng', type=click.Choice(prompt_range))
 @click.option('--example', default='1', type=click.Choice(example_range))
 @click.option('--input', default='4', type=click.Choice(input_range))

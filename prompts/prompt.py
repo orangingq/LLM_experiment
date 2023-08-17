@@ -50,8 +50,9 @@ def example_matcher(example_type:str, kg:str):
                     continue
                 if len(row[int(kg)]) == 0:
                     break
-                if i < 7:
-                    continue
+                if i < 3: continue
+                # if not i in [ 4, 7, 8, 12, 13,  15]:#14,1,10,9,  
+                #     continue
                 if int(kg) >= 5 and i < 12:
                     continue
                 examples += [{
@@ -65,7 +66,7 @@ def example_matcher(example_type:str, kg:str):
         case _:
             raise ValueError("example_type - got: ", example_type)
     
-    print(examples)
+    # print(examples)
     return examples
 
 
@@ -81,24 +82,26 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str, chat:bool=False
         # examples
         for example in examples:
             prompt += [
-                {"role": "user", "content": "Article: " + example['article'] + "\nOutput: "},
+                {"role": "user", "content": "Article: \n" + example['article'] + "\n\nOutput: \n"},
                 {"role": "assistant", "content": example['output']}
             ]
         
         # Sentence given to generate output
-        prompt += [{"role": "user", "content": "Article: {input}\nOutput: "}]
+        prompt += [{"role": "user", "content": "\n\nArticle: \n{input}\nOutput: \n"}]
     
     
     else:
         example_prompt = PromptTemplate(input_variables=[
-                                "article", "output"], template="Article: {article}\nOutput: {output}")
+                                "article", "output"], template="Article: \n{article}\n\nOutput: \n{output}\n")
         
         prompt = FewShotPromptTemplate(
             examples=examples,
             example_prompt=example_prompt,
-            suffix=suffix + "Article: {input}\nOutput: ",
+            suffix=suffix + "\n\nArticle: \n{input}\nOutput: \n",
             input_variables=["input"]
         )
+        
+    # print(prompt)
         
     return prompt
     

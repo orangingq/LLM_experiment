@@ -8,7 +8,7 @@ def save(save_info)->str:
    
     now = datetime.now().strftime("%Y%m%d_%H")
     
-    filename = './results/result_'+now+'.csv'
+    filename = './results/results/result_'+now+'.csv'
     
     # create a csv file if not exists
     if not path.exists(filename):

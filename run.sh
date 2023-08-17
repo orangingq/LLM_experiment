@@ -7,23 +7,26 @@
 # model_range = ['ChatLlama2', 'Llama2', 'all'] # Reject: 'KoAlpaca12.8','KoGPT2', 'KoAlpaca5.8', 'KoGPT', 'KULLM', 'ChatOpenAI', 'OpenAI', 
 
 
-python3 run.py --kg=LPG --input=4 --model=ChatLlama2;
-python3 run.py --kg=LPG --input=all --model=ChatLlama2;
-python3 run.py --kg=LPG_tense --input=4 --model=ChatLlama2;
-python3 run.py --kg=LPG_tense --input=all --model=ChatLlama2;
-python3 run.py --kg=LPG_sem --input=4 --model=ChatLlama2;
-python3 run.py --kg=LPG_sem --input=all --model=ChatLlama2;
-python3 run.py --kg=LPG_rea --input=4 --model=ChatLlama2;
-python3 run.py --kg=LPG_rea --input=all --model=ChatLlama2;
-python3 run.py --kg=LPG --input=4 --model=Llama2;
-python3 run.py --kg=LPG --input=all --model=Llama2;
-python3 run.py --kg=LPG_tense --input=4 --model=Llama2;
-python3 run.py --kg=LPG_tense --input=all --model=Llama2;
-python3 run.py --kg=LPG_sem --input=4 --model=Llama2;
-python3 run.py --kg=LPG_sem --input=all --model=Llama2;
-python3 run.py --kg=LPG_rea --input=4 --model=Llama2;
-python3 run.py --kg=LPG_rea --input=all --model=Llama2;
+# python3 run.py --kg=LPG_tense --input=4 --model=ChatLlama2;
+# python3 run.py --kg=LPG_tense --input=3 --model=ChatLlama2;
+# python3 run.py --kg=LPG_tense --input=5 --model=ChatLlama2;
+# python3 run.py --kg=LPG_tense --input=4 --model=Llama2;
+# python3 run.py --kg=LPG_tense --input=3 --model=Llama2;
+# python3 run.py --kg=LPG_tense --input=5 --model=Llama2;
 
+# python3 run.py --kg=LPG_tense --input=4 --model=ChatOpenAI;
+# python3 run.py --kg=LPG_tense --input=3 --model=ChatOpenAI;
+# python3 run.py --kg=LPG_tense --input=5 --model=ChatOpenAI;
+# python3 run.py --kg=LPG_tense --input=4 --model=OpenAI;
+# python3 run.py --kg=LPG_tense --input=3 --model=OpenAI;
+# python3 run.py --kg=LPG_tense --input=5 --model=OpenAI;
+
+python3 run.py --kg=RDF-star --input=3 --model=ChatLlama2;
+python3 run.py --kg=RDF-star --input=4 --model=ChatLlama2;
+python3 run.py --kg=RDF-star --input=5 --model=ChatLlama2;
+python3 run.py --kg=RDF-star --input=3 --model=Llama2;
+python3 run.py --kg=RDF-star --input=4 --model=Llama2;
+python3 run.py --kg=RDF-star --input=5 --model=Llama2;
 
 # python3 run.py \
 #     --kg_type=RDF-star \

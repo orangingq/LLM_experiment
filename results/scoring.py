@@ -7,7 +7,7 @@ import re
 def scoring(filename:str=''):
     if filename == '':
         now = datetime.now().strftime("%Y%m%d_%H")
-        filename = './results/result_'+now+'.csv'
+        filename = './results/results/result_'+now+'.csv'
         
     scorefilename = './results/scored/scored_'+filename.split('/result_')[1]
         
@@ -22,19 +22,70 @@ def scoring(filename:str=''):
     f = open(filename, mode="r")
     # loop through the csv list
     for row in csv.reader(f, delimiter=","):
-        if not 'LPG' in row[0]:
-            continue
+        # if not 'LPG' in row[0]:
+        #     continue
         kg, prompt, example, model, input_idx, input, output = row[0], row[1], row[2], row[4], row[7], row[8], row[9]
 
-        output, score, note = structure_score(output)
+        if 'LPG' in row[0]:
+            output, score, note = LPG_structure_score(output)
+        elif 'RDF' in row[0]:
+            output, score, note = RDF_structure_score(output)
+        else:
+            continue
+        
         wr.writerow([kg, prompt, example, model, input_idx, input, output, score, note])
         
     f.close()
     sf.close()
     print(f"\nresult saved: {scorefilename}")
-    return
+    return scorefilename
+       
+def RDF_structure_score(output):
+    total_score, note = 1, ''
+    scored = False # check if the output was scored
+    
+    parsed_output = ""
+    querylist = output.split(')')      
+    stop = False   # stop scoring if unformatted query was found.
+    record = ""
+    for i, query in enumerate(querylist):
+        query = query.lstrip(', \t').rstrip(', \t')     
+        
+        leave_out = False # don't put the query line into the output.
+
+        if len(query) < 3 or query[0] != '(':
+            continue 
+        query += ')'
+        
+        print(query)
+
+        # scoring
+        if not stop:
+            # node
+            score = triple_score(query)
+            
+            if score == 0:
+                if  i < len(querylist)-1:
+                    total_score = 0
+                    note = query
+                    stop = True
+                else:
+                    leave_out = True
+            elif record == query:
+                leave_out = True
+            else:
+                record = query
+                scored = True
                     
-def structure_score(output):
+        if not leave_out:
+            parsed_output = parsed_output + query + "\n"
+            
+    if not scored:
+        total_score = 0
+    return parsed_output, total_score, note
+      
+                    
+def LPG_structure_score(output):
     total_score, note = 1, ''
     node_scored = False # check if the output was scored
     edge_scored = False
@@ -86,6 +137,52 @@ def structure_score(output):
     if len(varlist)>10 and not edge_scored:
         total_score = 0
     return parsed_output, total_score, note
+      
+
+def triple_score(query):
+    # regular expression format
+    node1_format = "(?P<name1>\w[\w ]*\w):(?P<label1>[\w]+)"
+    node2_format = "(?P<name2>\w[\w ]*\w):(?P<label2>[\w]+)"
+    edge_format = "(?P<edge>\w[\w ]*\w)"
+    format = "^[(]" + node1_format + "[ ]{1,3}-[ ]{1,3}" + edge_format + "[ ]{1,3}-[ ]{1,3}" + node2_format + "[)]$"
+    p = re.compile(format)
+    m = p.search(query)
+    
+    if not m is None:
+        score = 1
+    else:
+        score = 0
+        # # Check label
+        # label = m.group('label')
+        # if ' ' in label:
+        #     new_label = label.replace(' ', '_')
+        #     idx =  m.start('label')
+        #     new_query = query[:idx] + new_label + query[idx+len(label):]
+        #     # print("replaced: ", query , " -> ", new_query)
+        #     return node_score(new_query, varlist, check_var)
+        
+        # # Check attributes
+        # att_score = 1
+        # attributes = m.group('attributes')
+        # if not attributes is None: 
+        #     att_score = attribute_score(attributes, varlist=varlist)
+        
+        # # Check variable
+        # var = m.group("var")
+        # # print("node var: ", var)
+        # if var is None:
+        #     score = 1
+        # elif not var in varlist:
+        #     varlist += [var]
+        #     score = 1
+             
+        # if score == 1 and att_score == 0:
+        #     score = 0
+    
+    # print("node score:", score)
+    return score
+    
+
                 
 # attribute format: {att_label: 'att_val'} or {att_label: (att_var)}
 def attribute_score(attributes, varlist, check_var=True):
@@ -224,7 +321,7 @@ def edge_score(query, varlist):
 
 # examples
 
-# scoring(filename="./results/result_20230731_01.csv")
+scoring(filename="./results/results/result_20230817_12.csv")
 
 s1 = "(a)-[:늘었다 {비율: '8.0%'}]->(:구독자)"
 s2 = '(a) -[:늘었다 {비율: "8.0%"}]->(:구독자)'

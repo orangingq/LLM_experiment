@@ -11,6 +11,7 @@ from keys.keys import llama2_path
 from results.save import save
 from models.base_model import output_parser
 from results.scoring import scoring
+from results.neo4j import save_into_DB
 
 # build the Llama2 model with the given prompt, inputs and the model name
 def build(model:str = 'llama-2-70b', max_seq_len:int = 3000, max_batch_size:int =64):
@@ -34,10 +35,9 @@ def run(final_inputs, chat:bool, max_seq_len:int = 3000, max_batch_size:int = 64
     # parameters
     model = 'llama-2-70b-chat' if chat else 'llama-2-70b' 
     max_gen_len = 512
-    temperature = 0
+    temperature = 0.1
     top_p = 0.9
     
-    # print("max_seq_len: ", max_seq_len, "max_batch_size:", max_batch_size)
     # model build
     generator = build(model, max_seq_len=max_seq_len, max_batch_size=max_batch_size) #prompt, inputs, 
     
@@ -96,13 +96,13 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
         for i in range(len(inputs)):
             final_inputs = final_inputs + [prompt.format(input=inputs[i])] 
     
-    # print(final_inputs[0])
+    print("total ", len(final_inputs), "each ", len(final_inputs[0]))
     
     # run
     outputs = run(
         final_inputs= final_inputs, 
         chat= chat, 
-        max_seq_len= max(int((len(str(prompt))+len(str(inputs[-1]))+0)/100)*150, 3000), 
+        max_seq_len= max(int((len(str(prompt))+len(str(inputs[-1]))+50)/100)*150, 3000), 
         max_batch_size=max(len(inputs)*2, 64)
     )
     
@@ -110,6 +110,8 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
     for i, (input, output) in enumerate(zip(inputs, outputs)):
         print(f"** {i}) \nInput: ", input)
         print(f"Output: {output['output']}\n") 
+        
+    print(f"Elapsed Time: {output['elapsed_time']}\ttotal: {len(final_inputs)}")
     
     # save
     filename = save({
@@ -122,7 +124,8 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
             'tokens': -1,
             'outputs': outputs
         })
-    scoring(filename=filename)
+    scorefilename = scoring(filename=filename)
+    save_into_DB(filename=scorefilename)
 
 
 if __name__ == "__main__":
