@@ -3,7 +3,7 @@
 import sys
 import requests
 import json
-import re
+from gensim.summarization.summarizer import summarize as gensim_summarize
 
 # setting path
 sys.path.append('../LLM_experiment')
@@ -28,42 +28,13 @@ def summarize(filename):
             articles = json.load(file)
             for i, data in enumerate(articles[itr*500: min(total_len, (itr+1)*500)]):
                 article = data['article']
-                data['summaryCount'] = summary_count(article)
-                print(f"article {i}) start: {data['line_start']}, end: {data['line_end']}, length: {len(article)}, summaryCnt: {data['summaryCount']}")
+                print(f"article {i}) start: {data['line_start']}, end: {data['line_end']}, length: {len(article)}") #, summaryCnt: {data['summaryCount']}
 
-                if not 'summary' in data or not 'text_rank' in data:
-                    # send_data = {
-                    # "document": { "content": article  },
-                    # "option": {
-                    #     "language": "ko",
-                    #     "model": "news",
-                    #     "tone": 0,
-                    #     "summaryCount": data['summaryCount'] 
-                    #     }
-                    # }
-                    # response = requests.post(url, headers=headers, data=json.dumps(send_data).encode('UTF-8'))
-                    # rescode = response.status_code
-                    # if(rescode == 200):
-                    #     summ_st = 12    # {"summary":"
-                    #     summ_end = -2   # "}
-                    #     line_sp = '\\n'
-                    from_clova = False
-                    
-                    lines = get_summary(article, from_clova=from_clova) #response.text[summ_st:summ_end].split(line_sp)
-                    if from_clova:
-                        data['summary'] = []
-                        for l in lines:
-                            print(l)
-                            data['summary'].append(l)
-                    
-                    else: 
-                        data = TextRank(data)
-                    # else:
-                    #     raise ConnectionAbortedError("Error : " + response.text)
-                        
-                if 'summary' in data and not 'summaryCountNum' in data:
-                    data = sentenceNumbering(data)                    
+                # add 'summary' (from_clova=True) or 'text_rank' (from_clova=False)
+                # if not 'summary' in data or not 'text_rank' in data:                    
+                data = get_summary(data, from_clova=False)         
                 
+                # add 'article_num'
                 if not 'article_num' in data:
                     data['article_num'] = i
                     
@@ -77,13 +48,21 @@ def summarize(filename):
 
 
 # get summary from clova or attention mechanism
-def get_summary(article, from_clova=False):
+def get_summary(data, from_clova=False):
     if from_clova:
-        return clova_summary(article)
+        lines = clova_summary(data['article'])
+        data['summary'] = []
+        for l in lines:
+            print(l)
+            data['summary'].append(l)
+        # return data
         
     # page_rank algorithm
     else:
-        return TextRank(article)
+        data = TextRank(data)
+    
+    # add numbering to the summarized sentences
+    return sentenceNumbering(data, from_clova=from_clova)
     
     
 def clova_summary(article):
@@ -93,7 +72,7 @@ def clova_summary(article):
         "language": "ko",
         "model": "news",
         "tone": 0,
-        "summaryCount": summary_count(article)
+        "summaryCount": min(max(round(len(article)/170), 3), 10) # 3 ~ 10 사이 #summary_count(article)
         }
     }
     response = requests.post(url, headers=headers, data=json.dumps(send_data).encode('UTF-8'))
@@ -108,33 +87,16 @@ def clova_summary(article):
         raise ConnectionAbortedError("Error : " + response.text)
 
 
-# return the number of summary sentences
-def summary_count(article):
-    return min(max(round(len(article)/170), 3), 10) # 3 ~ 10 사이
-
-# for clova summary
-def sentenceNumbering(data):
-    # article = data['article']
-    # splitted = re.split(r'(?<=[.!?])\s+', article)
-
-    # article_arr = []
-    # memory = ''
-    # for s in splitted:
-    #     if len(s) < 2:
-    #         # print(s)
-    #         continue
-    #     else:
-    #         if s[-2].isnumeric():
-    #             memory += s
-    #         else:
-    #             article_arr += [memory + s.strip()]
-    #             memory = ''
-            
-    article_arr = sentence_tokenize(data['article']) 
+# add 'summaryCountNum' (from_clova=True) or 'textrankCountNum' (from_clova=False)
+def sentenceNumbering(data, from_clova=True):
+    article_arr = data['article']
     sentenceNum = len(article_arr)
 
     i = 0
-    summary = data['summary']
+    if from_clova:
+        summary = data['summary']
+    else:
+        summary = data['text_rank']
     summary_cnt = [-1 for _ in range(len(summary))]
     for j, s in enumerate(summary):
         while i < sentenceNum:
@@ -146,37 +108,27 @@ def sentenceNumbering(data):
     if -1 in summary_cnt:
         print(data)
         
-    data['article'] = article_arr
-    data['sentenceNum'] = sentenceNum
-    data['summaryCountNum'] = summary_cnt
+    if from_clova:
+        data['summaryCountNum'] = summary_cnt
+    else:
+        data['textrankCountNum'] = summary_cnt
     
     return data
 
 
-def sentence_tokenize(article):
-    splitted = re.split(r'(?<=[.!?])\s+', article)
+def TextRank(data):
+    article = data['article']
+    data['text_rank'] = gensim_summarize(' \n'.join(article), ratio=0.3).split('\n')
+    return data
+        
 
-    article_arr = []
-    memory = ''
-    for s in splitted:
-        if len(s) < 2:
-            continue
-        else:
-            if s[-2].isnumeric():
-                memory += s
-            else:
-                article_arr += [memory + s.strip()]
-                memory = ''
+summarize('inputs/articles/articles_2980to19991.json')
+summarize('inputs/articles/articles_982to2979.json')
+summarize('inputs/articles/articles_297to981.json')
+
+
+
     
-    return article_arr
-
-
-
-# summarize('inputs/articles/articles_2980to19991.json')
-# summarize('inputs/articles/articles_982to2979.json')
-# summarize('inputs/articles/articles_297to981.json')
-
-
 # import tensorflow as tf
 # from tensorflow.keras.layers import Input, LSTM, Dense, Attention, Concatenate, Embedding
 # from tensorflow.keras.models import Model
@@ -184,37 +136,8 @@ def sentence_tokenize(article):
 # from tensorflow.keras.preprocessing.text import Tokenizer
 # from tensorflow.keras.preprocessing.sequence import pad_sequences
 # import matplotlib.pyplot as plt
-import numpy as np
+# import numpy as np
 # import pandas as pd
-from gensim.summarization.summarizer import summarize
-
-def TextRank(data):
-    article = data['article']
-    # with open(filename, 'r', encoding='utf-8') as file:
-    #     articles = json.load(file)
-        # n_of_val = int(len(articles)*0.2)
-        # input = ['\n'.join(a['article']) for a in articles]
-        # # print(input[2:5])
-        # summary = [a['summary'] for a in articles]
-        
-    data['text_rank'] = summarize('\n'.join(article), ratio=0.4)
-    return data
-    # for i in range(0, 3):
-    #     random_number = np.random.randint(0,len(articles), size=1)
-    #     print("="*120)
-    #     print(f'{random_number[0]}'+' 번째 문장\n')
-    #     print('원문 내용: \n'+input[random_number[0]]+'\n\n')
-    #     print('추출 요약 내용: \n'+extract[random_number[0]]+'\n\n')
-    #     print('정답 요약 내용: \n'+'\n'.join(summary[random_number[0]])+'\n\n')
-    
-    # print(extract[:5])
-    
-    # with open(filename, 'w', encoding='utf-8') as file:
-    #         json.dump(articles, file, ensure_ascii=False, indent="\t")
-        
-TextRank('inputs/articles/articles_982to2979.json')   
-    
-    
 # def attention_summary_train(filename):
      
 #     # 가정: vocab_size는 단어의 수, embedding_dim은 임베딩 차원, hidden_size는 LSTM 유닛의 수

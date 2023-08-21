@@ -40,7 +40,8 @@ def article_parser(start_limit=297, end_limit = 500):
             if start == 1:
                 if len(article) > 0 and len(article) < 2000: # 2000자 이내
                     article_end = line_cnt-1
-                    data = {"line_start": article_start, "line_end": article_end, "article": article, "article_num":article_num}
+                    article_arr = sentence_tokenize(article) 
+                    data = {"line_start": article_start, "line_end": article_end, "article": article_arr, "article_num":article_num}
                     articles.append(data)
                     article_num += 1
                     # print(data)
@@ -66,5 +67,23 @@ def article_parser(start_limit=297, end_limit = 500):
     
     print("file saved: ", savefilename)
     return
+
+import re 
+def sentence_tokenize(article):
+    splitted = re.split(r'(?<=[.!?])\s+', article)
+
+    article_arr = []
+    memory = ''
+    for s in splitted:
+        if len(s) < 2:
+            continue
+        else:
+            if s[-2].isnumeric():
+                memory += s
+            else:
+                article_arr += [memory + s.strip()]
+                memory = ''
+    
+    return article_arr
 
 article_parser(start_limit=2980, end_limit=20000)

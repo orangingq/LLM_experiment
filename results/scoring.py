@@ -321,7 +321,7 @@ def edge_score(query, varlist):
 
 # examples
 
-scoring(filename="./results/results/result_20230817_12.csv")
+# scoring(filename="./results/results/result_20230817_12.csv")
 
 s1 = "(a)-[:늘었다 {비율: '8.0%'}]->(:구독자)"
 s2 = '(a) -[:늘었다 {비율: "8.0%"}]->(:구독자)'
