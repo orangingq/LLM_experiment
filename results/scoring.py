@@ -22,8 +22,6 @@ def scoring(filename:str=''):
     f = open(filename, mode="r")
     # loop through the csv list
     for row in csv.reader(f, delimiter=","):
-        # if not 'LPG' in row[0]:
-        #     continue
         kg, prompt, example, model, input_idx, input, output = row[0], row[1], row[2], row[4], row[7], row[8], row[9]
 
         if 'LPG' in row[0]:
@@ -62,7 +60,7 @@ def RDF_structure_score(output):
         # scoring
         if not stop:
             # node
-            score = triple_score(query)
+            score, query = triple_score(query)
             
             if score == 0:
                 if  i < len(querylist)-1:
@@ -143,13 +141,15 @@ def triple_score(query):
     # regular expression format
     node1_format = "(?P<name1>\w[\w ]*\w):(?P<label1>[\w]+)"
     node2_format = "(?P<name2>\w[\w ]*\w):(?P<label2>[\w]+)"
-    edge_format = "(?P<edge>\w[\w ]*\w)"
+    edge_format = "(?P<edge>\w[\w :]*\w)"
     format = "^[(]" + node1_format + "[ ]{1,3}-[ ]{1,3}" + edge_format + "[ ]{1,3}-[ ]{1,3}" + node2_format + "[)]$"
     p = re.compile(format)
     m = p.search(query)
     
     if not m is None:
         score = 1
+        edge_label = m.group('edge').split(':')[0]
+        query = '(' + m.group('name1') + ':' + m.group('label1') + ' - ' + edge_label + ' - ' + m.group('name2') + ':' + m.group('label2') + ')'
     else:
         score = 0
         # # Check label
@@ -180,8 +180,9 @@ def triple_score(query):
         #     score = 0
     
     # print("node score:", score)
-    return score
+    return score, query
     
+# print(triple_score('(카카오택시:기업 - 로고 전자신문DB 카카오 스마트 모빌리티:서비스 - 출범:사업)'))
 
                 
 # attribute format: {att_label: 'att_val'} or {att_label: (att_var)}
@@ -321,8 +322,10 @@ def edge_score(query, varlist):
 
 # examples
 
-# scoring(filename="./results/results/result_20230817_12.csv")
-
+# scorefilename = scoring(filename="./results/results/result_20230821_17.csv")
+# # scorefilename = scoring(filename=filename)
+# from neo4j import save_into_DB
+# save_into_DB(filename=scorefilename)
 s1 = "(a)-[:늘었다 {비율: '8.0%'}]->(:구독자)"
 s2 = '(a) -[:늘었다 {비율: "8.0%"}]->(:구독자)'
 s3 = "(a)-[:때문에]->(:가능성)"

@@ -2,6 +2,67 @@ import csv
 from os import path
 from datetime import datetime
 
+
+def next_alphabet(curr):
+    if curr[-1] == 'z':
+        return curr+'a'
+    else:
+        return curr[:-1] + chr(ord(curr[-1])+1)
+
+def TripleToNeo4j(triple:str, startvar='a'):
+    create_nodes = ''
+    create_edges = ''
+    nodelist = []
+    edgelist = []
+    varlist = []
+    alphabet = startvar
+    next_a = next_alphabet(alphabet)
+    
+    triple = ''.join(triple.split('(')[1:])
+    triple = ''.join(triple.split(')')[:-1])
+    for line in triple.split('\n'):
+        pair = line.split(' - ')
+        if len(pair) != 3: 
+            continue
+        [ent1, rel, ent2] = pair
+        [ent1, ent1_type] = ent1.split(':')
+        [ent2, ent2_type] = ent2.split(':')
+        
+        nodes = [f':{ent1_type.capitalize()} {{name: "{ent1}"}})', f':{ent2_type.capitalize()} {{name: "{ent2}"}})']
+        now = [alphabet, next_a]
+        for i, n in enumerate(nodes):
+            if i==0:
+                a = alphabet
+            else:
+                a = next_a
+                
+            if n in nodelist: 
+                idx = nodelist.index(n)
+                now[i] = varlist[idx]
+                # create_nodes += f'MERGE ('+n+'\n'
+            else:
+                create_nodes += f'CREATE ({now[i]}'+n+'\n'
+                nodelist += [n]
+                varlist += [a]
+        # create_nodes += f'CREATE ({alphabet}:{ent1_type.capitalize()} {{name: "{ent1}"}})\n'
+        # create_nodes += f'CREATE ({next_a}:{ent2_type.capitalize()} {{name: "{ent2}"}})\n'
+        
+        if "'" in rel:
+            continue
+        
+        edge = f'({now[0]})-[:{rel.replace(" ", "_")}]->({now[1]})'
+        if not edge in edgelist:
+            create_edges += f'CREATE ({now[0]})-[:{rel.replace(" ", "_")}]->({now[1]})\n' #MATCH ({alphabet}), ({next_a}) WHERE {alphabet}.name = “{ent1}” AND {next_a}.name = “{ent2}” 
+            edgelist += [edge]
+            
+        # update alphabets
+        alphabet = next_alphabet(next_a)
+        next_a = next_alphabet(alphabet)
+        
+    return create_nodes + create_edges[:-1], alphabet
+
+
+
 # save results into the csv file
 def save_into_DB(filename=''):
     if filename == '':
@@ -19,6 +80,8 @@ def save_into_DB(filename=''):
     wr.writerow(['input', 'query'])
 
     memory = []    
+    startvar = 'a'
+
     with open(filename, mode='r', encoding="utf-8") as f:
         csv_file = csv.reader(f, delimiter=",")
         for row in csv_file:
@@ -31,12 +94,11 @@ def save_into_DB(filename=''):
             if id in memory:
                 continue
             
-            output = row[6]
+            output = row[6].rstrip('\n')
             if 'RDF' in row[0]:
-                output = TripleToNeo4j(output)
+                output, startvar = TripleToNeo4j(output, startvar)
             elif 'LPG' in row[0]:
-                output = output.rstrip('\n').replace('\n', '\nCREATE ')
-                output = 'CREATE ' + output
+                output = 'CREATE ' + output.replace('\n', '\nCREATE ')
                 
             wr.writerow([row[5], output])
             memory.append(id)
@@ -46,42 +108,5 @@ def save_into_DB(filename=''):
     print(f"\nquery saved: {queryfilename}")
     return queryfilename
 
-# save_into_DB(filename='./results/scored/scored_20230810_15.csv')
+save_into_DB(filename='./results/scored/scored_20230821_18.csv')
             
-def next_alphabet(curr):
-    if curr[-1] == 'z':
-        return curr+'a'
-    else:
-        return curr[:-1] + chr(ord(curr)+1)
-
-def TripleToNeo4j(triple):
-    create_nodes = ''
-    create_edges = ''
-    alphabet = 'a'
-    next_a = next_alphabet(alphabet)
-
-    for line in triple.split('\n'):
-        pair = line.split(' - ')
-        ent1, rel, ent2 = pair[0], pair[1], pair[2]
-        [ent1, ent1_type] = ent1.split(':')
-        [ent2, ent2_type] = ent2.split(':')
-        
-        create_nodes += f'CREATE ({alphabet}:{ent1_type.capitalize()} {{name: “{ent1}“}});\n'
-        create_nodes += f'CREATE ({next_a}:{ent2_type.capitalize()} {{name: “{ent2}“}});\n'
-        
-        if "'" in rel:
-            continue
-        create_edges.append(f'MATCH ({alphabet}), ({next_a}) WHERE {alphabet}.name = “{ent1}” AND {next_a}.name = “{ent2}” CREATE ({alphabet})-[r:{rel.replace(" ", "_")}]->({next_a});\n')
-        
-        # update alphabets
-        alphabet = next_alphabet(next_a)
-        next_a = next_alphabet(alphabet)
-        
-    # print(len(create_nodes), create_nodes[0])
-    # print(len(create_edges), create_edges[0])
-    # create_nodes = list(set(create_nodes))
-    # create_edges = list(set(create_edges))
-    # with open(‘tfidf_greedy/graph_cypher_query.txt’, ‘w’) as fw:
-    #     for line in create_nodes + create_edges:
-    #         fw.write(f”{line}\n”)
-    return create_nodes + create_edges[:-2]

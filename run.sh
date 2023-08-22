@@ -21,12 +21,17 @@
 # python3 run.py --kg=LPG_tense --input=3 --model=OpenAI;
 # python3 run.py --kg=LPG_tense --input=5 --model=OpenAI;
 
-python3 run.py --kg=RDF-star --input=3 --model=ChatLlama2;
-python3 run.py --kg=RDF-star --input=4 --model=ChatLlama2;
-python3 run.py --kg=RDF-star --input=5 --model=ChatLlama2;
-python3 run.py --kg=RDF-star --input=3 --model=Llama2;
+# python3 run.py --kg=RDF-star --input=3 --model=ChatLlama2;
+# python3 run.py --kg=RDF-star --input=4 --model=ChatLlama2;
+# python3 run.py --kg=RDF-star --input=5 --model=ChatLlama2;
+# # python3 run.py --kg=RDF-star --input=3 --model=Llama2;
+# python3 run.py --kg=RDF-star --input=4 --model=Llama2;
+# python3 run.py --kg=RDF-star --input=5 --model=Llama2;
+
+# python3 run.py --kg=LPG_tense --input=4 --model=ChatLlama2;
+
 python3 run.py --kg=RDF-star --input=4 --model=Llama2;
-python3 run.py --kg=RDF-star --input=5 --model=Llama2;
+
 
 # python3 run.py \
 #     --kg_type=RDF-star \

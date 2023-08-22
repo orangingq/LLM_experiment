@@ -144,7 +144,7 @@ def get_articles(line=False, summary=True):
             for article in data:
                 # if not summary and i> 0:
                 #     break
-                if i >= 34:
+                if i >= 2:
                     break
                 if line and i >= 1:
                     break
@@ -152,12 +152,12 @@ def get_articles(line=False, summary=True):
                     if line:
                         articles += article['text_rank']#article['summary']
                     else:
-                        articles += [''.join(article['text_rank'])]#article['summary'])]
+                        articles += [' '.join(article['text_rank'])]#article['summary'])]
                 else:
                     if line:
                         articles += article['article'].rstrip('\n').split('\n')
                     else:
-                        articles += [article['article']]
+                        articles += [' '.join(article['article'])]
 
                 # iterate
                 i += 1
