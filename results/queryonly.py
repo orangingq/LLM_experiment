@@ -12,9 +12,9 @@ def queryonly(filename=''):
     if not path.exists(filename):
         raise NameError(f"Cannot read file named '{path.abspath(filename)}'.")
     
-    queryfilename = './results/onlyqueries/query_'+filename.split('/query_')[1].split('.csv')[0]+'.txt'
+    queryfilename = './results/onlyqueries/RDF_Llama2_gensim_'+filename.split('/query_')[1].split('.csv')[0]+'.txt'
     
-    qf = open(queryfilename, mode='w', encoding="utf-8")
+    qf = open(queryfilename, mode='a', encoding="utf-8")
 
     # memory = []    
     with open(filename, mode='r', encoding="utf-8") as f:
@@ -34,5 +34,3 @@ def queryonly(filename=''):
     
     print(f"\nquery saved: {queryfilename}")
     return queryfilename
-
-queryonly(filename='./results/queries/query_20230821_18.csv')

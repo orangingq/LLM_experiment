@@ -1,0 +1,416 @@
+CREATE (a:기관 {name: "KB국민은행"})
+CREATE (b:서비스 {name: "손쉬운 뱅킹 서비스"})
+CREATE (a)-[:손바닥_정맥으로_본인_인증을_거쳐_창구_업무를_보는_손쉬운_뱅킹_서비스를_시작했다]->(b)
+
+CREATE (c:사람 {name: "안철수 전 대표"})
+CREATE (d:논쟁 {name: "탈 호남 주장"})
+CREATE (c)-[:강력히_비판했다]->(d)
+
+CREATE (e:사람 {name: "르완도스키"})
+CREATE (f:기관 {name: "애비뉴 스트레티지스"})
+CREATE (e)-[:운영하다]->(f)
+
+CREATE (g:사람 {name: "가수 서인영"})
+CREATE (h:방송 {name: "예능프로그램"})
+CREATE (g)-[:하차_과정에서]->(h)
+
+CREATE (i:산업 {name: "산업계"})
+CREATE (j:산업 {name: "재계"})
+CREATE (i)-[:노동_비용_부담이_발생할_것으로_보다]->(j)
+
+CREATE (k:기관 {name: "국방부"})
+CREATE (l:None {name: "no information"})
+CREATE (k)-[:핵추진_잠수함_건조_여부에_대해_유연한_입장을_보여_관심을_끈다]->(l)
+
+CREATE (m:기관 {name: "선정된 기관"})
+CREATE (n:상황 {name: "아이디어를 일자리로 만들다"})
+CREATE (m)-[:방향을_제시하다]->(n)
+
+CREATE (o:사람 {name: "연구원"})
+CREATE (p:물건 {name: "자동차 엔진 연료 분사장치"})
+CREATE (r:물건 {name: "연료"})
+CREATE (t:물건 {name: "연료 분사장치"})
+CREATE (o)-[:연구를_하다]->(p)
+CREATE (o)-[:연구를_하다]->(r)
+CREATE (o)-[:연구를_하다]->(t)
+
+CREATE (u:사람 {name: "이씨"})
+CREATE (v:사람 {name: "피해자 가족"})
+CREATE (u)-[:술에_취해_찾아온다]->(v)
+
+CREATE (w:사람 {name: "도널드 트럼프"})
+CREATE (x:천체 {name: "태양"})
+CREATE (z:천체 {name: "개기일식"})
+CREATE (w)-[:맨눈으로_바라봤다]->(x)
+CREATE (w)-[:함께_지켜봤다]->(z)
+
+CREATE (aa:생물 {name: "서울 콘퍼런스"})
+CREATE (ab:시간 {name: "11일"})
+CREATE (aa)-[:개최한다]->(ab)
+
+CREATE (ac:물건 {name: "김치"})
+CREATE (ad:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (ac)-[:유산균이_분리되다]->(ad)
+
+CREATE (ae:기업 {name: "현대중공업"})
+CREATE (af:문서 {name: "양해각서 MOU"})
+CREATE (ae)-[:체결했다]->(af)
+
+CREATE (ag:기관 {name: "T뷰"})
+CREATE (ah:사건 {name: "침입 행위"})
+CREATE (ag)-[:촬영_영상을_분석하다]->(ah)
+
+CREATE (ai:물건 {name: "씽크애자일"})
+CREATE (aj:물건 {name: "새로운 소프트웨어 정의 솔루션"})
+CREATE (ai)-[:레노버_씽크시스템_플랫폼에_기반한다]->(aj)
+
+CREATE (ak:물건 {name: "공급토지"})
+CREATE (al:지역 {name: "안양농수산물시장 사거리"})
+CREATE (ak)-[:인접한다]->(al)
+
+CREATE (am:사람 {name: "이병호"})
+CREATE (am)-[:대표_독립투자자문업자_IFA_가_정체에_빠진_펀드시장에_활기를_가져다_줄_수_있다]->(am)
+
+CREATE (ao:단체 {name: "자유한국당"})
+CREATE (ap:사람 {name: "김이수 헌법재판소장 후보자"})
+CREATE (ao)-[:채택을_거부할_방침이다]->(ap)
+
+CREATE (aq:사람 {name: "근로자"})
+CREATE (aq)-[:매몰되다]->(aq)
+
+CREATE (as:물건 {name: "김치"})
+CREATE (at:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (as)-[:유산균이_분리되다]->(at)
+
+CREATE (a:기관 {name: "KB국민은행"})
+CREATE (b:서비스 {name: "손쉬운 뱅킹 서비스"})
+CREATE (a)-[:손바닥_정맥으로_본인_인증을_거쳐_창구_업무를_보는_손쉬운_뱅킹_서비스를_시작했다]->(b)
+
+CREATE (c:사람 {name: "안철수 전 대표"})
+CREATE (d:논쟁 {name: "탈 호남 주장"})
+CREATE (c)-[:강력히_비판했다]->(d)
+
+CREATE (e:사람 {name: "르완도스키"})
+CREATE (f:기관 {name: "애비뉴 스트레티지스"})
+CREATE (e)-[:운영하다]->(f)
+
+CREATE (g:사람 {name: "가수 서인영"})
+CREATE (h:방송 {name: "예능프로그램"})
+CREATE (g)-[:하차_과정에서]->(h)
+
+CREATE (i:산업 {name: "산업계"})
+CREATE (j:산업 {name: "재계"})
+CREATE (i)-[:노동_비용_부담이_발생할_것으로_보다]->(j)
+
+CREATE (k:기관 {name: "국방부"})
+CREATE (l:None {name: "no information"})
+CREATE (k)-[:핵추진_잠수함_건조_여부에_대해_유연한_입장을_보여_관심을_끈다]->(l)
+
+CREATE (m:기관 {name: "선정된 기관"})
+CREATE (n:상황 {name: "아이디어를 일자리로 만들다"})
+CREATE (m)-[:방향을_제시하다]->(n)
+
+CREATE (o:사람 {name: "연구원"})
+CREATE (p:물건 {name: "자동차 엔진 연료 분사장치"})
+CREATE (r:물건 {name: "연료"})
+CREATE (t:물건 {name: "연료 분사장치"})
+CREATE (o)-[:연구를_하다]->(p)
+CREATE (o)-[:연구를_하다]->(r)
+CREATE (o)-[:연구를_하다]->(t)
+
+CREATE (u:사람 {name: "이씨"})
+CREATE (v:사람 {name: "피해자 가족"})
+CREATE (u)-[:술에_취해_찾아온다]->(v)
+
+CREATE (w:사람 {name: "도널드 트럼프"})
+CREATE (x:천체 {name: "태양"})
+CREATE (z:천체 {name: "개기일식"})
+CREATE (w)-[:맨눈으로_바라봤다]->(x)
+CREATE (w)-[:함께_지켜봤다]->(z)
+
+CREATE (aa:생물 {name: "서울 콘퍼런스"})
+CREATE (ab:시간 {name: "11일"})
+CREATE (aa)-[:개최한다]->(ab)
+
+CREATE (ac:물건 {name: "김치"})
+CREATE (ad:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (ac)-[:유산균이_분리되다]->(ad)
+
+CREATE (ae:기업 {name: "현대중공업"})
+CREATE (af:문서 {name: "양해각서 MOU"})
+CREATE (ae)-[:체결했다]->(af)
+
+CREATE (ag:기관 {name: "T뷰"})
+CREATE (ah:사건 {name: "침입 행위"})
+CREATE (ag)-[:촬영_영상을_분석하다]->(ah)
+
+CREATE (ai:물건 {name: "씽크애자일"})
+CREATE (aj:물건 {name: "새로운 소프트웨어 정의 솔루션"})
+CREATE (ai)-[:레노버_씽크시스템_플랫폼에_기반한다]->(aj)
+
+CREATE (ak:물건 {name: "공급토지"})
+CREATE (al:지역 {name: "안양농수산물시장 사거리"})
+CREATE (ak)-[:인접한다]->(al)
+
+CREATE (am:사람 {name: "이병호"})
+CREATE (am)-[:대표_독립투자자문업자_IFA_가_정체에_빠진_펀드시장에_활기를_가져다_줄_수_있다]->(am)
+
+CREATE (ao:단체 {name: "자유한국당"})
+CREATE (ap:사람 {name: "김이수 헌법재판소장 후보자"})
+CREATE (ao)-[:채택을_거부할_방침이다]->(ap)
+
+CREATE (aq:사람 {name: "근로자"})
+CREATE (aq)-[:매몰되다]->(aq)
+
+CREATE (as:물건 {name: "김치"})
+CREATE (at:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (as)-[:유산균이_분리되다]->(at)
+
+CREATE (a:기관 {name: "KB국민은행"})
+CREATE (b:서비스 {name: "손쉬운 뱅킹 서비스"})
+CREATE (a)-[:손바닥_정맥으로_본인_인증을_거쳐_창구_업무를_보는_손쉬운_뱅킹_서비스를_시작했다]->(b)
+
+CREATE (c:사람 {name: "안철수 전 대표"})
+CREATE (d:논쟁 {name: "탈 호남 주장"})
+CREATE (c)-[:강력히_비판했다]->(d)
+
+CREATE (e:사람 {name: "르완도스키"})
+CREATE (f:기관 {name: "애비뉴 스트레티지스"})
+CREATE (e)-[:운영하다]->(f)
+
+CREATE (g:사람 {name: "가수 서인영"})
+CREATE (h:방송 {name: "예능프로그램"})
+CREATE (g)-[:하차_과정에서]->(h)
+
+CREATE (i:산업 {name: "산업계"})
+CREATE (j:산업 {name: "재계"})
+CREATE (i)-[:노동_비용_부담이_발생할_것으로_보다]->(j)
+
+CREATE (k:기관 {name: "국방부"})
+CREATE (l:None {name: "no information"})
+CREATE (k)-[:핵추진_잠수함_건조_여부에_대해_유연한_입장을_보여_관심을_끈다]->(l)
+
+CREATE (m:기관 {name: "선정된 기관"})
+CREATE (n:상황 {name: "아이디어를 일자리로 만들다"})
+CREATE (m)-[:방향을_제시하다]->(n)
+
+CREATE (o:사람 {name: "연구원"})
+CREATE (p:물건 {name: "자동차 엔진 연료 분사장치"})
+CREATE (r:물건 {name: "연료"})
+CREATE (t:물건 {name: "연료 분사장치"})
+CREATE (o)-[:연구를_하다]->(p)
+CREATE (o)-[:연구를_하다]->(r)
+CREATE (o)-[:연구를_하다]->(t)
+
+CREATE (u:사람 {name: "이씨"})
+CREATE (v:사람 {name: "피해자 가족"})
+CREATE (u)-[:술에_취해_찾아온다]->(v)
+
+CREATE (w:사람 {name: "도널드 트럼프"})
+CREATE (x:천체 {name: "태양"})
+CREATE (z:천체 {name: "개기일식"})
+CREATE (w)-[:맨눈으로_바라봤다]->(x)
+CREATE (w)-[:함께_지켜봤다]->(z)
+
+CREATE (aa:생물 {name: "서울 콘퍼런스"})
+CREATE (ab:시간 {name: "11일"})
+CREATE (aa)-[:개최한다]->(ab)
+
+CREATE (ac:물건 {name: "김치"})
+CREATE (ad:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (ac)-[:유산균이_분리되다]->(ad)
+
+CREATE (ae:기업 {name: "현대중공업"})
+CREATE (af:문서 {name: "양해각서 MOU"})
+CREATE (ae)-[:체결했다]->(af)
+
+CREATE (ag:기관 {name: "T뷰"})
+CREATE (ah:사건 {name: "침입 행위"})
+CREATE (ag)-[:촬영_영상을_분석하다]->(ah)
+
+CREATE (ai:물건 {name: "씽크애자일"})
+CREATE (aj:물건 {name: "새로운 소프트웨어 정의 솔루션"})
+CREATE (ai)-[:레노버_씽크시스템_플랫폼에_기반한다]->(aj)
+
+CREATE (ak:물건 {name: "공급토지"})
+CREATE (al:지역 {name: "안양농수산물시장 사거리"})
+CREATE (ak)-[:인접한다]->(al)
+
+CREATE (am:사람 {name: "이병호"})
+CREATE (am)-[:대표_독립투자자문업자_IFA_가_정체에_빠진_펀드시장에_활기를_가져다_줄_수_있다]->(am)
+
+CREATE (ao:단체 {name: "자유한국당"})
+CREATE (ap:사람 {name: "김이수 헌법재판소장 후보자"})
+CREATE (ao)-[:채택을_거부할_방침이다]->(ap)
+
+CREATE (aq:사람 {name: "근로자"})
+CREATE (aq)-[:매몰되다]->(aq)
+
+CREATE (as:물건 {name: "김치"})
+CREATE (at:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (as)-[:유산균이_분리되다]->(at)
+
+CREATE (a:기관 {name: "KB국민은행"})
+CREATE (b:서비스 {name: "손쉬운 뱅킹 서비스"})
+CREATE (a)-[:손바닥_정맥으로_본인_인증을_거쳐_창구_업무를_보는_손쉬운_뱅킹_서비스를_시작했다]->(b)
+
+CREATE (c:사람 {name: "안철수 전 대표"})
+CREATE (d:논쟁 {name: "탈 호남 주장"})
+CREATE (c)-[:강력히_비판했다]->(d)
+
+CREATE (e:사람 {name: "르완도스키"})
+CREATE (f:기관 {name: "애비뉴 스트레티지스"})
+CREATE (e)-[:운영하다]->(f)
+
+CREATE (g:사람 {name: "가수 서인영"})
+CREATE (h:방송 {name: "예능프로그램"})
+CREATE (g)-[:하차_과정에서]->(h)
+
+CREATE (i:산업 {name: "산업계"})
+CREATE (j:산업 {name: "재계"})
+CREATE (i)-[:노동_비용_부담이_발생할_것으로_보다]->(j)
+
+CREATE (k:기관 {name: "국방부"})
+CREATE (l:None {name: "no information"})
+CREATE (k)-[:핵추진_잠수함_건조_여부에_대해_유연한_입장을_보여_관심을_끈다]->(l)
+
+CREATE (m:기관 {name: "선정된 기관"})
+CREATE (n:상황 {name: "아이디어를 일자리로 만들다"})
+CREATE (m)-[:방향을_제시하다]->(n)
+
+CREATE (o:사람 {name: "연구원"})
+CREATE (p:물건 {name: "자동차 엔진 연료 분사장치"})
+CREATE (r:물건 {name: "연료"})
+CREATE (t:물건 {name: "연료 분사장치"})
+CREATE (o)-[:연구를_하다]->(p)
+CREATE (o)-[:연구를_하다]->(r)
+CREATE (o)-[:연구를_하다]->(t)
+
+CREATE (u:사람 {name: "이씨"})
+CREATE (v:사람 {name: "피해자 가족"})
+CREATE (u)-[:술에_취해_찾아온다]->(v)
+
+CREATE (w:사람 {name: "도널드 트럼프"})
+CREATE (x:천체 {name: "태양"})
+CREATE (z:천체 {name: "개기일식"})
+CREATE (w)-[:맨눈으로_바라봤다]->(x)
+CREATE (w)-[:함께_지켜봤다]->(z)
+
+CREATE (aa:생물 {name: "서울 콘퍼런스"})
+CREATE (ab:시간 {name: "11일"})
+CREATE (aa)-[:개최한다]->(ab)
+
+CREATE (ac:물건 {name: "김치"})
+CREATE (ad:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (ac)-[:유산균이_분리되다]->(ad)
+
+CREATE (ae:기업 {name: "현대중공업"})
+CREATE (af:문서 {name: "양해각서 MOU"})
+CREATE (ae)-[:체결했다]->(af)
+
+CREATE (ag:기관 {name: "T뷰"})
+CREATE (ah:사건 {name: "침입 행위"})
+CREATE (ag)-[:촬영_영상을_분석하다]->(ah)
+
+CREATE (ai:물건 {name: "씽크애자일"})
+CREATE (aj:물건 {name: "새로운 소프트웨어 정의 솔루션"})
+CREATE (ai)-[:레노버_씽크시스템_플랫폼에_기반한다]->(aj)
+
+CREATE (ak:물건 {name: "공급토지"})
+CREATE (al:지역 {name: "안양농수산물시장 사거리"})
+CREATE (ak)-[:인접한다]->(al)
+
+CREATE (am:사람 {name: "이병호"})
+CREATE (am)-[:대표_독립투자자문업자_IFA_가_정체에_빠진_펀드시장에_활기를_가져다_줄_수_있다]->(am)
+
+CREATE (ao:단체 {name: "자유한국당"})
+CREATE (ap:사람 {name: "김이수 헌법재판소장 후보자"})
+CREATE (ao)-[:채택을_거부할_방침이다]->(ap)
+
+CREATE (aq:사람 {name: "근로자"})
+CREATE (aq)-[:매몰되다]->(aq)
+
+CREATE (as:물건 {name: "김치"})
+CREATE (at:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (as)-[:유산균이_분리되다]->(at)
+
+CREATE (a:기관 {name: "KB국민은행"})
+CREATE (b:서비스 {name: "손쉬운 뱅킹 서비스"})
+CREATE (a)-[:손바닥_정맥으로_본인_인증을_거쳐_창구_업무를_보는_손쉬운_뱅킹_서비스를_시작했다]->(b)
+
+CREATE (c:사람 {name: "안철수 전 대표"})
+CREATE (d:논쟁 {name: "탈 호남 주장"})
+CREATE (c)-[:강력히_비판했다]->(d)
+
+CREATE (e:사람 {name: "르완도스키"})
+CREATE (f:기관 {name: "애비뉴 스트레티지스"})
+CREATE (e)-[:운영하다]->(f)
+
+CREATE (g:사람 {name: "가수 서인영"})
+CREATE (h:방송 {name: "예능프로그램"})
+CREATE (g)-[:하차_과정에서]->(h)
+
+CREATE (i:산업 {name: "산업계"})
+CREATE (j:산업 {name: "재계"})
+CREATE (i)-[:노동_비용_부담이_발생할_것으로_보다]->(j)
+
+CREATE (k:기관 {name: "국방부"})
+CREATE (l:None {name: "no information"})
+CREATE (k)-[:핵추진_잠수함_건조_여부에_대해_유연한_입장을_보여_관심을_끈다]->(l)
+
+CREATE (m:기관 {name: "선정된 기관"})
+CREATE (n:상황 {name: "아이디어를 일자리로 만들다"})
+CREATE (m)-[:방향을_제시하다]->(n)
+
+CREATE (o:사람 {name: "연구원"})
+CREATE (p:물건 {name: "자동차 엔진 연료 분사장치"})
+CREATE (r:물건 {name: "연료"})
+CREATE (t:물건 {name: "연료 분사장치"})
+CREATE (o)-[:연구를_하다]->(p)
+CREATE (o)-[:연구를_하다]->(r)
+CREATE (o)-[:연구를_하다]->(t)
+
+CREATE (u:사람 {name: "이씨"})
+CREATE (v:사람 {name: "피해자 가족"})
+CREATE (u)-[:술에_취해_찾아온다]->(v)
+
+CREATE (w:사람 {name: "도널드 트럼프"})
+CREATE (x:천체 {name: "태양"})
+CREATE (z:천체 {name: "개기일식"})
+CREATE (w)-[:맨눈으로_바라봤다]->(x)
+CREATE (w)-[:함께_지켜봤다]->(z)
+
+CREATE (aa:생물 {name: "서울 콘퍼런스"})
+CREATE (ab:시간 {name: "11일"})
+CREATE (aa)-[:개최한다]->(ab)
+
+CREATE (ac:물건 {name: "김치"})
+CREATE (ad:기관 {name: "제9회 아시아유산균학회서"})
+CREATE (ac)-[:유산균이_분리되다]->(ad)
+
+CREATE (ae:기업 {name: "현대중공업"})
+CREATE (af:문서 {name: "양해각서 MOU"})
+CREATE (ae)-[:체결했다]->(af)
+
+CREATE (ag:기관 {name: "T뷰"})
+CREATE (ah:사건 {name: "침입 행위"})
+CREATE (ag)-[:촬영_영상을_분석하다]->(ah)
+
+CREATE (ai:물건 {name: "씽크애자일"})
+CREATE (aj:물건 {name: "새로운 소프트웨어 정의 솔루션"})
+CREATE (ai)-[:레노버_씽크시스템_플랫폼에_기반한다]->(aj)
+
+CREATE (ak:물건 {name: "공급토지"})
+CREATE (al:지역 {name: "안양농수산물시장 사거리"})
+CREATE (ak)-[:인접한다]->(al)
+
+CREATE (am:사람 {name: "이병호"})
+CREATE (am)-[:대표_독립투자자문업자_IFA_가_정체에_빠진_펀드시장에_활기를_가져다_줄_수_있다]->(am)
+
+CREATE (ao:단체 {name: "자유한국당"})
+CREATE (ap:사람 {name: "김이수 헌법재판소장 후보자"})
+CREATE (ao)-[:채택을_거부할_방침이다]->(ap)
+
+CREATE (aq:사람 {name: "근로자"})
+CREATE (aq)-[:매몰되다]->(aq)
+

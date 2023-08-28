@@ -24,7 +24,6 @@ class KoGPT2(BaseLLM):
         input_ids = self.tokenizer.encode(prompt, return_tensors='pt')
 
         self.tokens = input_ids.shape[1]
-        # print("\n** Tokens: ", input_ids.shape, input_ids[0, :10], "\n")
 
         # inference
         start_time = time.time()

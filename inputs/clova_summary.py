@@ -20,28 +20,23 @@ headers = {
 def summarize(filename):
     with open(filename, 'r', encoding='utf-8') as file:
         articles = json.load(file)
-        total_len = len(articles)
-        cycle = int(total_len/500)
-        
-    for itr in range(cycle+1):
-        with open(filename, 'r', encoding='utf-8') as file:
-            articles = json.load(file)
-            for i, data in enumerate(articles[itr*500: min(total_len, (itr+1)*500)]):
-                article = data['article']
-                print(f"article {i}) start: {data['line_start']}, end: {data['line_end']}, length: {len(article)}") #, summaryCnt: {data['summaryCount']}
+        for i, data in enumerate(articles):
+            article = data['article']
+            print(f"article {i}) start: {data['line_start']}, end: {data['line_end']}, length: {len(article)}") #, summaryCnt: {data['summaryCount']}
 
-                # add 'summary' (from_clova=True) or 'text_rank' (from_clova=False)
-                # if not 'summary' in data or not 'text_rank' in data:                    
-                data = get_summary(data, from_clova=False)         
+            # add 'summary' (from_clova=True) or 'text_rank' (from_clova=False)
+            # if not 'summary' in data or not 'text_rank' in data:                    
+            data = get_summary(data, from_clova=False)         
+            
+            # add 'article_num'
+            if not 'article_num' in data:
+                data['article_num'] = i
                 
-                # add 'article_num'
-                if not 'article_num' in data:
-                    data['article_num'] = i
-                    
-                articles[i] = data
-                
-        with open(filename, 'w', encoding='utf-8') as file:
-            json.dump(articles, file, ensure_ascii=False, indent="\t")
+            articles[i] = data
+
+        
+    with open(filename, mode='w', encoding='utf-8') as file:
+        json.dump(articles, file, ensure_ascii=False, indent="\t")
         
     print("summarize done: ", filename)
     return
@@ -122,9 +117,9 @@ def TextRank(data):
     return data
         
 
-summarize('inputs/articles/articles_2980to19991.json')
-summarize('inputs/articles/articles_982to2979.json')
-summarize('inputs/articles/articles_297to981.json')
+# summarize('inputs/articles/articles_2980to19991.json')
+# summarize('inputs/articles/articles_982to2979.json')
+# summarize('inputs/articles/articles_297to981.json')
 
 
 

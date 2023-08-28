@@ -25,13 +25,13 @@ def input_provider(input_type: str):
         case '2':
             return simple_paragraph
         case '3': 
-            return get_articles(line=True, summary=True) # return each line of the summarized articles
+            return get_articles(line=True, summary=True)[0] # return each line of the summarized articles
         case '4':
-            return get_articles(line=False, summary=True) # return each summary paragraph of articles
+            return get_articles(line=False, summary=True)[0] # return each summary paragraph of articles
         case '5':
-            return get_articles(line=False, summary=False) # return a whole article
+            return get_articles(line=False, summary=False)[0] # return a whole article
         case 'all':
-            return simple_sentence + complex_sentence + simple_paragraph + get_articles(line=False, summary=True)
+            return simple_sentence + complex_sentence + simple_paragraph + get_articles(line=False, summary=True)[0]
         case _:
             raise ValueError("input_type")
 
@@ -128,24 +128,39 @@ news_headlines = [
     "교육부, 국내 초중고등학교 교육과정 개편 검토 중"
 ]
 
+import math
 
-def get_articles(line=False, summary=True):
+def get_articles(line=False, summary=True, start=0):
     import json
     
-    articles = []
+    articles = [] # inputs
     files = [
         'inputs/articles/articles_297to981.json',
         'inputs/articles/articles_982to2979.json',
+        'inputs/articles/articles_2980to19991.json'
     ]
-    i = 0
+    i = 0 # iterator
+    one_cycle = 25 # 33 articles per one cycle
+
+    total_articles = 0
+    for filename in files:
+        with open(filename, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            total_articles += len(data)
+
+    end = min(start + one_cycle, total_articles)
+        
     for filename in files:
         with open(filename, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for article in data:
-                # if not summary and i> 0:
-                #     break
-                if i >= 2:
+                if i < start:
+                    i += 1
+                    # print(article['text_rank'][:10])
+                    continue
+                elif i >= end:
                     break
+                # if i > 1:break
                 if line and i >= 1:
                     break
                 if summary:
@@ -162,7 +177,8 @@ def get_articles(line=False, summary=True):
                 # iterate
                 i += 1
                 
-    # print(articles, line, summary)
-    return articles
+    isdone = (end >= total_articles)
+    # print([a[:10] for a in articles])
+    return articles, end, isdone
 
 # get_articles()

@@ -4,10 +4,17 @@ from datetime import datetime
 
 
 def next_alphabet(curr):
-    if curr[-1] == 'z':
-        return curr+'a'
+    up = -1
+    while -up <= len(curr) and curr[up] == 'z':
+        up -= 1
+    
+    if -up == len(curr) + 1: # next order
+        return 'a'*(len(curr)+1)
     else:
-        return curr[:-1] + chr(ord(curr[-1])+1)
+        return curr[:up] + chr(ord(curr[up])+1)+'a'*(-up-1)
+    #     return curr+'a'
+    # else:
+    #     return curr[:-1] + chr(ord(curr[-1])+1)
 
 def TripleToNeo4j(triple:str, startvar='a'):
     create_nodes = ''
@@ -108,5 +115,5 @@ def save_into_DB(filename=''):
     print(f"\nquery saved: {queryfilename}")
     return queryfilename
 
-save_into_DB(filename='./results/scored/scored_20230821_18.csv')
+# save_into_DB(filename='./results/scored/scored_20230821_18.csv')
             

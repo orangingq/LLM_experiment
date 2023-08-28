@@ -38,5 +38,4 @@ class ChatOpenai(BaseLLM):
 
         # decode
         generated = output.content
-        # print("\n** Output:\n", generated)
         return output_parser(generated)

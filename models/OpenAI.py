@@ -32,5 +32,4 @@ class Openai(BaseLLM):
         self.calculate_elapsed_time(start_time=start_time)
 
         # decode
-        # print("\n** Output:\n", generated)
         return output_parser(generated)
