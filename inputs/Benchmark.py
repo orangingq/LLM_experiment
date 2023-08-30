@@ -1,36 +1,36 @@
 def input_provider(input_type: str):
     match input_type:
-        case 'one':
+        case 'one':     # 1형 문장
             return type_one
-        case 'two':
+        case 'two':     # 2형 문장
             return type_two
-        case 'three':
+        case 'three':   # 3형 문장
             return type_three
-        case 'four':
+        case 'four':    # 4형 문장
             return type_four
-        case 'five':
+        case 'five':    # 5형 문장
             return type_five
-        case 'nested':
+        case 'nested':  # 겹문장
             return nested
-        case 'parallel':
+        case 'parallel':# 대등하게 이어지는 문장
             return parallel
-        case 'dependent':
+        case 'dependent':  # 종속적으로 이어지는 문장
             return dependent
-        case 'numbers':
+        case 'numbers': # 숫자가 포함된 문장
             return numbers
-        case '0': 
+        case '0':       # 간단한 문장들 (1~5형 문장 전체)
             return simple_sentence
-        case '1':
+        case '1':       # 복잡한 문장들 (겹문장 + 이어지는 문장 + 숫자 포함 문장)
             return complex_sentence
-        case '2':
+        case '2':       # 간단한 문단
             return simple_paragraph
-        case '3': 
-            return get_articles(line=True, summary=True)[0] # return each line of the summarized articles
-        case '4':
-            return get_articles(line=False, summary=True)[0] # return each summary paragraph of articles
-        case '5':
-            return get_articles(line=False, summary=False)[0] # return a whole article
-        case 'all':
+        case '3':       # return each line of the summarized articles
+            return get_articles(line=True, summary=True)[0] 
+        case '4':       # return each summary paragraph of articles
+            return get_articles(line=False, summary=True)[0] 
+        case '5':       # return a whole article
+            return get_articles(line=False, summary=False)[0] 
+        case 'all':     # 전부!
             return simple_sentence + complex_sentence + simple_paragraph + get_articles(line=False, summary=True)[0]
         case _:
             raise ValueError("input_type")
@@ -128,7 +128,6 @@ news_headlines = [
     "교육부, 국내 초중고등학교 교육과정 개편 검토 중"
 ]
 
-import math
 
 def get_articles(line=False, summary=True, start=0):
     import json

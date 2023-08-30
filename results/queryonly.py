@@ -34,3 +34,6 @@ def queryonly(filename=''):
     
     print(f"\nquery saved: {queryfilename}")
     return queryfilename
+
+
+queryonly(filename='results/queries/query_YYYYmmdd_hh.csv') # ex) results/queries/query_20230825_14.csv

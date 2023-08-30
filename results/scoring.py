@@ -152,38 +152,9 @@ def triple_score(query):
         query = '(' + m.group('name1') + ':' + m.group('label1') + ' - ' + edge_label + ' - ' + m.group('name2') + ':' + m.group('label2') + ')'
     else:
         score = 0
-        # # Check label
-        # label = m.group('label')
-        # if ' ' in label:
-        #     new_label = label.replace(' ', '_')
-        #     idx =  m.start('label')
-        #     new_query = query[:idx] + new_label + query[idx+len(label):]
-        #     # print("replaced: ", query , " -> ", new_query)
-        #     return node_score(new_query, varlist, check_var)
         
-        # # Check attributes
-        # att_score = 1
-        # attributes = m.group('attributes')
-        # if not attributes is None: 
-        #     att_score = attribute_score(attributes, varlist=varlist)
-        
-        # # Check variable
-        # var = m.group("var")
-        # # print("node var: ", var)
-        # if var is None:
-        #     score = 1
-        # elif not var in varlist:
-        #     varlist += [var]
-        #     score = 1
-             
-        # if score == 1 and att_score == 0:
-        #     score = 0
-    
-    # print("node score:", score)
     return score, query
     
-# print(triple_score('(카카오택시:기업 - 로고 전자신문DB 카카오 스마트 모빌리티:서비스 - 출범:사업)'))
-
                 
 # attribute format: {att_label: 'att_val'} or {att_label: (att_var)}
 def attribute_score(attributes, varlist, check_var=True):
@@ -213,7 +184,6 @@ def attribute_score(attributes, varlist, check_var=True):
                     att_score = 0
                     break
                 
-    # print(att_score, att_list)
     return att_score
 
 # node format: (var:label {att_label: att_val})
@@ -246,7 +216,6 @@ def node_score(query, varlist, check_var=False):
         
         # Check variable
         var = m.group("var")
-        # print("node var: ", var)
         if var is None:
             score = 1
         elif not var in varlist:
@@ -256,7 +225,6 @@ def node_score(query, varlist, check_var=False):
         if score == 1 and att_score == 0:
             score = 0
     
-    # print("node score:", score)
     return score, query, varlist
     
     
@@ -269,17 +237,15 @@ def edge_score(query, varlist):
     var1_format = "[(](?P<var1>:?.*)[)]"
     var_format = "(?P<var>\w+)?"
     label_format = "(?P<label>(\w|[ ]|:)*\w)"
-    # label_format = "(?P<label>(\w|[ ]|:)+)" # label_format = ":(?P<label>\w+)"
     var2_format = "[(](?P<var2>:?.*)[)]"
     attribute_format = "(?P<attributes>[{].+[}])?"
     edge_format = "^" + var1_format + "[ ]?[-][ ]?\["+var_format+label_format+"[ ]{0,3}"+attribute_format+"\][ ]?[-][>][ ]?"+var2_format + "$"
     p = re.compile(edge_format) 
     m = p.search(query)
-    # print(query)
+
     if not m is None:
         # set variables
         var1, var2, var = m.group('var1'), m.group('var2'), m.group('var')
-        # print(var1, var2, var)
         label = m.group('label')
         attributes = m.group('attributes')
         
@@ -289,7 +255,6 @@ def edge_score(query, varlist):
             new_label = label.replace(' ', '_')
             idx =  m.start('label')
             new_query = query[:idx] + new_label + query[idx+len(label):]
-            # print("replaced: ", query , " -> ", new_query)
             return edge_score(new_query, varlist)
         
         # Check variables
@@ -320,47 +285,5 @@ def edge_score(query, varlist):
     return score, query, varlist # , label if score ==1 else ''
 
 
-# examples
-
+# example
 # scorefilename = scoring(filename="./results/results/result_20230821_17.csv")
-# # scorefilename = scoring(filename=filename)
-# from neo4j import save_into_DB
-# save_into_DB(filename=scorefilename)
-s1 = "(a)-[:늘었다 {비율: '8.0%'}]->(:구독자)"
-s2 = '(a) -[:늘었다 {비율: "8.0%"}]->(:구독자)'
-s3 = "(a)-[:때문에]->(:가능성)"
-# print(edge_score(s2, ['a', 'b', 'd']))
-# print(edge_score(s3, ['a']))
-
-output1 = """
-(a:장마)
-(b:평년)
-(c:비)
-(d:전문가)
-(e:기상청)
-(f:6월25일)
-(g:현재)
-(h:전국)
-(i:대 부분)
-(j:지역)
-(k:누 적)
-(l:강수 량)
-(a)-[:때문 에]->(:가능성)
-(d)-[:관 측]->(a)
-(e)-[:밝혔다]->(c)
-(f)-[:시작된]->(a)
-(g)-[:현재까지]->(f)
-(h)-[:전국 대부분]->(i)
-(i)-[:지역에]->(j)
-(j)-[:많은 누적]->(k)
-(k)-[:강수량을]->
-"""
-
-# outputs = output1.split('\n')
-# varlist = []
-# for o in outputs:
-#     score1, o, varlist = node_score(o, varlist)
-#     if score1 == 0:
-#         score1, o, varlist = edge_score(o, varlist)
-#     print(score1, varlist, o)
-

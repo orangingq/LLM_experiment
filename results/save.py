@@ -7,7 +7,6 @@ from inputs.Benchmark import input_provider
 def save(save_info)->str:
    
     now = datetime.now().strftime("%Y%m%d_%H")
-    
     filename = './results/results/result_'+now+'.csv'
     
     # create a csv file if not exists

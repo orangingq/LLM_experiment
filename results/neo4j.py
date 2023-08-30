@@ -12,10 +12,8 @@ def next_alphabet(curr):
         return 'a'*(len(curr)+1)
     else:
         return curr[:up] + chr(ord(curr[up])+1)+'a'*(-up-1)
-    #     return curr+'a'
-    # else:
-    #     return curr[:-1] + chr(ord(curr[-1])+1)
 
+# Covert triples to the Neo4j format
 def TripleToNeo4j(triple:str, startvar='a'):
     create_nodes = ''
     create_edges = ''
@@ -46,14 +44,11 @@ def TripleToNeo4j(triple:str, startvar='a'):
             if n in nodelist: 
                 idx = nodelist.index(n)
                 now[i] = varlist[idx]
-                # create_nodes += f'MERGE ('+n+'\n'
             else:
                 create_nodes += f'CREATE ({now[i]}'+n+'\n'
                 nodelist += [n]
                 varlist += [a]
-        # create_nodes += f'CREATE ({alphabet}:{ent1_type.capitalize()} {{name: "{ent1}"}})\n'
-        # create_nodes += f'CREATE ({next_a}:{ent2_type.capitalize()} {{name: "{ent2}"}})\n'
-        
+                        
         if "'" in rel:
             continue
         
@@ -109,7 +104,7 @@ def save_into_DB(filename=''):
                 
             wr.writerow([row[5], output])
             memory.append(id)
-    # print(memory, len(memory))
+
     qf.close()
     
     print(f"\nquery saved: {queryfilename}")

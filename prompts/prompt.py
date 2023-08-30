@@ -3,6 +3,7 @@ from langchain.prompts import PromptTemplate
 import importlib 
 import csv
 
+# kg_type을 통해 kg의 번호값을 내보낸다. 
 def kg_matcher(kg_type:str)->str:
     match kg_type:
         case 'RDF-star': # RDF-star format
@@ -24,6 +25,7 @@ def kg_matcher(kg_type:str)->str:
     return kg
 
 
+# prompt_type과 kg 번호를 받아, 적절한 prompt template을 return
 def prompt_matcher(prompt_type:str, kg:str)->str:
     match prompt_type:
         case 'None':
@@ -36,6 +38,7 @@ def prompt_matcher(prompt_type:str, kg:str)->str:
             raise ValueError("prompt_type - got: ", prompt_type)
     return suffix
 
+# example_type과 kg 번호를 받아, 해당 kg type에 해당하는 example을 return 
 def example_matcher(example_type:str, kg:str):
     match example_type:
         case '0':
@@ -51,8 +54,6 @@ def example_matcher(example_type:str, kg:str):
                 if len(row[int(kg)]) == 0:
                     break
                 if i < 3: continue
-                # if not i in [ 4, 7, 8, 12, 13,  15]:#14,1,10,9,  
-                #     continue
                 if int(kg) >= 5 and i < 12:
                     continue
                 examples += [{
@@ -66,10 +67,9 @@ def example_matcher(example_type:str, kg:str):
         case _:
             raise ValueError("example_type - got: ", example_type)
     
-    # print(examples)
     return examples
 
-
+# kg_type, prompt_type, example_type을 받아, prompt template과 example을 선택한 뒤 적절히 조합해 최종 prompt를 생성한다. 
 def prompt_maker(kg_type:str, prompt_type:str, example_type:str, chat:bool=False)->str:
     kg = kg_matcher(kg_type)
     suffix = prompt_matcher(prompt_type, kg)
@@ -100,9 +100,7 @@ def prompt_maker(kg_type:str, prompt_type:str, example_type:str, chat:bool=False
             suffix=suffix + "\n\nArticle: \n{input}\nOutput: \n",
             input_variables=["input"]
         )
-        
-    # print(prompt)
-        
+                
     return prompt
     
     
