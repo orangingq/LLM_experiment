@@ -128,7 +128,10 @@ news_headlines = [
     "교육부, 국내 초중고등학교 교육과정 개편 검토 중"
 ]
 
-
+# line: True = 문장 별로 쪼개서 input에 넣고 싶다.
+# summary: True = 기사의 summary를 input으로 넣는다. / False: 기사 전체를 input으로 넣는다.
+#       ex) line=True, summary=True: 기사의 summary를 문장 별로 쪼개서 input에 넣는다.
+# start: input으로 넣을 article의 시작 번호
 def get_articles(line=False, summary=True, start=0):
     import json
     
@@ -139,7 +142,10 @@ def get_articles(line=False, summary=True, start=0):
         'inputs/articles/articles_2980to19991.json'
     ]
     i = 0 # iterator
-    one_cycle = 25 # 33 articles per one cycle
+    if line: 
+        one_cycle = 1 # 1 articles per one cycle
+    else:
+        one_cycle = 1 # 25 articles per one cycle
 
     total_articles = 0
     for filename in files:
@@ -147,21 +153,18 @@ def get_articles(line=False, summary=True, start=0):
             data = json.load(f)
             total_articles += len(data)
 
-    end = min(start + one_cycle, total_articles)
+    end = min(start + one_cycle, total_articles) # last order of articles
         
     for filename in files:
         with open(filename, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for article in data:
-                if i < start:
+                if i < start:   # start
                     i += 1
-                    # print(article['text_rank'][:10])
                     continue
-                elif i >= end:
+                elif i >= end:  # end
                     break
-                # if i > 1:break
-                if line and i >= 1:
-                    break
+                
                 if summary:
                     if line:
                         articles += article['text_rank']#article['summary']
@@ -176,8 +179,6 @@ def get_articles(line=False, summary=True, start=0):
                 # iterate
                 i += 1
                 
-    isdone = (end >= total_articles)
-    # print([a[:10] for a in articles])
+    isdone = (end >= total_articles) # 전체 article을 모두 출력했다면 isdone=True를 반환한다
     return articles, end, isdone
 
-# get_articles()

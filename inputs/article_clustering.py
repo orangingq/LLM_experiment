@@ -21,42 +21,54 @@ def preprocess(texts):
     return [[str(word) for word in text] for text in result]
 
 
-
-# Text Vectorization, Normalization
-def vectorize(texts):
+def Tfidf_vectorizer(texts):
     vectorizer = TfidfVectorizer(min_df=3, max_features=50000, ngram_range=(1,2))
     return vectorizer.fit_transform(texts)
-    # print(len(texts), len(texts[0]))
-    # model = WV(sentences = texts, size = 100, window = 5, min_count = 1, workers = 4)#, sg = 0
-    # model.save("word2vec.model")
-    # # model = WV.load("word2vec.model")
-    
-    # print(model.wv.vectors.shape)
-    # print(model.wv.most_similar("카카오"))
-        
-    # features = []
-    # for text in texts:
-    #     zero_vector = np.zeros(model.vector_size)
-    #     vectors = []
-    #     for token in text:
-    #         if token in model.wv:
-    #             try:
-    #                 vectors.append(model.wv[token])
-    #             except KeyError:
-    #                 continue
-        
-    #     if vectors:
-    #         vectors = np.asarray(vectors)
-    #         avg_vec = vectors.mean(axis=0)
-    #         features.append(avg_vec)
-    #     else:
-    #         features.append(zero_vector)
-        
-    #     # print(np.array(features).shape)
-    # scaler = StandardScaler() #MinMaxScaler()
-    # features [:] = scaler.fit_transform(features)
-    # return features
 
+def word2vec_vectorizer(texts, minmax=False):
+    # Word Vector 생성
+    model = WV(sentences = texts, size = 100, window = 5, min_count = 1, workers = 4)#, sg = 0
+    model.save("word2vec.model")
+    
+    # 생성된 모델 불러오기
+    # model = WV.load("word2vec.model")
+    
+    print(model.wv.vectors.shape)
+    print(model.wv.most_similar("카카오"))
+        
+    features = []
+    for text in texts:
+        zero_vector = np.zeros(model.vector_size)
+        vectors = []
+        for token in text:
+            if token in model.wv:
+                try:
+                    vectors.append(model.wv[token])
+                except KeyError:
+                    continue
+        
+        if vectors:
+            vectors = np.asarray(vectors)
+            avg_vec = vectors.mean(axis=0)
+            features.append(avg_vec)
+        else:
+            features.append(zero_vector)
+        
+    # Normalization
+    if minmax: 
+        scaler = MinMaxScaler()
+    else:
+        scaler = StandardScaler()
+    features [:] = scaler.fit_transform(features)
+    return features
+
+
+# Text Vectorization, Normalization
+def vectorize(texts, tfidf = True):
+    if tfidf:
+        return Tfidf_vectorizer(texts)
+    else:
+        return word2vec_vectorizer(texts)
 
 # Extract Central Article
 def get_central_sentences(vectors, kmeans):
@@ -81,8 +93,6 @@ def visualize_clusters(vectors, labels):
     plt.savefig('./inputs/article_clusters.png')
 
 def kmeans_clustering(vectors, k=-1):
-    
-    # print(np.array(vectors).shape)
     if k < 0:
         length = len(vectors) # vectors.shape[0]
         k = int(length / 25) # k: cluster 수
@@ -98,6 +108,7 @@ def kmeans_clustering(vectors, k=-1):
     
     return labels, central_indices
 
+
 def DBSCAN_clustering(vectors):
     model = DBSCAN(eps=0.5, min_samples=4, metric = "cosine") #eps=0.3,
     # 거리 계산 식으로는 Cosine distance를 이용
@@ -106,8 +117,8 @@ def DBSCAN_clustering(vectors):
     result[result == 0] = -1
     return result
 
-
-def article_clustering(k=-1):    
+# main function
+def article_clustering(k=-1, DBSCAN=False):    
     files = [
         'inputs/articles/articles_297to981.json',
         'inputs/articles/articles_982to2979.json',
@@ -122,9 +133,7 @@ def article_clustering(k=-1):
                 if article['text_rank'][0] == "":
                     outliers += [i]
                 else:
-                    total_articles += [article['text_rank'][0]]#[' '.join(article['article'])]#[article['text_rank'][0]]
-    
-    
+                    total_articles += [article['text_rank'][0]]#[' '.join(article['article'])]#[article['text_rank'][0]]    
     
     # preprocess
     preprocessed = preprocess(total_articles)
@@ -143,13 +152,14 @@ def article_clustering(k=-1):
     
     # vectorize
     text_vectors = vectorize(preprocessed_texts)
-        
-    # print(text_vectors)
-    
+            
     # clustering
-    # result, central_indices = kmeans_clustering(text_vectors)
-    result = DBSCAN_clustering(text_vectors)
+    if DBSCAN:
+        result = DBSCAN_clustering(text_vectors)
+    else:
+        result, central_indices = kmeans_clustering(text_vectors)
     print(result)
+    
     # visualize
     visualize_clusters(text_vectors, result)
         
@@ -162,13 +172,16 @@ def article_clustering(k=-1):
                     noise_cnt += 1
             continue
         else:
-            # print(cluster_num, central_indices[cluster_num], preprocessed_indices[central_indices[cluster_num]], total_articles[preprocessed_indices[central_indices[cluster_num]]])
-            print(f"\ncluster num : {cluster_num}")# - {total_articles[preprocessed_indices[central_indices[cluster_num]]]}")
+            if DBSCAN:
+                print(f"\ncluster num : {cluster_num}")
+            else: 
+                central = preprocessed_indices[central_indices[cluster_num]]
+                print(f"\ncluster num : {cluster_num} - Text {central}: {total_articles[central][:50]}")
             for i, label in enumerate(result):
                 if label == cluster_num:
                     print(f"Text {i}: {total_articles[i][:70]}")
     print("\nnoise count: " , noise_cnt)
-    
-    # print(central_indices)
-    
+        
+        
+        
 article_clustering()

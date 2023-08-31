@@ -36,4 +36,4 @@ def queryonly(filename=''):
     return queryfilename
 
 
-queryonly(filename='results/queries/query_YYYYmmdd_hh.csv') # ex) results/queries/query_20230825_14.csv
+# queryonly(filename='results/queries/query_YYYYmmdd_hh.csv') # ex) results/queries/query_20230825_14.csv

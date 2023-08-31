@@ -55,8 +55,6 @@ def RDF_structure_score(output):
             continue 
         query += ')'
         
-        print(query)
-
         # scoring
         if not stop:
             # node
@@ -205,7 +203,6 @@ def node_score(query, varlist, check_var=False):
             new_label = label.replace(' ', '_')
             idx =  m.start('label')
             new_query = query[:idx] + new_label + query[idx+len(label):]
-            # print("replaced: ", query , " -> ", new_query)
             return node_score(new_query, varlist, check_var)
         
         # Check attributes
