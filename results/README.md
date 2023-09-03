@@ -10,6 +10,8 @@
    file은 `onlyqueries` 폴더 내에 저장되고, 파일 이름은 `RDF_Llama2_gensim_YYYYmmdd_hh.txt` 이다. (gensim summarizer 사용, Llama2 모델 사용, RDF format으로 출력했다는 뜻. 파일 이름 변경은 `queryonly.py`에서 가능하다.)
 5. 위 txt file을 전체 복사해 neo4j DB에 넣어주면 node와 edge들이 생성된다.
 
+---
+
 ### 1. 결과 저장
 
 > LLM output ➔ `result_YYYYmmdd_hh.csv`
@@ -27,7 +29,9 @@
 - `input`: input text
 - `output`: raw output of LLM
 
-### 2. 채점
+---
+
+### 2. 결과 채점
 
 > `result_YYYYmmdd_hh.csv` ➔ `scored_YYYYmmdd_hh.csv`
 
@@ -46,12 +50,16 @@
 - `structure_score`: 문법 통과라면 1, 아니면 0
 - `note`: 만약 문법 통과를 못했다면 output의 줄에서 통과를 못했는지 보여준다.
 
+---
+
 ### 3. cypher 문법화
 
 > `scored_YYYYmmdd_hh.csv` ➔ `query_YYYYmmdd_hh.csv`
 
 `query_YYYYmmdd_hh.csv` 파일은 `neo4j.py`에서 생성한다.
 `neo4j.py`에서는 채점을 통과한 결과들을 cypher 문법에 맞게 수정한다. (`CREATE`를 붙이거나 triple을 LPG 형식으로 변환 등)
+
+---
 
 ### 4. query text file
 
