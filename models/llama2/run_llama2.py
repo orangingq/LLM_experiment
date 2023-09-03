@@ -143,7 +143,7 @@ def main(kg_type:str='LPG',prompt_type:str='Eng',example_type:str='1', input_typ
             if kg_type == 'RDF-star' and chat == False:
                 queryonly(queryfilename)
         
-            start = end
+        start = end
 
 if __name__ == "__main__":
     fire.Fire(main)

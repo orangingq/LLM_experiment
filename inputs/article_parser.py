@@ -34,7 +34,6 @@ def article_parser(start_limit=297, end_limit = 500):
             continue
         if not line:  # end of the file
             break
-        # print(line_cnt, line)
         
         if line == '\n':
             if start == 1:
@@ -44,7 +43,6 @@ def article_parser(start_limit=297, end_limit = 500):
                     data = {"line_start": article_start, "line_end": article_end, "article": article_arr, "article_num":article_num}
                     articles.append(data)
                     article_num += 1
-                    # print(data)
                 start = 0
         elif start == 0:
             article_start = line_cnt

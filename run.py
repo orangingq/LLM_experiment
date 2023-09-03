@@ -110,7 +110,7 @@ def run(kg_type:str,prompt_type:str,example_type:str, input_type:str,  model_typ
 @click.option('--prompt', default='Eng', type=click.Choice(prompt_range))   # prompt_range list 원소 중 하나를 입력할 수 있음 (기본값: Eng)
 @click.option('--example', default='1', type=click.Choice(example_range))   # example_range list 원소 중 하나를 입력할 수 있음 (기본값: 1)
 @click.option('--input', default='4', type=click.Choice(input_range))       # input_range list 원소 중 하나를 입력할 수 있음 (기본값: 4)
-@click.option('--model', default='all', type=click.Choice(model_range))     # model_range list 원소 중 하나를 입력할 수 있음 (기본값: all)
+@click.option('--model', default='ChatLlama2', type=click.Choice(model_range))     # model_range list 원소 중 하나를 입력할 수 있음 (기본값: ChatLlama2)
 def main(kg:str,prompt:str,example:str, input:str,  model:str):
     runall(kg, prompt, example, input, model)
             
