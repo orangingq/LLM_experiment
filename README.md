@@ -47,35 +47,53 @@ python3 run.py
 python3 run.py --kg=LPG_tense --example=1 --input=5 --model=Llama2
 ```
 
+#### 결과 확인
+
+`results/results/result_{YYYYMMdd_hh}.csv` 파일을 확인하라.
+`YYYYMMdd_hh`는 실험을 돌린 '년월일\_시간'을 의미한다.
+
+결과를 더 자세히 분석하기 위해서는 `results` directory의 README 파일을 참고하라.
+
 # 구성 폴더
 
 ```python3
 ├── inputs      # KG로 변환할 input text를 구성하는 directory
-│   ├── articles
-|   |   ├── articles        # article dataset
-│   └── article_clustering.py       # articles 폴더의 json 파일들에 저장된 기사들을 가져와 cluster한다.
+│   ├── articles           # article dataset
+│   └── article_clustering.py       # article dataset을 클러스터링
 │   └── article_parser.py           # raw text file로부터 article dataset 생성
 │   └── clova_summary.py            # article dataset의 각 article에 대한 요약본 생성
-│   └── Benchmark.py       #
-│   │
+│   └── Benchmark.py       # LLM에 input으로 넣어줄 input text를 생성
+│
 ├── prompts     # LLM에 넣어줄 prompt를 구성하는 directory
 │   └── prompt.py
-│   └── prompt1_eng.py      # English description of RDF-star format
+│   └── prompt1_eng.py     # English description of RDF-star format
 │   └── ...
+│
 ├── examples    # prompt에 넣어줄 example을 저장하는 directory
 │   └── raw_examples.csv    # 각 출력 형식 별 example들을 저장
+│
 ├── models      # LLM들을 관리하는 directory
-│   ├── ...
+│   ├── llama2
+│   │   └── run_llama2.py  # Llama2 모델과 Llama2-Chat 모델을 실행
+│   │   └── ...
+│   └── base_model.py      # LLM model class의 abstract class 및 model loader 정의
+│   └── ChatOpenAI.py      # ChatOpenAI model의 LLM model class 정의
+│   └── ...
+│
 ├── results     # LLM의 출력 결과 및 후처리된 결과를 저장/관리하는 directory
 │   ├── results             # 1) LLM의 출력 결과를 저장
 │   ├── scored              # 2) results 폴더의 결과의 채점 결과 저장
 │   ├── queries             # 3) 채점된 결과를 Neo4j의 cypher query문으로 변환, 저장
 │   ├── onlyqueries         # 4) query문을 통합하여 txt file로 저장
-│   └── save.py             # LLM의 결과를 1로 저장
-│   └── scoring.py          # 1) -> 2)
-│   └── neo4j.py            # 2) -> 3)
-│   └── queryonly.py        # 3) -> 4)
-│   └── find.py
+│   └── save.py             # LLM output  -> 1)
+│   └── scoring.py          #    1)       -> 2)
+│   └── neo4j.py            #    2)       -> 3)
+│   └── queryonly.py        #    3)       -> 4)
+│
 ├── keys        # OpenAI 보안키 등 암호를 보관하는 directory
 │   └── keys_template.py    # 보안키들의 template 저장. 파일명을 'keys.py' 변경 필요.
+│
+└── run.py     # 전체 실험 pipeline을 한 번에 실행할 수 있는 파일
+└── conda_requirements.txt    # conda library 환경 설치
+└── requirements.txt          # pip3 library 환경 설치
 ```

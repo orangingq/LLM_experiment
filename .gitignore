@@ -6,3 +6,5 @@ results/*.json
 results/*.csv
 results/*/*.csv
 neo4j.sh
+run.sh
+word2vec.model
